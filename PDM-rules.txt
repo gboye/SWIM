@@ -1,0 +1,1816 @@
+
+Decomposition of segments:
+y : {('cont', '1'), ('low', '0'), ('strid\n', '0'), ('son', '1'), ('nas', '0'), ('round', '1'), ('cons', '0'), ('ant', '0'), ('cor', '0'), ('lat', '0'), ('back', '0'), ('syl', '1'), ('voice', '1'), ('ATR', '1'), ('high', '1')}
+z : {('cont', '1'), ('low', '0'), ('voice', '1'), ('cons', '1'), ('nas', '0'), ('cor', '1'), ('round', '0'), ('ant', '1'), ('lat', '0'), ('back', '0'), ('ATR', '0'), ('syl', '0'), ('son', '0'), ('high', '0'), ('strid\n', '1')}
+û : {('cont', '1'), ('low', '0'), ('nas', '1'), ('son', '1'), ('round', '1'), ('cons', '0'), ('ant', '0'), ('ATR', '0'), ('cor', '0'), ('lat', '0'), ('back', '0'), ('syl', '1'), ('voice', '1'), ('strid\n', '0'), ('high', '0')}
+2 : {('cont', '1'), ('low', '0'), ('strid\n', '0'), ('son', '1'), ('nas', '0'), ('round', '1'), ('cons', '0'), ('ant', '0'), ('ATR', '0'), ('cor', '0'), ('lat', '0'), ('back', '0'), ('syl', '1'), ('voice', '1'), ('high', '0')}
+p : {('low', '0'), ('strid\n', '0'), ('cons', '1'), ('nas', '0'), ('round', '0'), ('back', '1'), ('cor', '0'), ('lat', '0'), ('ant', '1'), ('voice', '0'), ('ATR', '0'), ('syl', '0'), ('son', '0'), ('high', '0'), ('cont', '0')}
+ô : {('cont', '1'), ('low', '0'), ('nas', '1'), ('son', '1'), ('round', '1'), ('cons', '0'), ('ant', '0'), ('ATR', '0'), ('cor', '0'), ('lat', '0'), ('syl', '1'), ('back', '2'), ('voice', '1'), ('strid\n', '0'), ('high', '0')}
+r : {('cont', '1'), ('low', '0'), ('ATR', '0'), ('cons', '1'), ('nas', '0'), ('back', '2'), ('ant', '0'), ('round', '0'), ('cor', '0'), ('lat', '0'), ('son', '1'), ('voice', '1'), ('syl', '0'), ('high', '0'), ('strid\n', '1')}
+s : {('cont', '1'), ('low', '0'), ('cons', '1'), ('nas', '0'), ('cor', '1'), ('round', '0'), ('ant', '1'), ('lat', '0'), ('back', '0'), ('voice', '0'), ('ATR', '0'), ('syl', '0'), ('son', '0'), ('high', '0'), ('strid\n', '1')}
+t : {('low', '0'), ('strid\n', '0'), ('cons', '1'), ('nas', '0'), ('cor', '1'), ('round', '0'), ('ant', '1'), ('lat', '0'), ('back', '0'), ('voice', '0'), ('ATR', '0'), ('syl', '0'), ('son', '0'), ('high', '0'), ('cont', '0')}
+u : {('cont', '1'), ('low', '0'), ('strid\n', '0'), ('son', '1'), ('nas', '0'), ('round', '1'), ('cons', '0'), ('ant', '0'), ('cor', '0'), ('lat', '0'), ('syl', '1'), ('back', '2'), ('voice', '1'), ('ATR', '1'), ('high', '1')}
+v : {('cont', '1'), ('low', '0'), ('voice', '1'), ('cons', '1'), ('nas', '0'), ('round', '0'), ('back', '1'), ('cor', '0'), ('lat', '0'), ('ant', '1'), ('ATR', '0'), ('syl', '0'), ('son', '0'), ('high', '0'), ('strid\n', '1')}
+w : {('cont', '1'), ('low', '0'), ('strid\n', '0'), ('ATR', '0'), ('nas', '0'), ('round', '1'), ('back', '2'), ('ant', '0'), ('cor', '0'), ('lat', '0'), ('son', '1'), ('cons', '0'), ('voice', '1'), ('syl', '0'), ('high', '1')}
+è : {('cont', '1'), ('low', '0'), ('strid\n', '0'), ('son', '1'), ('nas', '0'), ('cons', '0'), ('ant', '0'), ('round', '0'), ('cor', '0'), ('lat', '0'), ('back', '0'), ('syl', '1'), ('voice', '1'), ('high', '0'), ('ATR', '0')}
+i : {('cont', '1'), ('low', '0'), ('strid\n', '0'), ('son', '1'), ('nas', '0'), ('cons', '0'), ('ant', '0'), ('round', '0'), ('cor', '0'), ('lat', '0'), ('back', '0'), ('syl', '1'), ('voice', '1'), ('ATR', '1'), ('high', '1')}
+j : {('cont', '1'), ('low', '0'), ('strid\n', '0'), ('ATR', '0'), ('nas', '0'), ('cons', '0'), ('ant', '0'), ('round', '0'), ('cor', '0'), ('lat', '0'), ('back', '0'), ('son', '1'), ('voice', '1'), ('syl', '0'), ('high', '1')}
+k : {('low', '0'), ('strid\n', '0'), ('cons', '1'), ('nas', '0'), ('back', '2'), ('ant', '0'), ('round', '0'), ('cor', '0'), ('lat', '0'), ('voice', '0'), ('ATR', '0'), ('syl', '0'), ('son', '0'), ('high', '1'), ('cont', '0')}
+l : {('strid\n', '1'), ('low', '0'), ('ATR', '0'), ('cons', '1'), ('nas', '0'), ('cor', '1'), ('round', '0'), ('ant', '1'), ('back', '0'), ('lat', '1'), ('son', '1'), ('voice', '1'), ('syl', '0'), ('high', '0'), ('cont', '0')}
+m : {('low', '0'), ('nas', '1'), ('ATR', '0'), ('cons', '1'), ('round', '0'), ('back', '1'), ('cor', '0'), ('lat', '0'), ('ant', '1'), ('son', '1'), ('voice', '1'), ('syl', '0'), ('high', '0'), ('cont', '0'), ('strid\n', '0')}
+n : {('low', '0'), ('nas', '1'), ('ATR', '0'), ('cons', '1'), ('cor', '1'), ('round', '0'), ('ant', '1'), ('lat', '0'), ('back', '0'), ('son', '1'), ('voice', '1'), ('syl', '0'), ('high', '0'), ('cont', '0'), ('strid\n', '0')}
+o : {('cont', '1'), ('low', '0'), ('strid\n', '0'), ('son', '1'), ('nas', '0'), ('round', '1'), ('cons', '0'), ('ant', '0'), ('ATR', '0'), ('cor', '0'), ('lat', '0'), ('syl', '1'), ('back', '2'), ('voice', '1'), ('high', '0')}
+a : {('low', '1'), ('cont', '1'), ('strid\n', '0'), ('son', '1'), ('nas', '0'), ('cons', '0'), ('ant', '0'), ('round', '0'), ('back', '1'), ('cor', '0'), ('lat', '0'), ('syl', '1'), ('voice', '1'), ('high', '0'), ('ATR', '0')}
+b : {('low', '0'), ('strid\n', '0'), ('voice', '1'), ('cons', '1'), ('nas', '0'), ('round', '0'), ('back', '1'), ('cor', '0'), ('lat', '0'), ('ant', '1'), ('ATR', '0'), ('syl', '0'), ('son', '0'), ('high', '0'), ('cont', '0')}
+d : {('low', '0'), ('strid\n', '0'), ('voice', '1'), ('cons', '1'), ('nas', '0'), ('cor', '1'), ('round', '0'), ('ant', '1'), ('lat', '0'), ('back', '0'), ('ATR', '0'), ('syl', '0'), ('son', '0'), ('high', '0'), ('cont', '0')}
+e : {('cont', '1'), ('low', '0'), ('strid\n', '0'), ('son', '1'), ('nas', '0'), ('cons', '0'), ('ant', '0'), ('round', '0'), ('cor', '0'), ('lat', '0'), ('back', '0'), ('syl', '1'), ('voice', '1'), ('high', '0'), ('ATR', '0')}
+f : {('cont', '1'), ('low', '0'), ('cons', '1'), ('nas', '0'), ('round', '0'), ('back', '1'), ('cor', '0'), ('lat', '0'), ('ant', '1'), ('voice', '0'), ('ATR', '0'), ('syl', '0'), ('son', '0'), ('high', '0'), ('strid\n', '1')}
+g : {('low', '0'), ('strid\n', '0'), ('voice', '1'), ('cons', '1'), ('nas', '0'), ('back', '2'), ('ant', '0'), ('round', '0'), ('cor', '0'), ('lat', '0'), ('ATR', '0'), ('syl', '0'), ('son', '0'), ('high', '1'), ('cont', '0')}
+9 : {('cont', '1'), ('low', '0'), ('strid\n', '0'), ('son', '1'), ('nas', '0'), ('round', '1'), ('cons', '0'), ('ant', '0'), ('ATR', '0'), ('cor', '0'), ('lat', '0'), ('back', '0'), ('syl', '1'), ('voice', '1'), ('high', '0')}
+6 : {('cont', '1'), ('low', '0'), ('strid\n', '0'), ('son', '1'), ('nas', '0'), ('round', '1'), ('cons', '0'), ('ant', '0'), ('ATR', '0'), ('cor', '0'), ('lat', '0'), ('back', '0'), ('syl', '1'), ('voice', '1'), ('high', '0')}
+Z : {('cont', '1'), ('low', '0'), ('voice', '1'), ('cons', '1'), ('nas', '0'), ('ant', '0'), ('round', '0'), ('back', '1'), ('lat', '0'), ('high', '1'), ('ATR', '0'), ('syl', '0'), ('son', '0'), ('cor', '1'), ('strid\n', '1')}
+â : {('low', '1'), ('cont', '1'), ('nas', '1'), ('son', '1'), ('cons', '0'), ('ant', '0'), ('round', '0'), ('cor', '0'), ('lat', '0'), ('syl', '1'), ('back', '2'), ('voice', '1'), ('strid\n', '0'), ('high', '0'), ('ATR', '0')}
+S : {('cont', '1'), ('low', '0'), ('cons', '1'), ('nas', '0'), ('ant', '0'), ('round', '0'), ('back', '1'), ('lat', '0'), ('high', '1'), ('voice', '0'), ('ATR', '0'), ('syl', '0'), ('son', '0'), ('cor', '1'), ('strid\n', '1')}
+ê : {('cont', '1'), ('low', '0'), ('nas', '1'), ('son', '1'), ('cons', '0'), ('ant', '0'), ('round', '0'), ('cor', '0'), ('lat', '0'), ('back', '0'), ('syl', '1'), ('voice', '1'), ('strid\n', '0'), ('high', '0'), ('ATR', '0')}
+H : {('cont', '1'), ('low', '0'), ('strid\n', '0'), ('ATR', '0'), ('nas', '0'), ('round', '1'), ('cons', '0'), ('ant', '0'), ('cor', '0'), ('lat', '0'), ('back', '0'), ('son', '1'), ('voice', '1'), ('syl', '0'), ('high', '1')}
+J : {('low', '0'), ('nas', '1'), ('ATR', '0'), ('cons', '1'), ('ant', '0'), ('round', '0'), ('back', '1'), ('cor', '0'), ('lat', '0'), ('son', '1'), ('voice', '1'), ('syl', '0'), ('high', '1'), ('cont', '0'), ('strid\n', '0')}
+ò : {('cont', '1'), ('low', '0'), ('strid\n', '0'), ('son', '1'), ('nas', '0'), ('round', '1'), ('cons', '0'), ('ant', '0'), ('ATR', '0'), ('cor', '0'), ('lat', '0'), ('syl', '1'), ('back', '2'), ('voice', '1'), ('high', '0')}
+O : {('cont', '1'), ('low', '0'), ('strid\n', '0'), ('son', '1'), ('nas', '0'), ('round', '1'), ('cons', '0'), ('ant', '0'), ('ATR', '0'), ('cor', '0'), ('lat', '0'), ('syl', '1'), ('back', '2'), ('voice', '1'), ('high', '0')}
+3 : {('cont', '1'), ('low', '0'), ('strid\n', '0'), ('son', '1'), ('nas', '0'), ('round', '1'), ('cons', '0'), ('ant', '0'), ('ATR', '0'), ('cor', '0'), ('lat', '0'), ('back', '0'), ('syl', '1'), ('voice', '1'), ('high', '0')}
+E : {('cont', '1'), ('low', '0'), ('strid\n', '0'), ('son', '1'), ('nas', '0'), ('cons', '0'), ('ant', '0'), ('round', '0'), ('cor', '0'), ('lat', '0'), ('back', '0'), ('syl', '1'), ('voice', '1'), ('high', '0'), ('ATR', '0')}
+normalization table:
+p => p
+t => t
+k => k
+b => b
+d => d
+g => g
+f => f
+s => s
+S => S
+v => v
+z => z
+Z => Z
+m => m
+n => n
+J => J
+j => j
+l => l
+r => r
+w => w
+H => H
+i => i
+y => y
+E => E
+e => E
+è => E
+6 => 6
+2 => 6
+9 => 6
+a => a
+u => u
+o => o
+ò => o
+O => o
+ê => ê
+û => û
+â => â
+ô => ô
+3 => 6
+done.
+Computing conditional entropy...
+
+  0% done
+***************************************
+***************************************
+***************************************
+        ipf.3 ==> prs.3
+***************************************
+Inferring rules...
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ #	5237
+sE --> [] / X[i,E,a] ___ #	353
+tE --> [] / X[r,E,a,ê,â] ___ #	43
+6lE --> El / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,r] ___ #	80
+ErE --> jEr / X[E,6,a,o,ê,û,â,ô]k ___ #	5
+dE --> [] / X[p,t,b,d,f,s,v,z,r,E,6,o][r,o,â,ô] ___ #	50
+jE --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,a,u,o] ___ #	101
+jE --> i / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,l,r] ___ #	263
+6vE --> wa / X[t,d,s,z] ___ #	9
+6sE --> Es / X[d,l][E,a][p,b,m] ___ #	2
+zE --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,u,o] ___ #	53
+6zE --> E / Xf ___ #	8
+aJE --> ê / XZw ___ #	6
+pE --> [] / Xrô ___ #	3
+mE --> [] / X[p,t,b,d,f,s,v,z]or ___ #	5
+6tE --> Et / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r] ___ #	72
+vE --> [] / X[j,r,i,E,a] ___ #	21
+tE --> pt / X[d,z][â,ô] ___ #	2
+EJE --> ê / X[p,t,k,b,d,g,f,s,S,v,z,Z,l,r] ___ #	22
+6vE --> Ev / X[f,s,S,v,z,Z,l,r] ___ #	13
+urE --> 6r / #m ___ #	1
+6nE --> jê / X[p,t,b,d,f,s,v,z] ___ #	27
+6nE --> â / Xpr ___ #	12
+uvE --> 6 / Xm ___ #	2
+6nE --> En / X[p,t,b,d,f,s,v,z,m,n,l,r] ___ #	19
+6mE --> Em / Xs ___ #	4
+lE --> [] / Xmu ___ #	3
+alE --> o / Xv ___ #	4
+aisE --> E / #âtr6 ___ #	1
+avE --> E / #s ___ #	1
+ulE --> 6 / Xv ___ #	2
+6zE --> Ez / Xp ___ #	4
+6rE --> Er / #liz ___ #	1
+aisE --> E / # ___ #	1
+EjE --> jE / Xas ___ #	2
+yvE --> wa / #b ___ #	1
+alE --> va / # ___ #	1
+kE --> [] / Xvê ___ #	2
+ojE --> wa / # ___ #	1
+olvE --> u / #rEz ___ #	1
+6vrE --> Evr / #s ___ #	1
+6pE --> Ep / #r6s ___ #	1
+done.
+
+class 1 ( âkErE ~ âkjEr ):  6 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 1—16.67% (équerrer, etc.)
+ErE --> jEr / X[E,6,a,o,ê,û,â,ô]k ___ # : 5—83.33% (enquérir, etc.)
+local conditional entropy: 0.6500224216483541
+-----
+class 2 ( grasEjE ~ grasEj ):  3 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 1—33.33% (grasseyer, etc.)
+jE --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,a,u,o] ___ # : 0—0.00%
+EjE --> jE / Xas ___ # : 2—66.67% (rasseoir_2, etc.)
+local conditional entropy: 0.9182958340544896
+-----
+class 3 ( aisE ~ E ):  1 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+sE --> [] / X[i,E,a] ___ # : 0—0.00%
+aisE --> E / # ___ # : 1—100.00% (haïr, etc.)
+local conditional entropy: -0.0
+-----
+class 4 ( vrijE ~ vrij ):  336 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 235—69.94% (vriller, etc.)
+jE --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,a,u,o] ___ # : 101—30.06% (rapatrier, etc.)
+local conditional entropy: 0.8820172971814205
+-----
+class 5 ( r6dormE ~ r6dor ):  15 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 10—66.67% (reformer, etc.)
+mE --> [] / X[p,t,b,d,f,s,v,z]or ___ # : 5—33.33% (redormir, etc.)
+local conditional entropy: 0.9182958340544896
+-----
+class 6 ( alE ~ al ):  3 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 2—66.67% (hâler, etc.)
+alE --> va / # ___ # : 1—33.33% (aller, etc.)
+local conditional entropy: 0.9182958340544896
+-----
+class 7 ( gravE ~ grav ):  86 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 65—75.58% (graver, etc.)
+vE --> [] / X[j,r,i,E,a] ___ # : 21—24.42% (proscrire, etc.)
+local conditional entropy: 0.8019325020834525
+-----
+class 8 ( murE ~ m6r ):  1 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+urE --> 6r / #m ___ # : 1—100.00% (mourir, etc.)
+local conditional entropy: -0.0
+-----
+class 9 ( sorisE ~ sori ):  535 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 182—34.02% (surbaisser, etc.)
+sE --> [] / X[i,E,a] ___ # : 353—65.98% (saurir, etc.)
+local conditional entropy: 0.9249974583335759
+-----
+class 10 ( vulE ~ v6 ):  2 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+ulE --> 6 / Xv ___ # : 2—100.00% (vouloir, etc.)
+local conditional entropy: -0.0
+-----
+class 11 ( zj6tE ~ zj6t ):  78 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 6—7.69% (zieuter, etc.)
+6tE --> Et / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r] ___ # : 72—92.31% (jarreter, etc.)
+local conditional entropy: 0.39124356362925566
+-----
+class 12 ( r6s6pE ~ r6sEp ):  1 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+6pE --> Ep / #r6s ___ # : 1—100.00% (receper, etc.)
+local conditional entropy: -0.0
+-----
+class 13 ( râsEJE ~ râsEJ ):  35 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 13—37.14% (renseigner, etc.)
+EJE --> ê / X[p,t,k,b,d,g,f,s,S,v,z,Z,l,r] ___ # : 22—62.86% (rétreindre, etc.)
+local conditional entropy: 0.9517626756348311
+-----
+class 14 ( dôtE ~ dôpt ):  1 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+tE --> pt / X[d,z][â,ô] ___ # : 1—100.00% (dompter, etc.)
+local conditional entropy: -0.0
+-----
+class 15 ( âdâtE ~ âdât ):  9 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 8—88.89% (endenter, etc.)
+tE --> [] / X[r,E,a,ê,â] ___ # : 0—0.00%
+tE --> pt / X[d,z][â,ô] ___ # : 1—11.11% (exempter, etc.)
+local conditional entropy: 0.5032583347756457
+-----
+class 16 ( ojE ~ wa ):  1 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+ojE --> wa / # ___ # : 1—100.00% (ouïr, etc.)
+local conditional entropy: -0.0
+-----
+class 17 ( EmulE ~ Emu ):  8 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 5—62.50% (vermouler, etc.)
+lE --> [] / Xmu ___ # : 3—37.50% (émoudre, etc.)
+local conditional entropy: 0.9544340029249649
+-----
+class 18 ( byvE ~ bwa ):  1 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+yvE --> wa / #b ___ # : 1—100.00% (boire, etc.)
+local conditional entropy: -0.0
+-----
+class 19 ( radjodifyzE ~ radjodifyz ):  528 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 475—89.96% (radiodiffuser, etc.)
+zE --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,u,o] ___ # : 53—10.04% (retraduire, etc.)
+local conditional entropy: 0.4701951740543873
+-----
+class 20 ( kolorjE ~ kolori ):  263 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+jE --> i / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,l,r] ___ # : 263—100.00% (colorier, etc.)
+local conditional entropy: -0.0
+-----
+class 21 ( m6nE ~ mEn ):  18 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+6nE --> En / X[p,t,b,d,f,s,v,z,m,n,l,r] ___ # : 18—100.00% (mener, etc.)
+local conditional entropy: -0.0
+-----
+class 22 ( syrpr6nE ~ syrprâ ):  12 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+6nE --> â / Xpr ___ # : 12—100.00% (surprendre, etc.)
+6nE --> En / X[p,t,b,d,f,s,v,z,m,n,l,r] ___ # : 0—0.00%
+local conditional entropy: -0.0
+-----
+class 23 ( savE ~ sE ):  1 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+vE --> [] / X[j,r,i,E,a] ___ # : 0—0.00%
+avE --> E / #s ___ # : 1—100.00% (savoir, etc.)
+local conditional entropy: -0.0
+-----
+class 24 ( mêt6nE ~ mêtjê ):  28 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+6nE --> jê / X[p,t,b,d,f,s,v,z] ___ # : 27—96.43% (maintenir, etc.)
+6nE --> En / X[p,t,b,d,f,s,v,z,m,n,l,r] ___ # : 1—3.57% (assener, etc.)
+local conditional entropy: 0.22228483068568797
+-----
+class 25 ( êtErôpE ~ êtErô ):  5 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 2—40.00% (détromper, etc.)
+pE --> [] / Xrô ___ # : 3—60.00% (interrompre, etc.)
+local conditional entropy: 0.9709505944546686
+-----
+class 26 ( s6vrE ~ sEvr ):  1 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+6vrE --> Evr / #s ___ # : 1—100.00% (sevrer, etc.)
+local conditional entropy: -0.0
+-----
+class 27 ( liz6rE ~ lizEr ):  1 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+6rE --> Er / #liz ___ # : 1—100.00% (liserer, etc.)
+local conditional entropy: -0.0
+-----
+class 28 ( muvE ~ m6 ):  2 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+uvE --> 6 / Xm ___ # : 2—100.00% (mouvoir, etc.)
+local conditional entropy: -0.0
+-----
+class 29 ( kr6vE ~ krEv ):  14 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 1—7.14% (abreuver, etc.)
+6vE --> Ev / X[f,s,S,v,z,Z,l,r] ___ # : 13—92.86% (crever, etc.)
+local conditional entropy: 0.37123232664087563
+-----
+class 30 ( dEp6sE ~ dEpEs ):  2 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+6sE --> Es / X[d,l][E,a][p,b,m] ___ # : 2—100.00% (dépecer, etc.)
+local conditional entropy: -0.0
+-----
+class 31 ( tarodE ~ tarod ):  102 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 52—50.98% (tarauder, etc.)
+dE --> [] / X[p,t,b,d,f,s,v,z,r,E,6,o][r,o,â,ô] ___ # : 50—49.02% (refondre, etc.)
+local conditional entropy: 0.9997226475394072
+-----
+class 32 ( âtrapErs6vE ~ âtrapErswa ):  7 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+6vE --> wa / X[t,d,s,z] ___ # : 7—100.00% (entrapercevoir, etc.)
+6vE --> Ev / X[f,s,S,v,z,Z,l,r] ___ # : 0—0.00%
+local conditional entropy: -0.0
+-----
+class 33 ( âtEtE ~ âtEt ):  324 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 281—86.73% (entêter, etc.)
+tE --> [] / X[r,E,a,ê,â] ___ # : 43—13.27% (rebattre, etc.)
+local conditional entropy: 0.5648401867294691
+-----
+class 34 ( f6zE ~ fE ):  8 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+zE --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,u,o] ___ # : 0—0.00%
+6zE --> E / Xf ___ # : 8—100.00% (faire, etc.)
+local conditional entropy: -0.0
+-----
+class 35 ( d6vE ~ dwa ):  2 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+6vE --> wa / X[t,d,s,z] ___ # : 2—100.00% (devoir, etc.)
+local conditional entropy: -0.0
+-----
+class 36 ( r6volE ~ r6vol ):  3887 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 3887—100.00% (revoler, etc.)
+local conditional entropy: -0.0
+-----
+class 37 ( vêkE ~ vê ):  2 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+kE --> [] / Xvê ___ # : 2—100.00% (vaincre, etc.)
+local conditional entropy: -0.0
+-----
+class 38 ( ravalE ~ raval ):  9 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 5—55.56% (ravaler, etc.)
+alE --> o / Xv ___ # : 4—44.44% (prévaloir, etc.)
+local conditional entropy: 0.9910760598382222
+-----
+class 39 ( dEfis6lE ~ dEfisEl ):  86 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 6—6.98% (feuler, etc.)
+6lE --> El / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,r] ___ # : 80—93.02% (déficeler, etc.)
+local conditional entropy: 0.3650551896402848
+-----
+class 40 ( r6ZwaJE ~ r6Zwê ):  6 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+aJE --> ê / XZw ___ # : 6—100.00% (rejoindre, etc.)
+local conditional entropy: -0.0
+-----
+class 41 ( rEzolvE ~ rEzu ):  1 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+olvE --> u / #rEz ___ # : 1—100.00% (résoudre, etc.)
+local conditional entropy: -0.0
+-----
+class 42 ( âtr6aisE ~ âtr6E ):  1 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+sE --> [] / X[i,E,a] ___ # : 0—0.00%
+aisE --> E / #âtr6 ___ # : 1—100.00% (entre-haïr, etc.)
+local conditional entropy: -0.0
+-----
+class 43 ( syrs6mE ~ syrsEm ):  4 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+6mE --> Em / Xs ___ # : 4—100.00% (sursemer, etc.)
+local conditional entropy: -0.0
+-----
+class 44 ( p6zE ~ pEz ):  4 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+zE --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,u,o] ___ # : 0—0.00%
+6zE --> Ez / Xp ___ # : 4—100.00% (peser, etc.)
+local conditional entropy: -0.0
+-----
+conditional entropy for ipf.3 ==> prs.3 : 0.2405603846326787
+
+ 17% done
+***************************************
+***************************************
+***************************************
+        ipf.3 ==> inf
+***************************************
+Inferring rules...
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ #	5753
+sE --> r / Xi ___ #	336
+E --> r / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ #	92
+E --> ir / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][f,v,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r] ___ #	83
+sE --> tr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r,w,H][E,a] ___ #	18
+E --> war / X[i,y,E,6,a,u,o][v,z,l] ___ #	19
+zE --> r / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,E] ___ #	50
+jE --> r / X[j,r,w,H][i,E,a] ___ #	15
+6zE --> Er / Xf ___ #	8
+aJE --> êdr / XZw ___ #	6
+vE --> r / X[s,z,E]kri ___ #	12
+EJE --> êdr / X[p,t,k,b,d,g,f,s,S,v,z,Z,l,r] ___ #	22
+zE --> dr / Xku ___ #	3
+6nE --> âdr / Xpr ___ #	12
+jE --> ir / #sur ___ #	1
+lE --> dr / Xmu ___ #	3
+sE --> [] / #rôdi ___ #	1
+EjE --> war / Xas ___ #	2
+yvE --> war / #b ___ #	1
+ojE --> wir / # ___ #	1
+olvE --> udr / #rEz ___ #	1
+6nE --> EnE / #as ___ #	1
+done.
+
+class 1 ( âtEtE ~ âtEtE ):  2446 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 2323—94.97% (entêter, etc.)
+E --> r / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 82—3.35% (rebattre, etc.)
+E --> ir / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][f,v,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r] ___ # : 41—1.68% (enquérir, etc.)
+local conditional entropy: 0.3337889849620211
+-----
+class 2 ( r6ZwaJE ~ r6Zwêdr ):  6 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 0—0.00%
+E --> ir / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][f,v,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r] ___ # : 0—0.00%
+aJE --> êdr / XZw ___ # : 6—100.00% (rejoindre, etc.)
+local conditional entropy: -0.0
+-----
+class 3 ( proskrivE ~ proskrir ):  12 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 0—0.00%
+E --> r / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+E --> ir / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][f,v,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r] ___ # : 0—0.00%
+E --> war / X[i,y,E,6,a,u,o][v,z,l] ___ # : 0—0.00%
+vE --> r / X[s,z,E]kri ___ # : 12—100.00% (proscrire, etc.)
+local conditional entropy: -0.0
+-----
+class 4 ( dESifonE ~ dESifonE ):  999 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 957—95.80% (déchiffonner, etc.)
+E --> ir / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][f,v,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r] ___ # : 42—4.20% (redormir, etc.)
+local conditional entropy: 0.2515777883931848
+-----
+class 5 ( r6volE ~ r6volE ):  397 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 391—98.49% (revoler, etc.)
+E --> war / X[i,y,E,6,a,u,o][v,z,l] ___ # : 6—1.51% (vouloir, etc.)
+local conditional entropy: 0.11304438920466645
+-----
+class 6 ( vrijE ~ vrijE ):  129 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 114—88.37% (vriller, etc.)
+E --> r / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+E --> ir / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][f,v,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r] ___ # : 0—0.00%
+jE --> r / X[j,r,w,H][i,E,a] ___ # : 15—11.63% (rasseoir, etc.)
+local conditional entropy: 0.5185697317883058
+-----
+class 7 ( f6zE ~ fEr ):  8 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 0—0.00%
+E --> r / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+E --> ir / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][f,v,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r] ___ # : 0—0.00%
+E --> war / X[i,y,E,6,a,u,o][v,z,l] ___ # : 0—0.00%
+6zE --> Er / Xf ___ # : 8—100.00% (faire, etc.)
+local conditional entropy: -0.0
+-----
+class 8 ( rEzolvE ~ rEzudr ):  1 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 0—0.00%
+E --> r / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+olvE --> udr / #rEz ___ # : 1—100.00% (résoudre, etc.)
+local conditional entropy: -0.0
+-----
+class 9 ( blazE ~ blazE ):  34 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 33—97.06% (blaser, etc.)
+E --> r / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+E --> war / X[i,y,E,6,a,u,o][v,z,l] ___ # : 1—2.94% (avoir, etc.)
+local conditional entropy: 0.19143325481419346
+-----
+class 10 ( EmulE ~ Emudr ):  8 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 5—62.50% (vermouler, etc.)
+E --> war / X[i,y,E,6,a,u,o][v,z,l] ___ # : 0—0.00%
+lE --> dr / Xmu ___ # : 3—37.50% (émoudre, etc.)
+local conditional entropy: 0.9544340029249649
+-----
+class 11 ( ojE ~ wir ):  1 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 0—0.00%
+E --> r / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+ojE --> wir / # ___ # : 1—100.00% (ouïr, etc.)
+local conditional entropy: -0.0
+-----
+class 12 ( as6nE ~ asEnE ):  1 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 0—0.00%
+E --> ir / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][f,v,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r] ___ # : 0—0.00%
+6nE --> EnE / #as ___ # : 1—100.00% (assener, etc.)
+local conditional entropy: -0.0
+-----
+class 13 ( byvE ~ bwar ):  1 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 0—0.00%
+E --> r / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+E --> ir / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][f,v,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r] ___ # : 0—0.00%
+E --> war / X[i,y,E,6,a,u,o][v,z,l] ___ # : 0—0.00%
+yvE --> war / #b ___ # : 1—100.00% (boire, etc.)
+local conditional entropy: -0.0
+-----
+class 14 ( kalotE ~ kalotE ):  465 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 460—98.92% (calotter, etc.)
+E --> r / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 5—1.08% (inclure, etc.)
+local conditional entropy: 0.08574268253550252
+-----
+class 15 ( sorisE ~ sorir ):  335 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 30—8.96% (immiscer, etc.)
+sE --> r / Xi ___ # : 305—91.04% (saurir, etc.)
+E --> r / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+E --> ir / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][f,v,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r] ___ # : 0—0.00%
+local conditional entropy: 0.4349734800747426
+-----
+class 16 ( kuzE ~ kudr ):  3 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 0—0.00%
+E --> r / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+E --> ir / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][f,v,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r] ___ # : 0—0.00%
+E --> war / X[i,y,E,6,a,u,o][v,z,l] ___ # : 0—0.00%
+zE --> dr / Xku ___ # : 3—100.00% (coudre, etc.)
+local conditional entropy: -0.0
+-----
+class 17 ( surjE ~ surir ):  1 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 0—0.00%
+E --> r / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+E --> ir / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][f,v,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r] ___ # : 0—0.00%
+jE --> ir / #sur ___ # : 1—100.00% (sourire, etc.)
+local conditional entropy: -0.0
+-----
+class 18 ( trâsvazE ~ trâsvazE ):  299 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 282—94.31% (transvaser, etc.)
+E --> r / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 5—1.67% (suivre, etc.)
+E --> ir / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][f,v,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r] ___ # : 0—0.00%
+E --> war / X[i,y,E,6,a,u,o][v,z,l] ___ # : 12—4.01% (entrapercevoir, etc.)
+local conditional entropy: 0.36452785526984255
+-----
+class 19 ( syrbEsE ~ syrbEsE ):  126 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 108—85.71% (surbaisser, etc.)
+E --> r / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+E --> ir / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][f,v,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r] ___ # : 0—0.00%
+sE --> tr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r,w,H][E,a] ___ # : 18—14.29% (reconnaître, etc.)
+local conditional entropy: 0.5916727785823275
+-----
+class 20 ( dElEstE ~ dElEstE ):  619 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 619—100.00% (délester, etc.)
+local conditional entropy: -0.0
+-----
+class 21 ( syrpr6nE ~ syrprâdr ):  12 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 0—0.00%
+E --> ir / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][f,v,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r] ___ # : 0—0.00%
+6nE --> âdr / Xpr ___ # : 12—100.00% (surprendre, etc.)
+local conditional entropy: -0.0
+-----
+class 22 ( ravilisE ~ ravilir ):  44 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 13—29.55% (coulisser, etc.)
+sE --> r / Xi ___ # : 31—70.45% (ravilir, etc.)
+E --> r / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+local conditional entropy: 0.8756633923230397
+-----
+class 23 ( plEJE ~ plêdr ):  1 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 0—0.00%
+EJE --> êdr / X[p,t,k,b,d,g,f,s,S,v,z,Z,l,r] ___ # : 1—100.00% (plaindre, etc.)
+local conditional entropy: -0.0
+-----
+class 24 ( rôdisE ~ rôdi ):  1 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 0—0.00%
+sE --> r / Xi ___ # : 0—0.00%
+E --> r / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+E --> ir / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][f,v,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r] ___ # : 0—0.00%
+sE --> [] / #rôdi ___ # : 1—100.00% (rondir, etc.)
+local conditional entropy: -0.0
+-----
+class 25 ( madrigalizE ~ madrigalizE ):  190 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 183—96.32% (madrigaliser, etc.)
+E --> r / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+E --> war / X[i,y,E,6,a,u,o][v,z,l] ___ # : 0—0.00%
+zE --> r / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,E] ___ # : 7—3.68% (relire, etc.)
+local conditional entropy: 0.22762110906577415
+-----
+class 26 ( slavizE ~ slavizE ):  264 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 221—83.71% (slaviser, etc.)
+E --> r / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+E --> ir / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][f,v,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r] ___ # : 0—0.00%
+E --> war / X[i,y,E,6,a,u,o][v,z,l] ___ # : 0—0.00%
+zE --> r / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,E] ___ # : 43—16.29% (retraduire, etc.)
+local conditional entropy: 0.641152263003542
+-----
+class 27 ( râsEJE ~ râsEJE ):  34 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 13—38.24% (renseigner, etc.)
+E --> ir / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][f,v,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r] ___ # : 0—0.00%
+EJE --> êdr / X[p,t,k,b,d,g,f,s,S,v,z,Z,l,r] ___ # : 21—61.76% (rétreindre, etc.)
+local conditional entropy: 0.9596868937742169
+-----
+class 28 ( grasEjE ~ grasEjE ):  3 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 1—33.33% (grasseyer, etc.)
+E --> r / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+E --> ir / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][f,v,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r] ___ # : 0—0.00%
+EjE --> war / Xas ___ # : 2—66.67% (rasseoir_2, etc.)
+local conditional entropy: 0.9182958340544896
+-----
+conditional entropy for ipf.3 ==> inf : 0.28715047977688796
+
+ 33% done
+***************************************
+***************************************
+***************************************
+        prs.3 ==> ipf.3
+***************************************
+Inferring rules...
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ #	5237
+[] --> sE / X[i,E,a] ___ #	353
+[] --> tE / X[r,E,a,ê,â] ___ #	43
+El --> 6lE / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,r] ___ #	80
+jEr --> ErE / X[E,6,a,o,ê,û,â,ô]k ___ #	5
+[] --> dE / X[p,t,b,d,f,s,v,z,r,E,6,o][r,o,â,ô] ___ #	50
+[] --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,a,u,o] ___ #	101
+i --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,l,r] ___ #	263
+wa --> 6vE / X[t,d,s,z] ___ #	9
+Es --> 6sE / X[d,l][E,a][p,b,m] ___ #	2
+[] --> zE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,u,o] ___ #	53
+E --> 6zE / Xf ___ #	8
+ê --> aJE / XZw ___ #	6
+[] --> pE / Xrô ___ #	3
+[] --> mE / X[p,t,b,d,f,s,v,z]or ___ #	5
+Et --> 6tE / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r] ___ #	72
+[] --> vE / X[j,r,i,E,a] ___ #	21
+pt --> tE / X[d,z][â,ô] ___ #	2
+ê --> EJE / X[p,t,k,b,d,g,f,s,S,v,z,Z,l,r] ___ #	22
+Ev --> 6vE / X[f,s,S,v,z,Z,l,r] ___ #	13
+6r --> urE / #m ___ #	1
+jê --> 6nE / X[p,t,b,d,f,s,v,z] ___ #	27
+â --> 6nE / Xpr ___ #	12
+6 --> uvE / Xm ___ #	2
+En --> 6nE / X[p,t,b,d,f,s,v,z,m,n,l,r] ___ #	19
+Em --> 6mE / Xs ___ #	4
+[] --> lE / Xmu ___ #	3
+o --> alE / Xv ___ #	4
+E --> aisE / #âtr6 ___ #	1
+E --> avE / #s ___ #	1
+6 --> ulE / Xv ___ #	2
+Ez --> 6zE / Xp ___ #	4
+Er --> 6rE / #liz ___ #	1
+E --> aisE / # ___ #	1
+jE --> EjE / Xas ___ #	2
+wa --> yvE / #b ___ #	1
+va --> alE / # ___ #	1
+[] --> kE / Xvê ___ #	2
+wa --> ojE / # ___ #	1
+u --> olvE / #rEz ___ #	1
+Evr --> 6vrE / #s ___ #	1
+Ep --> 6pE / #r6s ___ #	1
+done.
+
+class 1 ( r6ba ~ r6batE ):  61 members  points
+[] --> sE / X[i,E,a] ___ # : 4—6.56% (recroître, etc.)
+[] --> tE / X[r,E,a,ê,â] ___ # : 11—18.03% (rebattre, etc.)
+[] --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,a,u,o] ___ # : 46—75.41% (larmoyer, etc.)
+[] --> vE / X[j,r,i,E,a] ___ # : 0—0.00%
+local conditional entropy: 1.01044884930661
+-----
+class 2 ( prEvo ~ prEvalE ):  4 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> dE / X[p,t,b,d,f,s,v,z,r,E,6,o][r,o,â,ô] ___ # : 0—0.00%
+[] --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,a,u,o] ___ # : 0—0.00%
+[] --> zE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,u,o] ___ # : 0—0.00%
+o --> alE / Xv ___ # : 4—100.00% (prévaloir, etc.)
+local conditional entropy: -0.0
+-----
+class 3 ( Esor ~ EsorE ):  36 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 25—69.44% (essorer, etc.)
+[] --> tE / X[r,E,a,ê,â] ___ # : 2—5.56% (ressortir, etc.)
+[] --> dE / X[p,t,b,d,f,s,v,z,r,E,6,o][r,o,â,ô] ___ # : 4—11.11% (distordre, etc.)
+[] --> mE / X[p,t,b,d,f,s,v,z]or ___ # : 5—13.89% (redormir, etc.)
+[] --> vE / X[j,r,i,E,a] ___ # : 0—0.00%
+local conditional entropy: 1.344757078697731
+-----
+class 4 ( syrsEm ~ syrs6mE ):  5 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 1—20.00% (essaimer, etc.)
+Em --> 6mE / Xs ___ # : 4—80.00% (sursemer, etc.)
+local conditional entropy: 0.7219280948873623
+-----
+class 5 ( âtEt ~ âtEtE ):  129 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 57—44.19% (entêter, etc.)
+Et --> 6tE / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r] ___ # : 72—55.81% (jarreter, etc.)
+local conditional entropy: 0.9902246902198684
+-----
+class 6 ( bwa ~ byvE ):  1 members  points
+[] --> sE / X[i,E,a] ___ # : 0—0.00%
+[] --> tE / X[r,E,a,ê,â] ___ # : 0—0.00%
+[] --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,a,u,o] ___ # : 0—0.00%
+[] --> vE / X[j,r,i,E,a] ___ # : 0—0.00%
+wa --> yvE / #b ___ # : 1—100.00% (boire, etc.)
+local conditional entropy: -0.0
+-----
+class 7 ( sori ~ sorisE ):  576 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> sE / X[i,E,a] ___ # : 270—46.88% (saurir, etc.)
+[] --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,a,u,o] ___ # : 24—4.17% (rapatrier, etc.)
+i --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,l,r] ___ # : 252—43.75% (colorier, etc.)
+[] --> zE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,u,o] ___ # : 15—2.60% (relire, etc.)
+[] --> vE / X[j,r,i,E,a] ___ # : 15—2.60% (proscrire, etc.)
+local conditional entropy: 1.4993337344088635
+-----
+class 8 ( r6vol ~ r6volE ):  4194 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 4194—100.00% (revoler, etc.)
+local conditional entropy: -0.0
+-----
+class 9 ( r6konE ~ r6konEsE ):  22 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 1—4.55% (délinéer, etc.)
+[] --> sE / X[i,E,a] ___ # : 5—22.73% (reconnaître, etc.)
+[] --> tE / X[r,E,a,ê,â] ___ # : 16—72.73% (permettre, etc.)
+[] --> vE / X[j,r,i,E,a] ___ # : 0—0.00%
+local conditional entropy: 1.0226297788901695
+-----
+class 10 ( rE ~ rEE ):  35 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 19—54.29% (réer, etc.)
+[] --> sE / X[i,E,a] ___ # : 9—25.71% (réapparaître, etc.)
+[] --> tE / X[r,E,a,ê,â] ___ # : 3—8.57% (vêtir, etc.)
+[] --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,a,u,o] ___ # : 0—0.00%
+[] --> zE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,u,o] ___ # : 4—11.43% (taire, etc.)
+[] --> vE / X[j,r,i,E,a] ___ # : 0—0.00%
+local conditional entropy: 1.643716294928612
+-----
+class 11 ( m6 ~ muvE ):  2 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+6 --> uvE / Xm ___ # : 2—100.00% (mouvoir, etc.)
+local conditional entropy: -0.0
+-----
+class 12 ( vrij ~ vrijE ):  267 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 267—100.00% (vriller, etc.)
+[] --> vE / X[j,r,i,E,a] ___ # : 0—0.00%
+local conditional entropy: -0.0
+-----
+class 13 ( rasjE ~ rasEjE ):  2 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> sE / X[i,E,a] ___ # : 0—0.00%
+[] --> tE / X[r,E,a,ê,â] ___ # : 0—0.00%
+[] --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,a,u,o] ___ # : 0—0.00%
+[] --> zE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,u,o] ___ # : 0—0.00%
+[] --> vE / X[j,r,i,E,a] ___ # : 0—0.00%
+jE --> EjE / Xas ___ # : 2—100.00% (rasseoir_2, etc.)
+local conditional entropy: -0.0
+-----
+class 14 ( fE ~ f6zE ):  8 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> sE / X[i,E,a] ___ # : 0—0.00%
+[] --> tE / X[r,E,a,ê,â] ___ # : 0—0.00%
+[] --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,a,u,o] ___ # : 0—0.00%
+[] --> zE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,u,o] ___ # : 0—0.00%
+E --> 6zE / Xf ___ # : 8—100.00% (faire, etc.)
+[] --> vE / X[j,r,i,E,a] ___ # : 0—0.00%
+local conditional entropy: -0.0
+-----
+class 15 ( mEvâ ~ mEvâdE ):  34 members  points
+[] --> tE / X[r,E,a,ê,â] ___ # : 5—14.71% (ressentir, etc.)
+[] --> dE / X[p,t,b,d,f,s,v,z,r,E,6,o][r,o,â,ô] ___ # : 29—85.29% (mévendre, etc.)
+local conditional entropy: 0.6024308020404453
+-----
+class 16 ( pEn ~ pEnE ):  46 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 27—58.70% (peiner, etc.)
+En --> 6nE / X[p,t,b,d,f,s,v,z,m,n,l,r] ___ # : 19—41.30% (mener, etc.)
+local conditional entropy: 0.978070970973496
+-----
+class 17 ( vê ~ vêkE ):  2 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> tE / X[r,E,a,ê,â] ___ # : 0—0.00%
+ê --> EJE / X[p,t,k,b,d,g,f,s,S,v,z,Z,l,r] ___ # : 0—0.00%
+[] --> kE / Xvê ___ # : 2—100.00% (vaincre, etc.)
+local conditional entropy: -0.0
+-----
+class 18 ( rabru ~ rabruE ):  109 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 103—94.50% (rabrouer, etc.)
+[] --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,a,u,o] ___ # : 3—2.75% (bouillir, etc.)
+[] --> zE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,u,o] ___ # : 3—2.75% (coudre, etc.)
+local conditional entropy: 0.36250240455492244
+-----
+class 19 ( lizEr ~ lizErE ):  2 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 1—50.00% (lisérer, etc.)
+[] --> tE / X[r,E,a,ê,â] ___ # : 0—0.00%
+[] --> dE / X[p,t,b,d,f,s,v,z,r,E,6,o][r,o,â,ô] ___ # : 0—0.00%
+[] --> vE / X[j,r,i,E,a] ___ # : 0—0.00%
+Er --> 6rE / #liz ___ # : 1—50.00% (liserer, etc.)
+local conditional entropy: 1.0
+-----
+class 20 ( âkjEr ~ âkErE ):  5 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> tE / X[r,E,a,ê,â] ___ # : 0—0.00%
+jEr --> ErE / X[E,6,a,o,ê,û,â,ô]k ___ # : 5—100.00% (enquérir, etc.)
+[] --> dE / X[p,t,b,d,f,s,v,z,r,E,6,o][r,o,â,ô] ___ # : 0—0.00%
+[] --> vE / X[j,r,i,E,a] ___ # : 0—0.00%
+local conditional entropy: -0.0
+-----
+class 21 ( r6Zwê ~ r6ZwaJE ):  6 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> tE / X[r,E,a,ê,â] ___ # : 0—0.00%
+ê --> aJE / XZw ___ # : 6—100.00% (rejoindre, etc.)
+local conditional entropy: -0.0
+-----
+class 22 ( v6 ~ vulE ):  2 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,a,u,o] ___ # : 0—0.00%
+[] --> zE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,u,o] ___ # : 0—0.00%
+6 --> ulE / Xv ___ # : 2—100.00% (vouloir, etc.)
+local conditional entropy: -0.0
+-----
+class 23 ( sE ~ savE ):  1 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> sE / X[i,E,a] ___ # : 0—0.00%
+[] --> tE / X[r,E,a,ê,â] ___ # : 0—0.00%
+[] --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,a,u,o] ___ # : 0—0.00%
+[] --> zE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,u,o] ___ # : 0—0.00%
+[] --> vE / X[j,r,i,E,a] ___ # : 0—0.00%
+E --> avE / #s ___ # : 1—100.00% (savoir, etc.)
+local conditional entropy: -0.0
+-----
+class 24 ( rEtrê ~ rEtrEJE ):  22 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> tE / X[r,E,a,ê,â] ___ # : 0—0.00%
+ê --> EJE / X[p,t,k,b,d,g,f,s,S,v,z,Z,l,r] ___ # : 22—100.00% (rétreindre, etc.)
+local conditional entropy: -0.0
+-----
+class 25 ( r6fô ~ r6fôdE ):  12 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> dE / X[p,t,b,d,f,s,v,z,r,E,6,o][r,o,â,ô] ___ # : 12—100.00% (refondre, etc.)
+local conditional entropy: -0.0
+-----
+class 26 ( a ~ avE ):  1 members  points
+[] --> sE / X[i,E,a] ___ # : 0—0.00%
+[] --> tE / X[r,E,a,ê,â] ___ # : 0—0.00%
+[] --> vE / X[j,r,i,E,a] ___ # : 1—100.00% (avoir, etc.)
+local conditional entropy: -0.0
+-----
+class 27 ( r6bEl ~ r6bElE ):  106 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 26—24.53% (rebeller, etc.)
+El --> 6lE / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,r] ___ # : 80—75.47% (déficeler, etc.)
+local conditional entropy: 0.8037159237834124
+-----
+class 28 ( krEv ~ kr6vE ):  14 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 1—7.14% (rêver, etc.)
+Ev --> 6vE / X[f,s,S,v,z,Z,l,r] ___ # : 13—92.86% (crever, etc.)
+local conditional entropy: 0.37123232664087563
+-----
+class 29 ( m6r ~ murE ):  1 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> tE / X[r,E,a,ê,â] ___ # : 0—0.00%
+[] --> dE / X[p,t,b,d,f,s,v,z,r,E,6,o][r,o,â,ô] ___ # : 0—0.00%
+[] --> vE / X[j,r,i,E,a] ___ # : 0—0.00%
+6r --> urE / #m ___ # : 1—100.00% (mourir, etc.)
+local conditional entropy: -0.0
+-----
+class 30 ( dEpEs ~ dEp6sE ):  2 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+Es --> 6sE / X[d,l][E,a][p,b,m] ___ # : 2—100.00% (dépecer, etc.)
+local conditional entropy: -0.0
+-----
+class 31 ( Emu ~ EmulE ):  3 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> lE / Xmu ___ # : 3—100.00% (émoudre, etc.)
+local conditional entropy: -0.0
+-----
+class 32 ( raswa ~ raswajE ):  29 members  points
+[] --> sE / X[i,E,a] ___ # : 0—0.00%
+[] --> tE / X[r,E,a,ê,â] ___ # : 0—0.00%
+[] --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,a,u,o] ___ # : 20—68.97% (rasseoir, etc.)
+wa --> 6vE / X[t,d,s,z] ___ # : 9—31.03% (entrapercevoir, etc.)
+[] --> vE / X[j,r,i,E,a] ___ # : 0—0.00%
+local conditional entropy: 0.8935711016541907
+-----
+class 33 ( kalomni ~ kalomnjE ):  54 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> sE / X[i,E,a] ___ # : 43—79.63% (honnir, etc.)
+i --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,l,r] ___ # : 11—20.37% (calomnier, etc.)
+[] --> vE / X[j,r,i,E,a] ___ # : 0—0.00%
+local conditional entropy: 0.7292739418449411
+-----
+class 34 ( dôpt ~ dôtE ):  2 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+pt --> tE / X[d,z][â,ô] ___ # : 2—100.00% (dompter, etc.)
+local conditional entropy: -0.0
+-----
+class 35 ( mêtjê ~ mêt6nE ):  27 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> tE / X[r,E,a,ê,â] ___ # : 0—0.00%
+jê --> 6nE / X[p,t,b,d,f,s,v,z] ___ # : 27—100.00% (maintenir, etc.)
+local conditional entropy: -0.0
+-----
+class 36 ( syrprâ ~ syrpr6nE ):  12 members  points
+[] --> tE / X[r,E,a,ê,â] ___ # : 0—0.00%
+[] --> dE / X[p,t,b,d,f,s,v,z,r,E,6,o][r,o,â,ô] ___ # : 0—0.00%
+â --> 6nE / Xpr ___ # : 12—100.00% (surprendre, etc.)
+local conditional entropy: -0.0
+-----
+class 37 ( rEZui ~ rEZuisE ):  16 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> sE / X[i,E,a] ___ # : 16—100.00% (réjouir, etc.)
+[] --> vE / X[j,r,i,E,a] ___ # : 0—0.00%
+local conditional entropy: -0.0
+-----
+class 38 ( E ~ aisE ):  2 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> sE / X[i,E,a] ___ # : 0—0.00%
+[] --> tE / X[r,E,a,ê,â] ___ # : 1—50.00% (être, etc.)
+[] --> vE / X[j,r,i,E,a] ___ # : 0—0.00%
+E --> aisE / # ___ # : 1—50.00% (haïr, etc.)
+local conditional entropy: 1.0
+-----
+class 39 ( apEz ~ apEzE ):  5 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 1—20.00% (apaiser, etc.)
+Ez --> 6zE / Xp ___ # : 4—80.00% (peser, etc.)
+local conditional entropy: 0.7219280948873623
+-----
+class 40 ( rEzu ~ rEzolvE ):  1 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,a,u,o] ___ # : 0—0.00%
+[] --> zE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,u,o] ___ # : 0—0.00%
+u --> olvE / #rEz ___ # : 1—100.00% (résoudre, etc.)
+local conditional entropy: -0.0
+-----
+class 41 ( manjEr ~ manjErE ):  320 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 312—97.50% (maniérer, etc.)
+[] --> tE / X[r,E,a,ê,â] ___ # : 0—0.00%
+[] --> dE / X[p,t,b,d,f,s,v,z,r,E,6,o][r,o,â,ô] ___ # : 5—1.56% (reperdre, etc.)
+[] --> vE / X[j,r,i,E,a] ___ # : 3—0.94% (resservir, etc.)
+local conditional entropy: 0.19252178156979435
+-----
+class 42 ( êtErô ~ êtErôpE ):  3 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> dE / X[p,t,b,d,f,s,v,z,r,E,6,o][r,o,â,ô] ___ # : 0—0.00%
+[] --> pE / Xrô ___ # : 3—100.00% (interrompre, etc.)
+local conditional entropy: -0.0
+-----
+class 43 ( wa ~ ojE ):  1 members  points
+[] --> sE / X[i,E,a] ___ # : 0—0.00%
+[] --> tE / X[r,E,a,ê,â] ___ # : 0—0.00%
+[] --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,a,u,o] ___ # : 0—0.00%
+[] --> vE / X[j,r,i,E,a] ___ # : 0—0.00%
+wa --> ojE / # ___ # : 1—100.00% (ouïr, etc.)
+local conditional entropy: -0.0
+-----
+class 44 ( aZur ~ aZurE ):  204 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 201—98.53% (ajourer, etc.)
+[] --> tE / X[r,E,a,ê,â] ___ # : 3—1.47% (repartir, etc.)
+[] --> vE / X[j,r,i,E,a] ___ # : 0—0.00%
+local conditional entropy: 0.11058084476988708
+-----
+class 45 ( r6sEp ~ r6s6pE ):  2 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 1—50.00% (recéper, etc.)
+Ep --> 6pE / #r6s ___ # : 1—50.00% (receper, etc.)
+local conditional entropy: 1.0
+-----
+class 46 ( va ~ alE ):  1 members  points
+[] --> sE / X[i,E,a] ___ # : 0—0.00%
+[] --> tE / X[r,E,a,ê,â] ___ # : 0—0.00%
+[] --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,a,u,o] ___ # : 0—0.00%
+[] --> vE / X[j,r,i,E,a] ___ # : 0—0.00%
+va --> alE / # ___ # : 1—100.00% (aller, etc.)
+local conditional entropy: -0.0
+-----
+class 47 ( âtr6E ~ âtr6aisE ):  1 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> sE / X[i,E,a] ___ # : 0—0.00%
+[] --> tE / X[r,E,a,ê,â] ___ # : 0—0.00%
+[] --> vE / X[j,r,i,E,a] ___ # : 0—0.00%
+E --> aisE / #âtr6 ___ # : 1—100.00% (entre-haïr, etc.)
+local conditional entropy: -0.0
+-----
+class 48 ( dEmâ ~ dEmâtE ):  2 members  points
+[] --> tE / X[r,E,a,ê,â] ___ # : 2—100.00% (démentir, etc.)
+local conditional entropy: -0.0
+-----
+class 49 ( r6tradHi ~ r6tradHizE ):  47 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> sE / X[i,E,a] ___ # : 6—12.77% (amuïr, etc.)
+[] --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,a,u,o] ___ # : 8—17.02% (ressuyer, etc.)
+[] --> zE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,y,E,6,u,o] ___ # : 31—65.96% (retraduire, etc.)
+[] --> vE / X[j,r,i,E,a] ___ # : 2—4.26% (suivre, etc.)
+local conditional entropy: 1.4037407532452955
+-----
+class 50 ( sEvr ~ s6vrE ):  1 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> tE / X[r,E,a,ê,â] ___ # : 0—0.00%
+[] --> dE / X[p,t,b,d,f,s,v,z,r,E,6,o][r,o,â,ô] ___ # : 0—0.00%
+[] --> vE / X[j,r,i,E,a] ___ # : 0—0.00%
+Evr --> 6vrE / #s ___ # : 1—100.00% (sevrer, etc.)
+local conditional entropy: -0.0
+-----
+conditional entropy for prs.3 ==> ipf.3 : 0.2492957304776124
+
+ 50% done
+
+ 50% done
+***************************************
+***************************************
+***************************************
+        prs.3 ==> inf
+***************************************
+Inferring rules...
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ #	5210
+[] --> r / X[i,y,E,6,a,u,o] ___ #	425
+[] --> tr / X[E,a] ___ #	46
+El --> 6lE / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,r] ___ #	80
+jEr --> Erir / X[E,6,a,o,ê,û,â,ô]k ___ #	5
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ #	97
+[] --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,l,r][p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,E,a] ___ #	83
+i --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,l,r] ___ #	262
+wa --> 6vwar / X[t,d,s,z] ___ #	9
+Es --> 6sE / X[d,l][E,a][p,b,m] ___ #	2
+[] --> pr / Xrô ___ #	3
+[] --> mir / X[p,t,b,d,f,s,v,z]or ___ #	5
+Et --> 6tE / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r] ___ #	72
+[] --> ir / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o][f,v,j,r,w,H,i,y,E,6,a,u,o][j,r] ___ #	24
+pt --> tE / X[d,z][â,ô] ___ #	2
+Ev --> 6vE / X[f,s,S,v,z,Z,l,r] ___ #	13
+[] --> tir / X[p,t,b,d,f,s,v,z,m,n,r,E,6,a,o,ê,û,â,ô][r,E,a,ê,â] ___ #	15
+6r --> urir / #m ___ #	1
+[] --> vr / X[v,j,r,w,H]i ___ #	5
+jê --> 6nir / X[p,t,b,d,f,s,v,z] ___ #	27
+6 --> uvwar / Xm ___ #	2
+En --> 6nE / X[m,n,l,r] ___ #	18
+Em --> 6mE / Xs ___ #	4
+[] --> [] / #rôdi ___ #	1
+o --> alwar / Xv ___ #	4
+[] --> vir / XsEr ___ #	3
+[] --> jir / Xbu ___ #	3
+E --> air / #âtr6 ___ #	1
+E --> avwar / #s ___ #	1
+6 --> ulwar / Xv ___ #	2
+Ez --> 6zE / Xp ___ #	4
+Er --> 6rE / #liz ___ #	1
+E --> air / # ___ #	1
+[] --> vwar / #a ___ #	1
+jE --> war / Xas ___ #	2
+va --> alE / # ___ #	1
+[] --> kr / Xvê ___ #	2
+a --> ir / #w ___ #	1
+Evr --> 6vrE / #s ___ #	1
+Ep --> 6pE / #r6s ___ #	1
+done.
+
+class 1 ( sori ~ sorir ):  59 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> r / X[i,y,E,6,a,u,o] ___ # : 32—54.24% (saurir, etc.)
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+i --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,l,r] ___ # : 25—42.37% (colorier, etc.)
+[] --> vr / X[v,j,r,w,H]i ___ # : 2—3.39% (revivre, etc.)
+local conditional entropy: 1.1691446638640766
+-----
+class 2 ( rabru ~ rabruE ):  129 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 115—89.15% (rabrouer, etc.)
+[] --> r / X[i,y,E,6,a,u,o] ___ # : 7—5.43% (inclure, etc.)
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 7—5.43% (coudre, etc.)
+local conditional entropy: 0.603984427768916
+-----
+class 3 ( rapatri ~ rapatrijE ):  39 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> r / X[i,y,E,6,a,u,o] ___ # : 25—64.10% (proscrire, etc.)
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+[] --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,l,r][p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,E,a] ___ # : 12—30.77% (rapatrier, etc.)
+i --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,l,r] ___ # : 1—2.56% (obvier, etc.)
+[] --> vr / X[v,j,r,w,H]i ___ # : 1—2.56% (survivre, etc.)
+local conditional entropy: 1.2055059431437356
+-----
+class 4 ( mEvâ ~ mEvâdr ):  48 members  points
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 41—85.42% (mévendre, etc.)
+[] --> tir / X[p,t,b,d,f,s,v,z,m,n,r,E,6,a,o,ê,û,â,ô][r,E,a,ê,â] ___ # : 7—14.58% (ressentir, etc.)
+local conditional entropy: 0.5993142373098092
+-----
+class 5 ( syrsEm ~ syrs6mE ):  5 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 1—20.00% (essaimer, etc.)
+Em --> 6mE / Xs ___ # : 4—80.00% (sursemer, etc.)
+local conditional entropy: 0.7219280948873623
+-----
+class 6 ( âtEt ~ âtEtE ):  129 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 57—44.19% (entêter, etc.)
+Et --> 6tE / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r] ___ # : 72—55.81% (jarreter, etc.)
+local conditional entropy: 0.9902246902198684
+-----
+class 7 ( r6krE ~ r6krEE ):  13 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 11—84.62% (recréer, etc.)
+[] --> r / X[i,y,E,6,a,u,o] ___ # : 2—15.38% (satisfaire, etc.)
+[] --> tr / X[E,a] ___ # : 0—0.00%
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+[] --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,l,r][p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,E,a] ___ # : 0—0.00%
+[] --> tir / X[p,t,b,d,f,s,v,z,m,n,r,E,6,a,o,ê,û,â,ô][r,E,a,ê,â] ___ # : 0—0.00%
+local conditional entropy: 0.6193821946787638
+-----
+class 8 ( r6bEl ~ r6bElE ):  106 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 26—24.53% (rebeller, etc.)
+El --> 6lE / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,r] ___ # : 80—75.47% (déficeler, etc.)
+local conditional entropy: 0.8037159237834124
+-----
+class 9 ( lizEr ~ lizErE ):  2 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 1—50.00% (lisérer, etc.)
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+[] --> ir / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o][f,v,j,r,w,H,i,y,E,6,a,u,o][j,r] ___ # : 0—0.00%
+[] --> tir / X[p,t,b,d,f,s,v,z,m,n,r,E,6,a,o,ê,û,â,ô][r,E,a,ê,â] ___ # : 0—0.00%
+Er --> 6rE / #liz ___ # : 1—50.00% (liserer, etc.)
+local conditional entropy: 1.0
+-----
+class 10 ( r6vol ~ r6volE ):  4224 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 4224—100.00% (revoler, etc.)
+local conditional entropy: -0.0
+-----
+class 11 ( êkarsEr ~ êkarsErE ):  18 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 15—83.33% (incarcérer, etc.)
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+[] --> ir / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o][f,v,j,r,w,H,i,y,E,6,a,u,o][j,r] ___ # : 0—0.00%
+[] --> tir / X[p,t,b,d,f,s,v,z,m,n,r,E,6,a,o,ê,û,â,ô][r,E,a,ê,â] ___ # : 0—0.00%
+[] --> vir / XsEr ___ # : 3—16.67% (resservir, etc.)
+local conditional entropy: 0.6500224216483541
+-----
+class 12 ( krEv ~ kr6vE ):  14 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 1—7.14% (rêver, etc.)
+Ev --> 6vE / X[f,s,S,v,z,Z,l,r] ___ # : 13—92.86% (crever, etc.)
+local conditional entropy: 0.37123232664087563
+-----
+class 13 ( bu ~ bujir ):  5 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 2—40.00% (embouer, etc.)
+[] --> r / X[i,y,E,6,a,u,o] ___ # : 0—0.00%
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+[] --> jir / Xbu ___ # : 3—60.00% (bouillir, etc.)
+local conditional entropy: 0.9709505944546686
+-----
+class 14 ( m6 ~ muvwar ):  2 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> r / X[i,y,E,6,a,u,o] ___ # : 0—0.00%
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+6 --> uvwar / Xm ___ # : 2—100.00% (mouvoir, etc.)
+local conditional entropy: -0.0
+-----
+class 15 ( v6 ~ vulwar ):  2 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> r / X[i,y,E,6,a,u,o] ___ # : 0—0.00%
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+6 --> ulwar / Xv ___ # : 2—100.00% (vouloir, etc.)
+local conditional entropy: -0.0
+-----
+class 16 ( êtErô ~ êtErôpr ):  3 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+[] --> pr / Xrô ___ # : 3—100.00% (interrompre, etc.)
+local conditional entropy: -0.0
+-----
+class 17 ( Samar ~ SamarE ):  8 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 8—100.00% (chamarrer, etc.)
+[] --> tir / X[p,t,b,d,f,s,v,z,m,n,r,E,6,a,o,ê,û,â,ô][r,E,a,ê,â] ___ # : 0—0.00%
+local conditional entropy: -0.0
+-----
+class 18 ( vê ~ vêkr ):  2 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+[] --> tir / X[p,t,b,d,f,s,v,z,m,n,r,E,6,a,o,ê,û,â,ô][r,E,a,ê,â] ___ # : 0—0.00%
+[] --> kr / Xvê ___ # : 2—100.00% (vaincre, etc.)
+local conditional entropy: -0.0
+-----
+class 19 ( mêtjê ~ mêt6nir ):  27 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+jê --> 6nir / X[p,t,b,d,f,s,v,z] ___ # : 27—100.00% (maintenir, etc.)
+local conditional entropy: -0.0
+-----
+class 20 ( r6fô ~ r6fôdr ):  50 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 30—60.00% (sommeiller, etc.)
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 20—40.00% (refondre, etc.)
+local conditional entropy: 0.9709505944546686
+-----
+class 21 ( wa ~ wir ):  1 members  points
+[] --> r / X[i,y,E,6,a,u,o] ___ # : 0—0.00%
+[] --> tr / X[E,a] ___ # : 0—0.00%
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+a --> ir / #w ___ # : 1—100.00% (ouïr, etc.)
+local conditional entropy: -0.0
+-----
+class 22 ( prEvo ~ prEvalwar ):  4 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> r / X[i,y,E,6,a,u,o] ___ # : 0—0.00%
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+o --> alwar / Xv ___ # : 4—100.00% (prévaloir, etc.)
+local conditional entropy: -0.0
+-----
+class 23 ( va ~ alE ):  1 members  points
+[] --> r / X[i,y,E,6,a,u,o] ___ # : 0—0.00%
+[] --> tr / X[E,a] ___ # : 0—0.00%
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+[] --> tir / X[p,t,b,d,f,s,v,z,m,n,r,E,6,a,o,ê,û,â,ô][r,E,a,ê,â] ___ # : 0—0.00%
+va --> alE / # ___ # : 1—100.00% (aller, etc.)
+local conditional entropy: -0.0
+-----
+class 24 ( raswa ~ raswar ):  29 members  points
+[] --> r / X[i,y,E,6,a,u,o] ___ # : 3—10.34% (rasseoir, etc.)
+[] --> tr / X[E,a] ___ # : 0—0.00%
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+[] --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,l,r][p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,E,a] ___ # : 17—58.62% (côtoyer, etc.)
+wa --> 6vwar / X[t,d,s,z] ___ # : 9—31.03% (entrapercevoir, etc.)
+local conditional entropy: 1.3141506221482602
+-----
+class 25 ( EgrEn ~ EgrEnE ):  40 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 22—55.00% (égrainer, etc.)
+En --> 6nE / X[m,n,l,r] ___ # : 18—45.00% (mener, etc.)
+local conditional entropy: 0.9927744539878084
+-----
+class 26 ( lystr ~ lystrE ):  189 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 166—87.83% (lustrer, etc.)
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 23—12.17% (rétreindre, etc.)
+[] --> tir / X[p,t,b,d,f,s,v,z,m,n,r,E,6,a,o,ê,û,â,ô][r,E,a,ê,â] ___ # : 0—0.00%
+local conditional entropy: 0.5342081882797987
+-----
+class 27 ( Esor ~ EsorE ):  36 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 25—69.44% (essorer, etc.)
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 4—11.11% (distordre, etc.)
+[] --> mir / X[p,t,b,d,f,s,v,z]or ___ # : 5—13.89% (redormir, etc.)
+[] --> ir / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o][f,v,j,r,w,H,i,y,E,6,a,u,o][j,r] ___ # : 0—0.00%
+[] --> tir / X[p,t,b,d,f,s,v,z,m,n,r,E,6,a,o,ê,û,â,ô][r,E,a,ê,â] ___ # : 2—5.56% (ressortir, etc.)
+local conditional entropy: 1.3447570786977312
+-----
+class 28 ( rEZui ~ rEZuir ):  15 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 2—13.33% (huer, etc.)
+[] --> r / X[i,y,E,6,a,u,o] ___ # : 13—86.67% (réjouir, etc.)
+local conditional entropy: 0.5665095065529053
+-----
+class 29 ( rasjE ~ raswar ):  2 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> r / X[i,y,E,6,a,u,o] ___ # : 0—0.00%
+[] --> tr / X[E,a] ___ # : 0—0.00%
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+[] --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,l,r][p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,E,a] ___ # : 0—0.00%
+jE --> war / Xas ___ # : 2—100.00% (rasseoir_2, etc.)
+local conditional entropy: -0.0
+-----
+class 30 ( aZur ~ aZurE ):  307 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 296—96.42% (ajourer, etc.)
+[] --> ir / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o][f,v,j,r,w,H,i,y,E,6,a,u,o][j,r] ___ # : 11—3.58% (discourir, etc.)
+local conditional entropy: 0.22283769868881326
+-----
+class 31 ( r6tradHi ~ r6tradHir ):  42 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> r / X[i,y,E,6,a,u,o] ___ # : 35—83.33% (retraduire, etc.)
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+[] --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,l,r][p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,E,a] ___ # : 5—11.90% (ressuyer, etc.)
+[] --> vr / X[v,j,r,w,H]i ___ # : 2—4.76% (suivre, etc.)
+local conditional entropy: 0.7938758497427927
+-----
+class 32 ( âtr6E ~ âtr6air ):  1 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> r / X[i,y,E,6,a,u,o] ___ # : 0—0.00%
+[] --> tr / X[E,a] ___ # : 0—0.00%
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+[] --> tir / X[p,t,b,d,f,s,v,z,m,n,r,E,6,a,o,ê,û,â,ô][r,E,a,ê,â] ___ # : 0—0.00%
+E --> air / #âtr6 ___ # : 1—100.00% (entre-haïr, etc.)
+local conditional entropy: -0.0
+-----
+class 33 ( sE ~ savwar ):  1 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> r / X[i,y,E,6,a,u,o] ___ # : 0—0.00%
+[] --> tr / X[E,a] ___ # : 0—0.00%
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+[] --> tir / X[p,t,b,d,f,s,v,z,m,n,r,E,6,a,o,ê,û,â,ô][r,E,a,ê,â] ___ # : 0—0.00%
+E --> avwar / #s ___ # : 1—100.00% (savoir, etc.)
+local conditional entropy: -0.0
+-----
+class 34 ( plE ~ plEr ):  6 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 3—50.00% (énucléer, etc.)
+[] --> r / X[i,y,E,6,a,u,o] ___ # : 3—50.00% (plaire, etc.)
+[] --> tr / X[E,a] ___ # : 0—0.00%
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+[] --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,l,r][p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,E,a] ___ # : 0—0.00%
+local conditional entropy: 1.0
+-----
+class 35 ( apEz ~ apEzE ):  5 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 1—20.00% (apaiser, etc.)
+Ez --> 6zE / Xp ___ # : 4—80.00% (peser, etc.)
+local conditional entropy: 0.7219280948873623
+-----
+class 36 ( a ~ avwar ):  1 members  points
+[] --> r / X[i,y,E,6,a,u,o] ___ # : 0—0.00%
+[] --> tr / X[E,a] ___ # : 0—0.00%
+[] --> vwar / #a ___ # : 1—100.00% (avoir, etc.)
+local conditional entropy: -0.0
+-----
+class 37 ( Zaji ~ Zajir ):  5 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> r / X[i,y,E,6,a,u,o] ___ # : 5—100.00% (jaillir, etc.)
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+[] --> vr / X[v,j,r,w,H]i ___ # : 0—0.00%
+local conditional entropy: -0.0
+-----
+class 38 ( dEpEs ~ dEp6sE ):  2 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+Es --> 6sE / X[d,l][E,a][p,b,m] ___ # : 2—100.00% (dépecer, etc.)
+local conditional entropy: -0.0
+-----
+class 39 ( urdi ~ urdir ):  97 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> r / X[i,y,E,6,a,u,o] ___ # : 77—79.38% (hourdir, etc.)
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+[] --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,l,r][p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,E,a] ___ # : 11—11.34% (publier, etc.)
+i --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,l,r] ___ # : 9—9.28% (amnistier, etc.)
+local conditional entropy: 0.9388238066046691
+-----
+class 40 ( r6ba ~ r6batr ):  11 members  points
+[] --> r / X[i,y,E,6,a,u,o] ___ # : 0—0.00%
+[] --> tr / X[E,a] ___ # : 11—100.00% (rebattre, etc.)
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+[] --> tir / X[p,t,b,d,f,s,v,z,m,n,r,E,6,a,o,ê,û,â,ô][r,E,a,ê,â] ___ # : 0—0.00%
+local conditional entropy: -0.0
+-----
+class 41 ( r6konE ~ r6konEtr ):  45 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 5—11.11% (réer, etc.)
+[] --> r / X[i,y,E,6,a,u,o] ___ # : 7—15.56% (faire, etc.)
+[] --> tr / X[E,a] ___ # : 30—66.67% (reconnaître, etc.)
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+[] --> tir / X[p,t,b,d,f,s,v,z,m,n,r,E,6,a,o,ê,û,â,ô][r,E,a,ê,â] ___ # : 3—6.67% (vêtir, etc.)
+local conditional entropy: 1.420236867457251
+-----
+class 42 ( gE ~ gEE ):  1 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 1—100.00% (guéer, etc.)
+[] --> r / X[i,y,E,6,a,u,o] ___ # : 0—0.00%
+[] --> tr / X[E,a] ___ # : 0—0.00%
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+local conditional entropy: -0.0
+-----
+class 43 ( fazEj ~ fazEjE ):  52 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 49—94.23% (faséyer, etc.)
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+[] --> ir / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o][f,v,j,r,w,H,i,y,E,6,a,u,o][j,r] ___ # : 3—5.77% (accueillir, etc.)
+local conditional entropy: 0.31821529768323314
+-----
+class 44 ( E ~ air ):  2 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> r / X[i,y,E,6,a,u,o] ___ # : 0—0.00%
+[] --> tr / X[E,a] ___ # : 1—50.00% (être, etc.)
+E --> air / # ___ # : 1—50.00% (haïr, etc.)
+local conditional entropy: 1.0
+-----
+class 45 ( dôpt ~ dôtE ):  2 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+pt --> tE / X[d,z][â,ô] ___ # : 2—100.00% (dompter, etc.)
+local conditional entropy: -0.0
+-----
+class 46 ( akapar ~ akaparE ):  30 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 27—90.00% (accaparer, etc.)
+[] --> ir / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o][f,v,j,r,w,H,i,y,E,6,a,u,o][j,r] ___ # : 0—0.00%
+[] --> tir / X[p,t,b,d,f,s,v,z,m,n,r,E,6,a,o,ê,û,â,ô][r,E,a,ê,â] ___ # : 3—10.00% (repartir, etc.)
+local conditional entropy: 0.4689955935892812
+-----
+class 47 ( manjEr ~ manjErE ):  133 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 121—90.98% (maniérer, etc.)
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 2—1.50% (reperdre, etc.)
+[] --> ir / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o][f,v,j,r,w,H,i,y,E,6,a,u,o][j,r] ___ # : 10—7.52% (rentrouvrir, etc.)
+[] --> tir / X[p,t,b,d,f,s,v,z,m,n,r,E,6,a,o,ê,û,â,ô][r,E,a,ê,â] ___ # : 0—0.00%
+local conditional entropy: 0.4958709117485614
+-----
+class 48 ( âkjEr ~ âkErir ):  5 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+jEr --> Erir / X[E,6,a,o,ê,û,â,ô]k ___ # : 5—100.00% (enquérir, etc.)
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+[] --> ir / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o][f,v,j,r,w,H,i,y,E,6,a,u,o][j,r] ___ # : 0—0.00%
+[] --> tir / X[p,t,b,d,f,s,v,z,m,n,r,E,6,a,o,ê,û,â,ô][r,E,a,ê,â] ___ # : 0—0.00%
+local conditional entropy: -0.0
+-----
+class 49 ( r6krwa ~ r6krwatr ):  51 members  points
+[] --> r / X[i,y,E,6,a,u,o] ___ # : 9—17.65% (croire, etc.)
+[] --> tr / X[E,a] ___ # : 4—7.84% (recroître, etc.)
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+[] --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,l,r][p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,E,a] ___ # : 38—74.51% (larmoyer, etc.)
+local conditional entropy: 1.0459435669942985
+-----
+class 50 ( sEvr ~ s6vrE ):  1 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+[] --> ir / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o][f,v,j,r,w,H,i,y,E,6,a,u,o][j,r] ___ # : 0—0.00%
+[] --> tir / X[p,t,b,d,f,s,v,z,m,n,r,E,6,a,o,ê,û,â,ô][r,E,a,ê,â] ___ # : 0—0.00%
+Evr --> 6vrE / #s ___ # : 1—100.00% (sevrer, etc.)
+local conditional entropy: -0.0
+-----
+class 51 ( r6sEp ~ r6s6pE ):  2 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 1—50.00% (recéper, etc.)
+Ep --> 6pE / #r6s ___ # : 1—50.00% (receper, etc.)
+local conditional entropy: 1.0
+-----
+class 52 ( dylsifi ~ dylsifjE ):  434 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> r / X[i,y,E,6,a,u,o] ___ # : 207—47.70% (brandir, etc.)
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+i --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,l,r] ___ # : 227—52.30% (dulcifier, etc.)
+local conditional entropy: 0.9984675761831936
+-----
+class 53 ( m6r ~ murir ):  1 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+[] --> tir / X[p,t,b,d,f,s,v,z,m,n,r,E,6,a,o,ê,û,â,ô][r,E,a,ê,â] ___ # : 0—0.00%
+6r --> urir / #m ___ # : 1—100.00% (mourir, etc.)
+local conditional entropy: -0.0
+-----
+class 54 ( rôdi ~ rôdi ):  1 members  points
+[] --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+[] --> r / X[i,y,E,6,a,u,o] ___ # : 0—0.00%
+[] --> dr / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 0—0.00%
+i --> jE / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,l,r] ___ # : 0—0.00%
+[] --> [] / #rôdi ___ # : 1—100.00% (rondir, etc.)
+local conditional entropy: -0.0
+-----
+conditional entropy for prs.3 ==> inf : 0.24982165621605235
+
+ 67% done
+***************************************
+***************************************
+***************************************
+        inf ==> ipf.3
+***************************************
+Inferring rules...
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ #	5753
+r --> sE / Xi ___ #	336
+r --> E / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ #	92
+ir --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][f,v,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r] ___ #	83
+tr --> sE / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r,w,H][E,a] ___ #	18
+war --> E / X[i,y,E,6,a,u,o][v,z,l] ___ #	19
+r --> zE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,E] ___ #	50
+r --> jE / X[j,r,w,H][i,E,a] ___ #	15
+Er --> 6zE / Xf ___ #	8
+êdr --> aJE / XZw ___ #	6
+r --> vE / X[s,z,E]kri ___ #	12
+êdr --> EJE / X[p,t,k,b,d,g,f,s,S,v,z,Z,l,r] ___ #	22
+dr --> zE / Xku ___ #	3
+âdr --> 6nE / Xpr ___ #	12
+ir --> jE / #sur ___ #	1
+dr --> lE / Xmu ___ #	3
+[] --> sE / #rôdi ___ #	1
+war --> EjE / Xas ___ #	2
+war --> yvE / #b ___ #	1
+wir --> ojE / # ___ #	1
+udr --> olvE / #rEz ___ #	1
+EnE --> 6nE / #as ___ #	1
+done.
+
+class 1 ( plEr ~ plEzE ):  3 members  points
+r --> E / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+r --> zE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,E] ___ # : 3—100.00% (plaire, etc.)
+local conditional entropy: -0.0
+-----
+class 2 ( r6batr ~ r6batE ):  45 members  points
+r --> E / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 27—60.00% (rebattre, etc.)
+tr --> sE / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r,w,H][E,a] ___ # : 18—40.00% (reconnaître, etc.)
+local conditional entropy: 0.9709505944546686
+-----
+class 3 ( r6tradHir ~ r6tradHizE ):  52 members  points
+r --> sE / Xi ___ # : 17—32.69% (amuïr, etc.)
+r --> E / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+r --> zE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,E] ___ # : 31—59.62% (retraduire, etc.)
+r --> jE / X[j,r,w,H][i,E,a] ___ # : 4—7.69% (rire, etc.)
+local conditional entropy: 1.2568444503863057
+-----
+class 4 ( r6Zwêdr ~ r6ZwaJE ):  6 members  points
+r --> E / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+êdr --> aJE / XZw ___ # : 6—100.00% (rejoindre, etc.)
+local conditional entropy: -0.0
+-----
+class 5 ( krwar ~ krwajE ):  6 members  points
+r --> jE / X[j,r,w,H][i,E,a] ___ # : 6—100.00% (croire, etc.)
+local conditional entropy: -0.0
+-----
+class 6 ( fEr ~ f6zE ):  8 members  points
+r --> zE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,E] ___ # : 0—0.00%
+Er --> 6zE / Xf ___ # : 8—100.00% (faire, etc.)
+local conditional entropy: -0.0
+-----
+class 7 ( r6fôdr ~ r6fôdE ):  65 members  points
+r --> E / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 65—100.00% (refondre, etc.)
+local conditional entropy: -0.0
+-----
+class 8 ( tEr ~ tEzE ):  1 members  points
+r --> zE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,E] ___ # : 1—100.00% (taire, etc.)
+local conditional entropy: -0.0
+-----
+class 9 ( sorir ~ sorisE ):  59 members  points
+r --> sE / Xi ___ # : 26—44.07% (saurir, etc.)
+r --> E / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+ir --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][f,v,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r] ___ # : 33—55.93% (enquérir, etc.)
+r --> zE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,E] ___ # : 0—0.00%
+r --> jE / X[j,r,w,H][i,E,a] ___ # : 0—0.00%
+local conditional entropy: 0.9898220559635811
+-----
+class 10 ( Emudr ~ EmulE ):  3 members  points
+r --> E / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+dr --> lE / Xmu ___ # : 3—100.00% (émoudre, etc.)
+local conditional entropy: -0.0
+-----
+class 11 ( brâdir ~ brâdisE ):  194 members  points
+r --> sE / Xi ___ # : 166—85.57% (brandir, etc.)
+ir --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][f,v,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r] ___ # : 18—9.28% (ressentir, etc.)
+r --> zE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,E] ___ # : 10—5.15% (redire, etc.)
+local conditional entropy: 0.7311784268344228
+-----
+class 12 ( bEnir ~ bEnisE ):  68 members  points
+r --> sE / Xi ___ # : 36—52.94% (bénir, etc.)
+r --> E / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+ir --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][f,v,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r] ___ # : 32—47.06% (redormir, etc.)
+local conditional entropy: 0.9975025463691153
+-----
+class 13 ( bwar ~ byvE ):  1 members  points
+r --> jE / X[j,r,w,H][i,E,a] ___ # : 0—0.00%
+war --> yvE / #b ___ # : 1—100.00% (boire, etc.)
+local conditional entropy: -0.0
+-----
+class 14 ( asEnE ~ asEnE ):  2 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 1—50.00% (asséner, etc.)
+EnE --> 6nE / #as ___ # : 1—50.00% (assener, etc.)
+local conditional entropy: 1.0
+-----
+class 15 ( wir ~ ojE ):  1 members  points
+r --> sE / Xi ___ # : 0—0.00%
+r --> E / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+r --> zE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,E] ___ # : 0—0.00%
+r --> jE / X[j,r,w,H][i,E,a] ___ # : 0—0.00%
+wir --> ojE / # ___ # : 1—100.00% (ouïr, etc.)
+local conditional entropy: -0.0
+-----
+class 16 ( r6volE ~ r6volE ):  5752 members  points
+[] --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô]E ___ # : 5752—100.00% (revoler, etc.)
+local conditional entropy: -0.0
+-----
+class 17 ( onir ~ onisE ):  25 members  points
+r --> sE / Xi ___ # : 25—100.00% (honnir, etc.)
+r --> E / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+local conditional entropy: -0.0
+-----
+class 18 ( êvEstir ~ êvEstisE ):  36 members  points
+r --> sE / Xi ___ # : 35—97.22% (investir, etc.)
+r --> zE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,E] ___ # : 1—2.78% (dire, etc.)
+local conditional entropy: 0.18312206830137276
+-----
+class 19 ( rEzudr ~ rEzolvE ):  1 members  points
+r --> E / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+udr --> olvE / #rEz ___ # : 1—100.00% (résoudre, etc.)
+local conditional entropy: -0.0
+-----
+class 20 ( âtrapErs6vwar ~ âtrapErs6vE ):  22 members  points
+war --> E / X[i,y,E,6,a,u,o][v,z,l] ___ # : 19—86.36% (entrapercevoir, etc.)
+r --> jE / X[j,r,w,H][i,E,a] ___ # : 3—13.64% (revoir, etc.)
+local conditional entropy: 0.5746356978376794
+-----
+class 21 ( kudr ~ kuzE ):  3 members  points
+r --> E / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+dr --> zE / Xku ___ # : 3—100.00% (coudre, etc.)
+local conditional entropy: -0.0
+-----
+class 22 ( ravilir ~ ravilisE ):  35 members  points
+r --> sE / Xi ___ # : 31—88.57% (ravilir, etc.)
+r --> E / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+r --> zE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,E] ___ # : 4—11.43% (relire, etc.)
+local conditional entropy: 0.512709142030877
+-----
+class 23 ( rôdi ~ rôdisE ):  1 members  points
+[] --> sE / #rôdi ___ # : 1—100.00% (rondir, etc.)
+local conditional entropy: -0.0
+-----
+class 24 ( raswar ~ raswajE ):  4 members  points
+r --> jE / X[j,r,w,H][i,E,a] ___ # : 2—50.00% (rasseoir, etc.)
+war --> EjE / Xas ___ # : 2—50.00% (rasseoir_2, etc.)
+local conditional entropy: 1.0
+-----
+class 25 ( syrprâdr ~ syrpr6nE ):  12 members  points
+r --> E / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+âdr --> 6nE / Xpr ___ # : 12—100.00% (surprendre, etc.)
+local conditional entropy: -0.0
+-----
+class 26 ( proskrir ~ proskrivE ):  12 members  points
+r --> sE / Xi ___ # : 0—0.00%
+r --> E / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+r --> zE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,E] ___ # : 0—0.00%
+r --> jE / X[j,r,w,H][i,E,a] ___ # : 0—0.00%
+r --> vE / X[s,z,E]kri ___ # : 12—100.00% (proscrire, etc.)
+local conditional entropy: -0.0
+-----
+class 27 ( rEtrêdr ~ rEtrEJE ):  22 members  points
+r --> E / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+êdr --> EJE / X[p,t,k,b,d,g,f,s,S,v,z,Z,l,r] ___ # : 22—100.00% (rétreindre, etc.)
+local conditional entropy: -0.0
+-----
+class 28 ( surir ~ surjE ):  1 members  points
+r --> sE / Xi ___ # : 0—0.00%
+r --> E / X[m,n,J,j,l,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o] ___ # : 0—0.00%
+ir --> E / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][f,v,j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô][p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,r] ___ # : 0—0.00%
+r --> zE / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,E] ___ # : 0—0.00%
+r --> jE / X[j,r,w,H][i,E,a] ___ # : 0—0.00%
+ir --> jE / #sur ___ # : 1—100.00% (sourire, etc.)
+local conditional entropy: -0.0
+-----
+conditional entropy for inf ==> ipf.3 : 0.06526493434995903
+
+ 83% done
+***************************************
+***************************************
+***************************************
+        inf ==> prs.3
+***************************************
+Inferring rules...
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ #	5210
+r --> [] / X[i,y,E,6,a,u,o] ___ #	425
+tr --> [] / X[E,a] ___ #	46
+6lE --> El / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,r] ___ #	80
+Erir --> jEr / X[E,6,a,o,ê,û,â,ô]k ___ #	5
+dr --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ #	97
+jE --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,l,r][p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,E,a] ___ #	83
+jE --> i / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,l,r] ___ #	262
+6vwar --> wa / X[t,d,s,z] ___ #	9
+6sE --> Es / X[d,l][E,a][p,b,m] ___ #	2
+pr --> [] / Xrô ___ #	3
+mir --> [] / X[p,t,b,d,f,s,v,z]or ___ #	5
+6tE --> Et / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r] ___ #	72
+ir --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o][f,v,j,r,w,H,i,y,E,6,a,u,o][j,r] ___ #	24
+tE --> pt / X[d,z][â,ô] ___ #	2
+6vE --> Ev / X[f,s,S,v,z,Z,l,r] ___ #	13
+tir --> [] / X[p,t,b,d,f,s,v,z,m,n,r,E,6,a,o,ê,û,â,ô][r,E,a,ê,â] ___ #	15
+urir --> 6r / #m ___ #	1
+vr --> [] / X[v,j,r,w,H]i ___ #	5
+6nir --> jê / X[p,t,b,d,f,s,v,z] ___ #	27
+uvwar --> 6 / Xm ___ #	2
+6nE --> En / X[m,n,l,r] ___ #	18
+6mE --> Em / Xs ___ #	4
+[] --> [] / #rôdi ___ #	1
+alwar --> o / Xv ___ #	4
+vir --> [] / XsEr ___ #	3
+jir --> [] / Xbu ___ #	3
+air --> E / #âtr6 ___ #	1
+avwar --> E / #s ___ #	1
+ulwar --> 6 / Xv ___ #	2
+6zE --> Ez / Xp ___ #	4
+6rE --> Er / #liz ___ #	1
+air --> E / # ___ #	1
+vwar --> [] / #a ___ #	1
+war --> jE / Xas ___ #	2
+alE --> va / # ___ #	1
+kr --> [] / Xvê ___ #	2
+ir --> a / #w ___ #	1
+6vrE --> Evr / #s ___ #	1
+6pE --> Ep / #r6s ___ #	1
+done.
+
+class 1 ( sHivr ~ sHi ):  5 members  points
+vr --> [] / X[v,j,r,w,H]i ___ # : 5—100.00% (suivre, etc.)
+local conditional entropy: -0.0
+-----
+class 2 ( rôdi ~ rôdi ):  1 members  points
+[] --> [] / #rôdi ___ # : 1—100.00% (rondir, etc.)
+local conditional entropy: -0.0
+-----
+class 3 ( bujir ~ bu ):  3 members  points
+r --> [] / X[i,y,E,6,a,u,o] ___ # : 0—0.00%
+ir --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o][f,v,j,r,w,H,i,y,E,6,a,u,o][j,r] ___ # : 0—0.00%
+jir --> [] / Xbu ___ # : 3—100.00% (bouillir, etc.)
+local conditional entropy: -0.0
+-----
+class 4 ( wir ~ wa ):  1 members  points
+r --> [] / X[i,y,E,6,a,u,o] ___ # : 0—0.00%
+ir --> a / #w ___ # : 1—100.00% (ouïr, etc.)
+local conditional entropy: -0.0
+-----
+class 5 ( r6s6pE ~ r6sEp ):  1 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+6pE --> Ep / #r6s ___ # : 1—100.00% (receper, etc.)
+local conditional entropy: -0.0
+-----
+class 6 ( mêt6nir ~ mêtjê ):  27 members  points
+r --> [] / X[i,y,E,6,a,u,o] ___ # : 0—0.00%
+6nir --> jê / X[p,t,b,d,f,s,v,z] ___ # : 27—100.00% (maintenir, etc.)
+local conditional entropy: -0.0
+-----
+class 7 ( âtr6air ~ âtr6E ):  1 members  points
+r --> [] / X[i,y,E,6,a,u,o] ___ # : 0—0.00%
+air --> E / #âtr6 ___ # : 1—100.00% (entre-haïr, etc.)
+local conditional entropy: -0.0
+-----
+class 8 ( r6batr ~ r6ba ):  46 members  points
+tr --> [] / X[E,a] ___ # : 46—100.00% (rebattre, etc.)
+local conditional entropy: -0.0
+-----
+class 9 ( raswar ~ raswa ):  4 members  points
+r --> [] / X[i,y,E,6,a,u,o] ___ # : 2—50.00% (rasseoir, etc.)
+war --> jE / Xas ___ # : 2—50.00% (rasseoir_2, etc.)
+local conditional entropy: 1.0
+-----
+class 10 ( alE ~ al ):  3 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 2—66.67% (hâler, etc.)
+alE --> va / # ___ # : 1—33.33% (aller, etc.)
+local conditional entropy: 0.9182958340544896
+-----
+class 11 ( âtrapErs6vwar ~ âtrapErswa ):  9 members  points
+r --> [] / X[i,y,E,6,a,u,o] ___ # : 0—0.00%
+6vwar --> wa / X[t,d,s,z] ___ # : 9—100.00% (entrapercevoir, etc.)
+local conditional entropy: -0.0
+-----
+class 12 ( r6sErvir ~ r6sEr ):  4 members  points
+r --> [] / X[i,y,E,6,a,u,o] ___ # : 1—25.00% (asservir, etc.)
+vir --> [] / XsEr ___ # : 3—75.00% (resservir, etc.)
+local conditional entropy: 0.8112781244591328
+-----
+class 13 ( liz6rE ~ lizEr ):  1 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+6rE --> Er / #liz ___ # : 1—100.00% (liserer, etc.)
+local conditional entropy: -0.0
+-----
+class 14 ( zj6tE ~ zj6t ):  78 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 6—7.69% (zieuter, etc.)
+6tE --> Et / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r] ___ # : 72—92.31% (jarreter, etc.)
+local conditional entropy: 0.39124356362925566
+-----
+class 15 ( kr6vE ~ krEv ):  14 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 1—7.14% (abreuver, etc.)
+6vE --> Ev / X[f,s,S,v,z,Z,l,r] ___ # : 13—92.86% (crever, etc.)
+local conditional entropy: 0.37123232664087563
+-----
+class 16 ( vrijE ~ vrij ):  137 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 54—39.42% (vriller, etc.)
+jE --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,l,r][p,t,k,b,d,g,f,s,S,v,z,Z,j,l,r,w,H][i,E,a] ___ # : 83—60.58% (rapatrier, etc.)
+local conditional entropy: 0.9674320981530664
+-----
+class 17 ( vulwar ~ v6 ):  2 members  points
+r --> [] / X[i,y,E,6,a,u,o] ___ # : 0—0.00%
+ulwar --> 6 / Xv ___ # : 2—100.00% (vouloir, etc.)
+local conditional entropy: -0.0
+-----
+class 18 ( prEvalwar ~ prEvo ):  4 members  points
+r --> [] / X[i,y,E,6,a,u,o] ___ # : 0—0.00%
+alwar --> o / Xv ___ # : 4—100.00% (prévaloir, etc.)
+local conditional entropy: -0.0
+-----
+class 19 ( dEp6sE ~ dEpEs ):  2 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+6sE --> Es / X[d,l][E,a][p,b,m] ___ # : 2—100.00% (dépecer, etc.)
+local conditional entropy: -0.0
+-----
+class 20 ( murir ~ m6r ):  1 members  points
+r --> [] / X[i,y,E,6,a,u,o] ___ # : 0—0.00%
+urir --> 6r / #m ___ # : 1—100.00% (mourir, etc.)
+local conditional entropy: -0.0
+-----
+class 21 ( avwar ~ a ):  1 members  points
+r --> [] / X[i,y,E,6,a,u,o] ___ # : 0—0.00%
+vwar --> [] / #a ___ # : 1—100.00% (avoir, etc.)
+local conditional entropy: -0.0
+-----
+class 22 ( âdâtE ~ âdât ):  10 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 8—80.00% (endenter, etc.)
+tE --> pt / X[d,z][â,ô] ___ # : 2—20.00% (dompter, etc.)
+local conditional entropy: 0.7219280948873623
+-----
+class 23 ( savwar ~ sE ):  1 members  points
+r --> [] / X[i,y,E,6,a,u,o] ___ # : 0—0.00%
+avwar --> E / #s ___ # : 1—100.00% (savoir, etc.)
+local conditional entropy: -0.0
+-----
+class 24 ( air ~ E ):  1 members  points
+r --> [] / X[i,y,E,6,a,u,o] ___ # : 0—0.00%
+air --> E / # ___ # : 1—100.00% (haïr, etc.)
+local conditional entropy: -0.0
+-----
+class 25 ( r6fôdr ~ r6fô ):  97 members  points
+dr --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,E,6,o,ê,û,ô][j,r,w,H,i,y,E,6,a,u,o,ê,û,â,ô] ___ # : 97—100.00% (refondre, etc.)
+local conditional entropy: -0.0
+-----
+class 26 ( êtErôpr ~ êtErô ):  3 members  points
+pr --> [] / Xrô ___ # : 3—100.00% (interrompre, etc.)
+local conditional entropy: -0.0
+-----
+class 27 ( garâtir ~ garâti ):  48 members  points
+r --> [] / X[i,y,E,6,a,u,o] ___ # : 33—68.75% (garantir, etc.)
+tir --> [] / X[p,t,b,d,f,s,v,z,m,n,r,E,6,a,o,ê,û,â,ô][r,E,a,ê,â] ___ # : 15—31.25% (ressentir, etc.)
+local conditional entropy: 0.8960382325345575
+-----
+class 28 ( m6nE ~ mEn ):  18 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+6nE --> En / X[m,n,l,r] ___ # : 18—100.00% (mener, etc.)
+local conditional entropy: -0.0
+-----
+class 29 ( r6volE ~ r6vol ):  5133 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 5133—100.00% (revoler, etc.)
+local conditional entropy: -0.0
+-----
+class 30 ( nurir ~ nuri ):  366 members  points
+r --> [] / X[i,y,E,6,a,u,o] ___ # : 366—100.00% (nourrir, etc.)
+local conditional entropy: -0.0
+-----
+class 31 ( vêkr ~ vê ):  2 members  points
+kr --> [] / Xvê ___ # : 2—100.00% (vaincre, etc.)
+local conditional entropy: -0.0
+-----
+class 32 ( dEfis6lE ~ dEfisEl ):  86 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 6—6.98% (feuler, etc.)
+6lE --> El / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,r] ___ # : 80—93.02% (déficeler, etc.)
+local conditional entropy: 0.3650551896402848
+-----
+class 33 ( sorir ~ sori ):  47 members  points
+r --> [] / X[i,y,E,6,a,u,o] ___ # : 23—48.94% (saurir, etc.)
+ir --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o][f,v,j,r,w,H,i,y,E,6,a,u,o][j,r] ___ # : 24—51.06% (discourir, etc.)
+local conditional entropy: 0.9996734260048917
+-----
+class 34 ( r6dormir ~ r6dor ):  5 members  points
+r --> [] / X[i,y,E,6,a,u,o] ___ # : 0—0.00%
+mir --> [] / X[p,t,b,d,f,s,v,z]or ___ # : 5—100.00% (redormir, etc.)
+local conditional entropy: -0.0
+-----
+class 35 ( kolorjE ~ kolori ):  262 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+jE --> i / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,l,r] ___ # : 262—100.00% (colorier, etc.)
+local conditional entropy: -0.0
+-----
+class 36 ( syrs6mE ~ syrsEm ):  4 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+6mE --> Em / Xs ___ # : 4—100.00% (sursemer, etc.)
+local conditional entropy: -0.0
+-----
+class 37 ( s6vrE ~ sEvr ):  1 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+6vrE --> Evr / #s ___ # : 1—100.00% (sevrer, etc.)
+local conditional entropy: -0.0
+-----
+class 38 ( p6zE ~ pEz ):  4 members  points
+E --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,m,n,J,j,l,r,w,H,i,y,E,6,u,o,ê,û,ô] ___ # : 0—0.00%
+6zE --> Ez / Xp ___ # : 4—100.00% (peser, etc.)
+local conditional entropy: -0.0
+-----
+class 39 ( âkErir ~ âkjEr ):  5 members  points
+r --> [] / X[i,y,E,6,a,u,o] ___ # : 0—0.00%
+Erir --> jEr / X[E,6,a,o,ê,û,â,ô]k ___ # : 5—100.00% (enquérir, etc.)
+ir --> [] / X[p,t,k,b,d,g,f,s,S,v,z,Z,j,r,w,H,i,y,E,6,u,o][f,v,j,r,w,H,i,y,E,6,a,u,o][j,r] ___ # : 0—0.00%
+local conditional entropy: -0.0
+-----
+class 40 ( muvwar ~ m6 ):  2 members  points
+r --> [] / X[i,y,E,6,a,u,o] ___ # : 0—0.00%
+uvwar --> 6 / Xm ___ # : 2—100.00% (mouvoir, etc.)
+local conditional entropy: -0.0
+-----
+conditional entropy for inf ==> prs.3 : 0.04764921761255452
+
+100% done
+
+100% done
+
+Mean conditional entropy of a line knowing a column: 0.18995706717762417
