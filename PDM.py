@@ -1,15 +1,23 @@
 import re
-import sys
-import copy
 import warnings
-import pickle
 
+seuilDistribution=0.01
 
 def strFloat(num):
     return ("%0.2f"%num).rstrip("0").rstrip(".")
 
 
-def formaterRegle(line):
+def parserPaire(line):
+    m=re.search("^\s*(\S+)\s+==>\s+(\S+)\s*$",line)
+    if m:
+        inCase=m.group(1)
+        outCase=m.group(2)
+        return (inCase,outCase)
+    else:
+        return False
+
+
+def parserRegle(line):
     m=re.search("^(\S+)\s+-->\s+(\S+)\s+/\s+(\S+)\s+___\s+(\S+)\s+(.*)$",line)
     if m:
         a=m.group(1)
@@ -39,9 +47,10 @@ class RegleDist:
     '''
     Cette classe permet de stocker une règle de transformation et sa proportion
     '''
-    def __init__(self,regle,dist,nom="",etiquette=False):
+    def __init__(self,regle,dist,sortie="",nom="",etiquette=False):
         self.regle=regle
         self.dist=dist
+        self.sortie=sortie
         self.nom=nom
         self.etiquette=etiquette
         
@@ -50,6 +59,8 @@ class RegleDist:
             name=" "+self.nom
         else:
             name=""
+        if self.sortie!="":
+            name=" "+self.sortie+name
         return '%d (%s%s)'%(self.regle,strFloat(self.dist),name)
     
     def __getitem__(self,index):
@@ -92,6 +103,10 @@ class FormeClasse:
         else:
             nomClasse=""
         return "%s[%s]"%(nomClasse,", ".join(temp))
+
+    def __eq__(self,other):
+        return self.getRules()==self.getRules()
+
             
     def __getitem__(self,index):
         return self.reglesDist[index]
@@ -111,7 +126,7 @@ class FormeClasse:
     def numRulesDist(self):
         normalReglesDist=[]
         for dr in self.reglesDist:
-            normalReglesDist.append(RegleDist(dr.regle,float(strFloat(dr.dist/self.total)),dr.nom,dr.etiquette))
+            normalReglesDist.append(RegleDist(dr.regle,float(strFloat(dr.dist/self.total)),dr.sortie,dr.nom,dr.etiquette))
         return normalReglesDist
     
     def getRules(self):
@@ -124,7 +139,7 @@ class FormeClasse:
 class PaireClasses:
     '''
     Cette classe permet de stocker les classes distributionnelles d'une paire
-     - distribution : un dict qui associe chaque règle à sa proportion dans la distribution
+     - classes : une liste de FormeClasse
     '''
     
     def __init__(self,nom="Classes",etiquette=True):
@@ -274,6 +289,7 @@ class Regles:
     def __init__(self):
         self.regles=[]
         self.reglesPaire={}
+        self.pairesCase={}
 
     def __repr__(self):
         tempRegles=[]
@@ -288,7 +304,7 @@ class Regles:
         return "\n".join(tempRegles)+"\n\n"+"\n".join(tempReglesPaire)
             
     def addRegle(self,paire,ligne):
-        (inPatron,mod,reste)=formaterRegle(ligne)
+        (inPatron,mod,reste)=parserRegle(ligne)
         regleSPE=""
         if ligne.endswith(reste):
             regleSPE=ligne[:-len(reste)]
@@ -299,12 +315,284 @@ class Regles:
             self.reglesPaire[paire]=[]
         if not self.regles.index(regle) in self.reglesPaire[paire]:
             self.reglesPaire[paire].append(self.regles.index(regle))
-            
+        if not paire.sortie in self.pairesCase:
+            self.pairesCase[paire.sortie]=[]
+        if not paire.entree in self.pairesCase[paire.sortie]:
+            self.pairesCase[paire.sortie].append(paire.entree)
+
     def getRegleSPE(self,num):
         return self.regles[num].regleSPE
 
     def getNumRegle(self,patron,mod):
         return self.regles.index(ModifForme(patron,mod))
     
+def distributionVecteurs(vecteurs):
+    formes={}
+    total=0
+    for vecteur in vecteurs:
+        for fc in vecteur:
+            forme=fc.forme
+            coef=fc.coef
+            if not forme in formes:
+                formes[forme]=0
+            formes[forme]+=coef
+            total+=coef
+    distribution=[]
+    supprime=False
+    for forme in formes:
+        coef=float(strFloat(formes[forme]/total))
+        if coef>seuilDistribution:
+            distribution.append(FormeCoef(forme,coef))
+        else:
+            supprime=True
+    if supprime==True:
+        distribution=distributionVecteurs([distribution])
+    return sorted(distribution,key=lambda couple: couple[1],reverse=True)
+    
+def transformerForme(inPatron,mod,forme):
+    extrait=re.search(inPatron,forme)
+    if extrait:
+        sortie=extrait.group(1)+mod+extrait.group(2)
+        return sortie
+    else:
+        return False
 
+def outputFormes(paireCase,FormeCoef):
+    lines=[]
+    numsClasse={}
+    (forme,part)=FormeCoef
+    for numero in pairesCasesRegles[paireCase]:
+        (inPatron,mod)=reglesPDM[numero]
+        sortie=transformerForme(inPatron,mod,forme)
+        if sortie:
+            numsClasse[numero]=sortie
+    alphaKeys=[]
+    for num in sorted(numsClasse.keys()):
+        alphaKeys.append(str(num))
+    classe="-".join(alphaKeys)
+    if not classe in Classes[paireCase]:
+        print ("FORME SANS SORTIE",forme)
+    else:
+        for numero in numsClasse:
+            if Classes[paireCase][classe][numero]>0:
+                lines.append((numsClasse[numero],Classes[paireCase][classe][numero]*part))
+    return distributionVecteurs([lines]) 
+
+class FormeCoef:
+    '''
+    Cet classe contient deux variables : forme et coef
+    '''
+    def __init__(self,forme,coef):
+        self.forme=forme
+        self.coef=coef
+        
+    def __repr__(self):
+        return ('("%s",%s)'%(self.forme,strFloat(self.coef)))
+    
+    def __getitem__(self,index):
+        if index==0:
+            return self.forme
+        elif index==1:
+            return self.coef
+        else:
+            raise ValueError("out of range [0,1]")
+            
+    def __setitem__(self,index,value):
+        if index==0:
+            self.forme=value
+        elif index==1:
+            self.coef=value
+        else:
+            raise ValueError("out of range [0,1]")
+            
+    def val(self):
+        return (self.forme,self.coef)
+
+class FormeSorties:
+    '''
+    Cet classe contient deux variables : forme et sorties
+    '''
+    def __init__(self,forme):
+        '''
+        FormeSorties
+        '''
+        self.forme=forme
+        self.sorties={}
+        
+    def __repr__(self):
+        '''
+        FormeSorties
+        '''
+        result=self.forme+" : "
+        for element in self.sorties:
+            result+=str(element)+"=>"+self.sorties[element]
+        return result
+
+    def __eq__(self,other):
+        '''
+        FormeSorties
+        '''
+        result=(self.entree==other.entree)
+        if result:
+            for sortie in self.sorties:
+                result=result and (self.sorties[sortie]==other.sorties[sortie])
+        return result
+                
+    def __setitem__(self,index,value):
+        '''
+        FormeSorties
+        '''
+        self.sorties[index]=value
+            
+    def val(self):
+        '''
+        FormeSorties
+        '''
+        return (self.forme,self.sorties)
+        
+class Case:
+    '''
+    Cette classe contient 4 variables :
+     - valeurs : une liste de FormeCoef
+     - coefficient : un dict qui associe chaque forme à son coefficient
+     - normalValeurs : une liste de FormeCoef avec des coefficients normés (somme=1)
+     - normalCoefficient : un dict qui associe chaque forme à son coefficient normé (somme=1)
+    '''
+    
+    def __init__(self,nom="",etiquette=False):
+        self.nom=nom
+        self.etiquette=etiquette
+        self.valeurs=[]
+        self.coefficient={}
+        self.normalValeurs=[]
+        self.normalCoefficient={}
+    
+    def __str__(self):
+        temp=[]
+        for fc in distributionVecteurs([self.valeurs]):
+            temp.append(repr(fc))
+        contenuCase=",".join(temp)
+        if self.nom!="":
+            nomCase=self.nom+" : "
+        else:
+            nomCase=""
+        return "%s[%s]"%(nomCase,contenuCase)
+
+    
+    def __repr__(self):
+        temp=[]
+        for fc in distributionVecteurs([self.valeurs]):
+            temp.append(repr(fc))
+        contenuCase=",".join(temp)
+        if self.etiquette and self.nom!="":
+            nomCase=self.nom+" : "
+        else:
+            nomCase=""
+        return "%s[%s]"%(nomCase,contenuCase)
+
+    def __getitem__(self,index):
+        return self.valeurs[index]
+        
+
+    def label(self,etiquette):
+        self.etiquette=etiquette
+
+    def addForm(self,FormeCoef):
+        self.valeurs.append(FormeCoef)
+        if not FormeCoef.forme in self.coefficient:
+            self.coefficient[FormeCoef.forme]=0
+        self.coefficient[FormeCoef.forme]+=FormeCoef.coef
+    
+    def addForms(self,FormesCoefs):
+        for FormeCoef in FormesCoefs:
+            self.addForm(self,FormeCoef)
+    
+    def content(self,original=False):
+        if original:
+            return self.valeurs
+        else:
+            self.normalValeurs=distributionVecteurs([self.valeurs])
+            return self.normalValeurs
+        
+    def coef(self,forme,original=False):
+        if forme in self.coefficient:
+            if original:
+                return self.coefficient[forme]
+            else:
+                self.normalValeurs=distributionVecteurs([self.valeurs])
+                for fc in self.normalValeurs:
+                    self.normalCoefficient[fc.forme]=fc.coef
+                return self.normalCoefficient[forme]
+        else:
+            return 0
+        
+    def coefs(self,original=False):
+        if original:
+            return self.coefficient
+        else:
+            self.normalValeurs=distributionVecteurs([self.valeurs])
+            for fc in self.normalValeurs:
+                self.normalCoefficient[fc.forme]=fc.coef
+            return self.normalCoefficient
+
+
+class Paradigme:
+    '''
+    Cet objet contient deux tableaux associatifs entrees et sorties qui contiennent des objets Case
+    le tableau supporter est prévu pour noter la contribution des entrées aux sorties
+    les cases du paradigme sont fixées par défaut à la création (mutable=False)
+    '''
+    def __init__(self,Cases=[],mutable=False):
+        self.entrees={}
+        self.sorties={}
+        self.supporters={}
+        self.mutable=mutable
+        for case in Cases:
+            self.entrees[case]=Case(case)
+            self.sorties[case]=Case(case)
+
+    def __repr__(self):
+        entreesTemp=[]
+        for case in self.entrees:
+            entreesTemp.append(case+" : "+repr(self.entrees[case]))
+        sortiesTemp=[]
+        for case in self.sorties:
+            sortiesTemp.append(case+" : "+repr(self.sorties[case]))
+        result="entrees : {%s} \nsorties : {%s}"%(", ".join(entreesTemp),", ".join(sortiesTemp))
+        return result
+    
+    def __setitem__(self,nomCase,case):
+        if self.mutable and not nomCase in self.entrees:
+            raise ValueError("%s not in Paradigme"%nomCase)
+        else:
+            self.entrees[nomCase]=case
+            if not nomCase in self.sorties:
+                self.sorties[nomCase]=Case(nomCase)
+        
+    def __getitem__(self,nomCase):
+        return self.entrees[nomCase]
+    
+    def strict(self,mutable):
+        self.mutable=mutable
+    
+    def addEntree(self,case):
+        if not case.nom in self.entrees:
+            self.entrees[case.nom]=case
+        else:
+            warnings.warn("%s déjà dans le paradigme d'entrée"%case)
+
+    def addEntrees(self,*cases):
+        for case in cases:
+            self.addEntree(case)
+
+    
+    def addSortie(self,case):
+        if not case.nom in self.sorties:
+            self.sorties[case.nom]=case
+        else:
+            warnings.warn("%s déjà dans le paradigme de sortie"%case)
+            
+    def addSorties(self,*cases):
+        for case in cases:
+            self.addSortie(case)    
 
