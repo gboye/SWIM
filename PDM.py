@@ -78,6 +78,7 @@ class RegleDist:
             self.dist=value
         else:
             warnings.warn("%d index out of range [0,1]"%index)
+
     def val(self):
         return (self.regle,self.dist)        
 
@@ -90,8 +91,8 @@ class FormeClasse:
     def __init__(self,nom="",etiquette=True):
         self.nom=str(nom)
         self.etiquette=etiquette
-        self.reglesDist=[]
-        self.regles=[]
+        self.reglesDist={}
+#        self.regles=[]
         self.total=0
         
     def __repr__(self):
@@ -105,33 +106,43 @@ class FormeClasse:
         return "%s[%s]"%(nomClasse,", ".join(temp))
 
     def __eq__(self,other):
-        return self.getRules()==self.getRules()
+        return self.getRules()==other.getRules()
 
             
     def __getitem__(self,index):
-        return self.reglesDist[index]
+        if index in self.reglesDist:
+            return self.reglesDist[index]
+        else:
+            raise KeyError("pas de %s" % index)
           
     def addRule(self,regleDist):
-        if not regleDist.regle in self.regles:
-            self.reglesDist.append(regleDist)
-            self.regles.append(regleDist.regle)
-            self.total+=regleDist.dist
+        if not regleDist.regle in self.reglesDist:
+            self.reglesDist[regleDist.regle]=regleDist
+#            self.regles.append(regleDist.regle)
+#            self.total+=regleDist.dist
         else:
             warnings.warn("La règle %d est déjà dans la distribution"%regleDist.regle)
 
     def addRules(self,*reglesDist):
         for regleDist in reglesDist:
             self.addRule(regleDist)
+    
+    def updateTotal(self):
+        self.total=0
+        for regle in self.reglesDist:
+            self.total+=self.reglesDist[regle].dist
         
     def numRulesDist(self):
+        self.updateTotal()
         normalReglesDist=[]
-        for dr in self.reglesDist:
+        for regle in self.reglesDist:
+            dr=self.reglesDist[regle]
             normalReglesDist.append(RegleDist(dr.regle,float(strFloat(dr.dist/self.total)),dr.sortie,dr.nom,dr.etiquette))
         return normalReglesDist
     
     def getRules(self):
         listeNum=[]
-        for element in self.regles:
+        for element in self.reglesDist:
             listeNum.append(str(element))
         return "-".join(sorted(listeNum,key=int))
 
@@ -432,7 +443,7 @@ class FormeSorties:
         '''
         FormeSorties
         '''
-        result=(self.entree==other.entree)
+        result=(self.forme==other.forme)
         if result:
             for sortie in self.sorties:
                 result=result and (self.sorties[sortie]==other.sorties[sortie])
@@ -450,6 +461,49 @@ class FormeSorties:
         '''
         return (self.forme,self.sorties)
         
+class FormeEntrees:
+    '''
+    Cet classe contient deux variables : forme et sorties
+    '''
+    def __init__(self,forme):
+        '''
+        FormeEntrees
+        '''
+        self.forme=forme
+        self.entrees={}
+        
+    def __repr__(self):
+        '''
+        FormeEntrees
+        '''
+        result=self.forme+" : "
+        for element in self.entrees:
+            result+=str(element)+"=>"+self.entrees[element]
+        return result
+
+    def __eq__(self,other):
+        '''
+        FormeEntrees
+        '''
+        result=(self.forme==other.forme)
+        if result:
+            for entree in self.entrees:
+                result=result and (self.entrees[entree]==other.entrees[entree])
+        return result
+                
+    def __setitem__(self,index,value):
+        '''
+        FormeEntrees
+        '''
+        self.entrees[index]=value
+            
+    def val(self):
+        '''
+        FormeEntrees
+        '''
+        return (self.forme,self.entrees)
+
+
 class Case:
     '''
     Cette classe contient 4 variables :
@@ -596,3 +650,14 @@ class Paradigme:
         for case in cases:
             self.addSortie(case)    
 
+    def addSupporter(self,paire,ruleDist):
+        '''
+        Ajouter la forme d'entrée de la paire supporte la forme de sortie
+        '''
+        inCase=paire.entree
+        outCase=paire.sortie
+        if not outCase in self.supporters:
+            self.supporters[outCase]={}
+        if not ruleDist.sortie in self.supporters[outCase]:
+            self.supporters[outCase][ruleDist.sortie]=FormeClasse()
+        self.supporters[outCase][ruleDist.sortie].addRule(RegleDist(ruleDist.regle,ruleDist.dist,ruleDist.nom+":"+inCase,ruleDist.sortie))
