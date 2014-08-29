@@ -650,7 +650,7 @@ class Paradigme:
         if not case.nom in self.entrees:
             self.entrees[case.nom]=case
         else:
-            warnings.warn("%s déjà dans le paradigme d'entrée"%case)
+            warnings.warn("%s déjà dans le paradigme d'entrée %s"%(case,self.entrees[case.nom]))
 
     def addEntrees(self,*cases):
         for case in cases:
@@ -665,10 +665,14 @@ class Paradigme:
             self.sorties[paire.sortie]={}
         if not paire in self.sorties[paire.sortie]:
             self.sorties[paire.sortie][paire]=[]
+        '''
+        il y a un pb avec __eq__ quand formeClasse concerne les mêmes règles
+        mais possède un nom différent
+        '''
         if not formeClasse in self.sorties[paire.sortie][paire]:
             self.sorties[paire.sortie][paire].append(formeClasse)
         else:
-            warnings.warn("%s déjà dans le paradigme de sortie"%paire)
+            warnings.warn("%s déjà dans le paradigme de sortie %s %s"%(formeClasse,paire,self.sorties[paire.sortie][paire]))
             
     def addSorties(self,paire,*formeClasses):
         for formeClasse in formeClasses:
