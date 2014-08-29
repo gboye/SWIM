@@ -108,6 +108,18 @@ class FormeClasse:
     def __eq__(self,other):
         return self.getRules()==other.getRules()
 
+#     def __eq__(self,other):
+#         '''
+#         FormeClasse
+#         '''
+#         result=True
+#         for rd in self.reglesDist:
+#             try:
+#                 result=result and (self.reglesDist[rd].regle==other.reglesDist[rd].regle)
+#             except KeyError:
+#                 return False
+#         return result
+
             
     def __getitem__(self,index):
         if index in self.reglesDist:
@@ -115,17 +127,15 @@ class FormeClasse:
         else:
             raise KeyError("pas de %s" % index)
           
-    def addRule(self,regleDist):
-        if not regleDist.regle in self.reglesDist:
+    def addRule(self,regleDist,force=False):
+        if force or not regleDist.regle in self.reglesDist:
             self.reglesDist[regleDist.regle]=regleDist
-#            self.regles.append(regleDist.regle)
-#            self.total+=regleDist.dist
         else:
             warnings.warn("La règle %d est déjà dans la distribution"%regleDist.regle)
 
-    def addRules(self,*reglesDist):
+    def addRules(self,*reglesDist,force=False):
         for regleDist in reglesDist:
-            self.addRule(regleDist)
+            self.addRule(regleDist,force)
     
     def updateTotal(self):
         self.total=0
@@ -133,6 +143,9 @@ class FormeClasse:
             self.total+=self.reglesDist[regle].dist
         
     def numRulesDist(self):
+        '''
+        Renvoie une distribution normalisée
+        '''
         self.updateTotal()
         normalReglesDist=[]
         for regle in self.reglesDist:
@@ -419,89 +432,89 @@ class FormeCoef:
     def val(self):
         return (self.forme,self.coef)
 
-class FormeSorties:
-    '''
-    Cet classe contient deux variables : forme et sorties
-    '''
-    def __init__(self,forme):
-        '''
-        FormeSorties
-        '''
-        self.forme=forme
-        self.sorties={}
+# class FormeSorties:
+#     '''
+#     Cet classe contient deux variables : forme et sorties
+#     '''
+#     def __init__(self,forme):
+#         '''
+#         FormeSorties
+#         '''
+#         self.forme=forme
+#         self.sorties={}
+#         
+#     def __repr__(self):
+#         '''
+#         FormeSorties
+#         '''
+#         result=self.forme+" : "
+#         for element in self.sorties:
+#             result+=str(element)+"=>"+self.sorties[element]
+#         return result
+# 
+#     def __eq__(self,other):
+#         '''
+#         FormeSorties
+#         '''
+#         result=(self.forme==other.forme)
+#         if result:
+#             for sortie in self.sorties:
+#                 result=result and (self.sorties[sortie]==other.sorties[sortie])
+#         return result
+#                 
+#     def __setitem__(self,index,value):
+#         '''
+#         FormeSorties
+#         '''
+#         self.sorties[index]=value
+#             
+#     def val(self):
+#         '''
+#         FormeSorties
+#         '''
+#         return (self.forme,self.sorties)
         
-    def __repr__(self):
-        '''
-        FormeSorties
-        '''
-        result=self.forme+" : "
-        for element in self.sorties:
-            result+=str(element)+"=>"+self.sorties[element]
-        return result
-
-    def __eq__(self,other):
-        '''
-        FormeSorties
-        '''
-        result=(self.forme==other.forme)
-        if result:
-            for sortie in self.sorties:
-                result=result and (self.sorties[sortie]==other.sorties[sortie])
-        return result
-                
-    def __setitem__(self,index,value):
-        '''
-        FormeSorties
-        '''
-        self.sorties[index]=value
-            
-    def val(self):
-        '''
-        FormeSorties
-        '''
-        return (self.forme,self.sorties)
-        
-class FormeEntrees:
-    '''
-    Cet classe contient deux variables : forme et sorties
-    '''
-    def __init__(self,forme):
-        '''
-        FormeEntrees
-        '''
-        self.forme=forme
-        self.entrees={}
-        
-    def __repr__(self):
-        '''
-        FormeEntrees
-        '''
-        result=self.forme+" : "
-        for element in self.entrees:
-            result+=str(element)+"=>"+self.entrees[element]
-        return result
-
-    def __eq__(self,other):
-        '''
-        FormeEntrees
-        '''
-        result=(self.forme==other.forme)
-        if result:
-            for entree in self.entrees:
-                result=result and (self.entrees[entree]==other.entrees[entree])
-        return result
-                
-    def __setitem__(self,index,value):
-        '''
-        FormeEntrees
-        '''
-        self.entrees[index]=value
-            
-    def val(self):
-        '''
-        FormeEntrees
-        '''
-        return (self.forme,self.entrees)
+# class FormeEntrees:
+#     '''
+#     Cet classe contient deux variables : forme et sorties
+#     '''
+#     def __init__(self,forme):
+#         '''
+#         FormeEntrees
+#         '''
+#         self.forme=forme
+#         self.entrees={}
+#         
+#     def __repr__(self):
+#         '''
+#         FormeEntrees
+#         '''
+#         result=self.forme+" : "
+#         for element in self.entrees:
+#             result+=str(element)+"=>"+self.entrees[element]
+#         return result
+# 
+#     def __eq__(self,other):
+#         '''
+#         FormeEntrees
+#         '''
+#         result=(self.forme==other.forme)
+#         if result:
+#             for entree in self.entrees:
+#                 result=result and (self.entrees[entree]==other.entrees[entree])
+#         return result
+#                 
+#     def __setitem__(self,index,value):
+#         '''
+#         FormeEntrees
+#         '''
+#         self.entrees[index]=value
+#             
+#     def val(self):
+#         '''
+#         FormeEntrees
+#         '''
+#         return (self.forme,self.entrees)
 
 
 class Case:
@@ -600,10 +613,11 @@ class Paradigme:
         self.entrees={}
         self.sorties={}
         self.supporters={}
+        self.nouveau={}
         self.mutable=mutable
         for case in Cases:
             self.entrees[case]=Case(case)
-            self.sorties[case]=Case(case)
+            self.sorties[case]={}
 
     def __repr__(self):
         entreesTemp=[]
@@ -620,8 +634,8 @@ class Paradigme:
             raise ValueError("%s not in Paradigme"%nomCase)
         else:
             self.entrees[nomCase]=case
-            if not nomCase in self.sorties:
-                self.sorties[nomCase]=Case(nomCase)
+#            if not nomCase in self.sorties:
+#                self.sorties[nomCase]=Case(nomCase)
         
     def __getitem__(self,nomCase):
         return self.entrees[nomCase]
@@ -630,6 +644,9 @@ class Paradigme:
         self.mutable=mutable
     
     def addEntree(self,case):
+        '''
+        Ajouter la distribution de formes (Case) pour une case d'entrée
+        '''
         if not case.nom in self.entrees:
             self.entrees[case.nom]=case
         else:
@@ -640,15 +657,22 @@ class Paradigme:
             self.addEntree(case)
 
     
-    def addSortie(self,case):
-        if not case.nom in self.sorties:
-            self.sorties[case.nom]=case
+    def addSortie(self,paire,formeClasse):
+        '''
+        Ajouter une distribution de formes à une case de sortie
+        '''
+        if not paire.sortie in self.sorties:
+            self.sorties[paire.sortie]={}
+        if not paire in self.sorties[paire.sortie]:
+            self.sorties[paire.sortie][paire]=[]
+        if not formeClasse in self.sorties[paire.sortie][paire]:
+            self.sorties[paire.sortie][paire].append(formeClasse)
         else:
-            warnings.warn("%s déjà dans le paradigme de sortie"%case)
+            warnings.warn("%s déjà dans le paradigme de sortie"%paire)
             
-    def addSorties(self,*cases):
-        for case in cases:
-            self.addSortie(case)    
+    def addSorties(self,paire,*formeClasses):
+        for formeClasse in formeClasses:
+            self.addSortie(paire,formeClasse)    
 
     def addSupporter(self,paire,ruleDist):
         '''
@@ -659,5 +683,7 @@ class Paradigme:
         if not outCase in self.supporters:
             self.supporters[outCase]={}
         if not ruleDist.sortie in self.supporters[outCase]:
-            self.supporters[outCase][ruleDist.sortie]=FormeClasse()
-        self.supporters[outCase][ruleDist.sortie].addRule(RegleDist(ruleDist.regle,ruleDist.dist,ruleDist.nom+":"+inCase,ruleDist.sortie))
+            self.supporters[outCase][ruleDist.sortie]={}
+        if not inCase in self.supporters[outCase][ruleDist.sortie]:
+            self.supporters[outCase][ruleDist.sortie][inCase]=FormeClasse()
+        self.supporters[outCase][ruleDist.sortie][inCase].addRule(RegleDist(ruleDist.regle,ruleDist.dist,ruleDist.nom,ruleDist.sortie))
