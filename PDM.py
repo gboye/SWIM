@@ -6,9 +6,16 @@ verbose=True
 verbose2=False
 
 def strFloat(num):
+    '''
+    string de l'arrondi d'un float à deux chiffres après le point
+    '''
     return ("%0.2f"%num).rstrip("0").rstrip(".")
 
 def parserPaire(line):
+    '''
+    parse une ligne de la sortie de PredSPE pour une paire comme :
+    ipf.1 ==> prs.1
+    '''
     m=re.search("^\s*(\S+)\s+==>\s+(\S+)\s*$",line)
     if m:
         inCase=m.group(1)
@@ -18,6 +25,10 @@ def parserPaire(line):
         return False
 
 def parserRegle(line):
+    '''
+    parse une ligne de la sortie de PredSPE pour une règle comme :
+    E --> jô / X ___ #
+    '''
     m=re.search("^(\S+)\s+-->\s+(\S+)\s+/\s+(\S+)\s+___\s+(\S+)\s+(.*)$",line)
     if m:
         a=m.group(1)
@@ -43,6 +54,9 @@ def parserRegle(line):
         return
 
 def distributionVecteurs(vecteurs):
+    '''
+    normalise la distribution sur un ensemble de vecteurs
+    '''
     formes={}
     total=0
     for vecteur in vecteurs:
@@ -66,6 +80,9 @@ def distributionVecteurs(vecteurs):
     return sorted(distribution,key=lambda couple: couple[1],reverse=True)
     
 def transformerForme(inPatron,mod,forme):
+    '''
+    renvoie la transformation de forme par inPatron et mod ou sinon False
+    '''
     extrait=re.search(inPatron,forme)
     if extrait:
         sortie=extrait.group(1)+mod+extrait.group(2)
@@ -172,7 +189,7 @@ class RegleDist:
 
 class FormeClasse:
     '''
-    Cette classe permet de stocker une classe distributionnelle de formes
+    Cette classe permet de stocker une classe de sorties pour une forme
     '''
     
     def __init__(self,nom="",etiquette=True):
