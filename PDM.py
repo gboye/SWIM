@@ -2,7 +2,8 @@ import re
 import warnings
 
 seuilDistribution=0.01
-verbose=True
+
+verbose=False
 verbose2=False
 
 def strFloat(num):
@@ -89,6 +90,17 @@ def transformerForme(inPatron,mod,forme):
         return sortie
     else:
         return False
+
+def modifierForme(forme,numRegle):
+    patron=analyse.regles[numRegle].patron
+    mod=analyse.regles[numRegle].mod
+
+    m=re.search(patron,forme)
+    if m:
+        sortie=m.group(1)+mod+m.group(2)
+        return(forme,sortie)
+    else:
+        return (forme,"")
 
 #def outputFormes(paireCase,FormeCoef):
 #    lines=[]
@@ -447,6 +459,8 @@ class Regles:
     def getNumRegle(self,patron,mod):
         return self.regles.index(ModifForme(patron,mod))
     
+analyse=Regles()
+classification=Classes()
 
 class FormeCoef:
     '''
@@ -577,8 +591,10 @@ class Paradigme:
             entreesTemp.append(case+" : "+repr(self.entrees[case]))
         sortiesTemp=[]
         for case in self.sorties:
-            sortiesTemp.append(case+" : "+repr(self.sorties[case]))
-        result="entrees : {%s} \nsorties : {%s}"%(", ".join(entreesTemp),", ".join(sortiesTemp))
+            sortiesTemp.append(repr(case))
+            for paire in self.sorties[case]:
+                sortiesTemp.append("\t"+repr(paire)+" : "+repr(self.sorties[case][paire]))
+        result="entrees : {\n\t%s\n} \nsorties : {\n\t%s\n}"%("\n\t".join(entreesTemp),"\n\t".join(sortiesTemp))
         return result
     
     def __setitem__(self,nomCase,case):
@@ -675,3 +691,66 @@ class Paradigme:
             self.supporters[outCase][ruleDist.sortie][inCase]=FormeClasse()
         self.supporters[outCase][ruleDist.sortie][inCase].addRule(RegleDist(ruleDist.regle,ruleDist.dist,ruleDist.nom,ruleDist.sortie),force=True)
 
+    def calculerParadigme(self):
+        for inCase in self.entrees:
+            if verbose: print("inCase",inCase,self.entrees[inCase].valeurs)
+            for formeCoef in self.entrees[inCase]:
+                if verbose: print("\tforme coef",formeCoef)
+                forme=formeCoef.forme
+                for outCase in analyse.pairesCase[inCase]:
+                    if verbose: print("\t\toutCase",outCase)
+                    paire=Paire(inCase,outCase)
+                    formeSorties=FormeClasse(forme)
+                    for numRegle in analyse.reglesPaire[paire]:
+                        (entree,sortie)=modifierForme(forme,numRegle)
+                        if sortie!="":
+                            formeSorties.addRule(RegleDist(numRegle,1,sortie,entree),force=True)
+                    if formeSorties in classification.classes[paire]:
+                        numClasse=classification.classes[paire].index(formeSorties)
+                        for numRegle in formeSorties.reglesDist:
+                            formeSorties.reglesDist[numRegle].dist=classification.classes[paire][numClasse].reglesDist[numRegle].dist
+                        self.addSortie(paire,formeSorties)
+                        if verbose: print("\t\t\tformeSorties",paire,formeSorties)
+                        for rd in formeSorties.numRulesDist():
+                            if rd.dist!=0:
+                                self.addSupporter(paire,rd)
+                    else:
+                        if verbose: print ("formeSorties",formeSorties.getRules())
+                        if verbose: print ("classes", classification.classes[paire])
+                        if verbose: print ("pas de classe", paire, formeSorties)
+        if verbose: print("verbes.sorties")
+        for nomCase in self.sorties:
+            if verbose: print("nom Case",nomCase)
+            case=Case(nomCase)
+            for vecteur in self.sorties[nomCase]:
+                if verbose: print("\tvecteur",vecteur)
+                for fc in self.sorties[nomCase][vecteur]:
+                    if verbose: print("\t\tforme classe",fc)
+                    for rd in fc.numRulesDist():
+                        if verbose: print("\t\t\trègle distribution",rd)
+                        if rd.dist!=0:
+                            case.addForm(FormeCoef(rd.sortie,rd.dist))
+            if verbose: print ("temp case %s : %s" % (nomCase,case.valeurs))
+            nouvelleCase=Case(nomCase)
+            nouvelleCase.addForms(case.numValeurs())
+            if verbose: print ("nouvelle case %s : %s" % (nomCase,nouvelleCase.valeurs))
+            self.nouveau[nomCase]=nouvelleCase
+    
+    def supportsEntrees(self):
+        for case in self.entrees:
+            print (case)
+            for formeCoef in self.entrees[case].numValeurs():
+                print ("\t",formeCoef.forme)
+                if formeCoef.forme in self.supporters[case]:
+                    for element in self.supporters[case][formeCoef.forme]:
+                        print ("\t\t",element,self.supporters[case][formeCoef.forme][element])
+            print ()
+    
+    def supportsSorties(self):
+        for case in self.sorties:
+            print (case)
+            for paire in self.sorties[case]:
+                print ("\t",paire)
+                for element in self.sorties[case][paire]:
+                    print ("\t\t",element)
+        
