@@ -1,5 +1,6 @@
 import re
 import warnings
+import networkx as nx
 
 seuilDistribution=0.01
 
@@ -595,6 +596,7 @@ class Paradigme:
         self.supporters={}
         self.nouveau={}
         self.mutable=mutable
+        self.graphe=nx.DiGraph()
         for case in Cases:
             self.entrees[case]=Case(case)
             self.sorties[case]={}
@@ -638,6 +640,17 @@ class Paradigme:
         for case in cases:
             self.addEntree(case)
 
+    def addEdge(self,paire,formeClasse):
+        '''
+        Ajouter des arcs dans le graphe pour la paire et la formeClasse
+        '''
+        nDepart=paire.entree+"-"+formeClasse.nom
+        self.graphe.add_node(nDepart)
+        rulesDist=formeClasse.numRulesDist()
+        for rd in rulesDist:
+            nArrivee=paire.sortie+"-"+rd.sortie
+            self.graphe.add_node(nArrivee)
+            self.graphe.add_edge(nDepart,nArrivee,poids=rd.dist)
     
     def addSortie(self,paire,formeClasse):
         '''
@@ -661,6 +674,7 @@ class Paradigme:
         formesDist.reglesDist=formeClasse.reglesDist
         if not formesDist in self.sorties[paire.sortie][paire]:
             self.sorties[paire.sortie][paire].append(formesDist)
+            self.addEdge(paire,formeClasse)
 #        if not formeClasse in self.sorties[paire.sortie][paire]:
 #            self.sorties[paire.sortie][paire].append(formeClasse)
         else:
@@ -669,28 +683,6 @@ class Paradigme:
     def addSorties(self,paire,*formeClasses):
         for formeClasse in formeClasses:
             self.addSortie(paire,formeClasse)    
-
-#    def addSortie(self,paire,formeClasse):
-#        '''
-#        Ajouter une distribution de formes à une case de sortie
-#        '''
-#        if not paire.sortie in self.sorties:
-#            self.sorties[paire.sortie]={}
-#        if not paire in self.sorties[paire.sortie]:
-#            self.sorties[paire.sortie][paire]=[]
-#        '''
-#        il y a un pb avec __eq__ quand formeClasse concerne les mêmes règles
-#        mais possède un nom différent
-#        '''
-#        if not formeClasse in self.sorties[paire.sortie][paire]:
-#            self.sorties[paire.sortie][paire].append(formeClasse)
-#        else:
-#            warnings.warn("%s déjà dans le paradigme de sortie %s %s"%(formeClasse,paire,self.sorties[paire.sortie][paire]))
-#            
-#    def addSorties(self,paire,*formeClasses):
-#        for formeClasse in formeClasses:
-#            self.addSortie(paire,formeClasse)    
-
 
     def addSupporter(self,paire,ruleDist):
         '''
@@ -751,6 +743,7 @@ class Paradigme:
             if verbose: print ("nouvelle case %s : %s" % (nomCase,nouvelleCase.valeurs))
             self.nouveau[nomCase]=nouvelleCase
     
+
     def supportsEntrees(self):
         for case in self.entrees:
             print (case)
