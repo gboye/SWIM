@@ -171,6 +171,14 @@ class RegleDist:
         self.nom=nom
         self.etiquette=etiquette
         
+    def __eq__(self,other):
+        result=True
+        result=result and (self.regle==other.regle)
+        result=result and (self.dist==other.dist)
+        result=result and (self.sortie==other.sortie)
+        result=result and (self.nom==other.nom)
+        return result
+        
     def __repr__(self):
         if self.etiquette and self.nom!="":
             name=" "+self.nom
@@ -197,7 +205,7 @@ class RegleDist:
             warnings.warn("%d index out of range [0,1]"%index)
 
     def val(self):
-        return (self.regle,self.dist)        
+        return (self.regle,self.dist,self.sortie,self.nom,self.etiquette)        
 
 class FormeClasse:
     '''
@@ -293,10 +301,16 @@ class FormesDist(FormeClasse):
 #        self.total=0
     
     def __eq__(self,other):
+        '''
+        Compare le contenu de deux FormesDist (nom et les RegleDist de la liste)
+        '''
         result=(self.nom==other.nom)
-        for rd in self.reglesDist:
-            result=result and (self.reglesDist[rd]==other.reglesDist[rd])
-        return result
+        if result:
+            for rd in self.reglesDist:
+                result=result and (self.reglesDist[rd]==other.reglesDist[rd])
+            return result
+        else:
+            return False
 
     def __repr__(self):
         temp=[]
@@ -646,10 +660,11 @@ class Paradigme:
         formesDist=FormesDist(formeClasse.nom)
         formesDist.reglesDist=formeClasse.reglesDist
         if not formesDist in self.sorties[paire.sortie][paire]:
-            self.sorties[paire.sortie][paire].append(formeClasse)
+            self.sorties[paire.sortie][paire].append(formesDist)
+#        if not formeClasse in self.sorties[paire.sortie][paire]:
+#            self.sorties[paire.sortie][paire].append(formeClasse)
         else:
             warnings.warn("%s déjà dans le paradigme de sortie %s %s"%(formesDist,paire,self.sorties[paire.sortie][paire]))
-        if verbose2: print ("FIN: addSortie(%s,%s) to %s"%(paire, formeClasse,self.sorties[paire.sortie][paire]))
             
     def addSorties(self,paire,*formeClasses):
         for formeClasse in formeClasses:
@@ -694,7 +709,7 @@ class Paradigme:
     def calculerParadigme(self):
         for inCase in self.entrees:
             if verbose: print("inCase",inCase,self.entrees[inCase].valeurs)
-            for formeCoef in self.entrees[inCase]:
+            for formeCoef in self.entrees[inCase].numValeurs():
                 if verbose: print("\tforme coef",formeCoef)
                 forme=formeCoef.forme
                 for outCase in analyse.pairesCase[inCase]:
