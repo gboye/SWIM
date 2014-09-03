@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import re
 import warnings
 import networkx as nx
