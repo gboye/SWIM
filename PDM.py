@@ -652,13 +652,13 @@ class Paradigme:
         rulesDist=formeClasse.numRulesDist()
         for rd in rulesDist:
             nArrivee=paire.sortie+"-"+rd.sortie
-            self.digraphe.add_node(nArrivee)
-            self.digraphe.add_edge(nDepart,nArrivee,poids=rd.dist)
+            self.digraphe.add_node(nArrivee,weight=rd.dist)
+            self.digraphe.add_edge(nDepart,nArrivee,weight=rd.dist)
             if self.digraphe.has_edge(nArrivee,nDepart):
-                poids=self.digraphe[nDepart][nArrivee]["poids"]+self.digraphe[nArrivee][nDepart]["poids"]
-                self.graphe.add_node(nDepart)
-                self.graphe.add_node(nArrivee)
-                self.graphe.add_edge(nDepart,nArrivee,poids=poids)
+                poids=(self.digraphe[nDepart][nArrivee]["weight"]+self.digraphe[nArrivee][nDepart]["weight"])/2
+                self.graphe.add_node(nDepart,weight=self.digraphe[nArrivee][nDepart]["weight"])
+                self.graphe.add_node(nArrivee,weight=self.digraphe[nDepart][nArrivee]["weight"])
+                self.graphe.add_edge(nDepart,nArrivee,weight=poids)
                 
     def addSortie(self,paire,formeClasse):
         '''
