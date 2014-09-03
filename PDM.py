@@ -596,7 +596,8 @@ class Paradigme:
         self.supporters={}
         self.nouveau={}
         self.mutable=mutable
-        self.graphe=nx.DiGraph()
+        self.digraphe=nx.DiGraph()
+        self.graphe=nx.Graph()
         for case in Cases:
             self.entrees[case]=Case(case)
             self.sorties[case]={}
@@ -649,9 +650,14 @@ class Paradigme:
         rulesDist=formeClasse.numRulesDist()
         for rd in rulesDist:
             nArrivee=paire.sortie+"-"+rd.sortie
-            self.graphe.add_node(nArrivee)
-            self.graphe.add_edge(nDepart,nArrivee,poids=rd.dist)
-    
+            self.digraphe.add_node(nArrivee)
+            self.digraphe.add_edge(nDepart,nArrivee,poids=rd.dist)
+            if self.digraphe.has_edge(nArrivee,nDepart):
+                poids=self.digraphe[nDepart][nArrivee]["poids"]+self.digraphe[nArrivee][nDepart]["poids"]
+                self.graphe.add_node(nDepart)
+                self.graphe.add_node(nArrivee)
+                self.graphe.add_edge(nDepart,nArrivee,poids=poids)
+                
     def addSortie(self,paire,formeClasse):
         '''
         Ajouter une distribution de formes à une case de sortie
