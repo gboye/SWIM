@@ -105,27 +105,6 @@ def modifierForme(forme,numRegle):
     else:
         return (forme,"")
 
-#def outputFormes(paireCase,FormeCoef):
-#    lines=[]
-#    numsClasse={}
-#    (forme,part)=FormeCoef
-#    for numero in pairesCasesRegles[paireCase]:
-#        (inPatron,mod)=reglesPDM[numero]
-#        sortie=transformerForme(inPatron,mod,forme)
-#        if sortie:
-#            numsClasse[numero]=sortie
-#    alphaKeys=[]
-#    for num in sorted(numsClasse.keys()):
-#        alphaKeys.append(str(num))
-#    classe="-".join(alphaKeys)
-#    if not classe in Classes[paireCase]:
-#        print ("FORME SANS SORTIE",forme)
-#    else:
-#        for numero in numsClasse:
-#            if Classes[paireCase][classe][numero]>0:
-#                lines.append((numsClasse[numero],Classes[paireCase][classe][numero]*part))
-#    return distributionVecteurs([lines]) 
-
 class Paire:
     '''
     Cette classe permet de définir une paire (entree,sortie)
@@ -161,7 +140,6 @@ class Paire:
             
     def val(self):
         return (self.entree,self.sortie)        
-
 
 class RegleDist:
     '''
@@ -234,18 +212,6 @@ class FormeClasse:
     def __eq__(self,other):
         return self.getRules()==other.getRules()
 
-#     def __eq__(self,other):
-#         '''
-#         FormeClasse
-#         '''
-#         result=True
-#         for rd in self.reglesDist:
-#             try:
-#                 result=result and (self.reglesDist[rd].regle==other.reglesDist[rd].regle)
-#             except KeyError:
-#                 return False
-#         return result
-
             
     def __getitem__(self,index):
         if index in self.reglesDist:
@@ -297,11 +263,6 @@ class FormesDist(FormeClasse):
     '''
     Classe distributionnelle pour une forme
     '''
-#    def __init__(self,nom="",etiquette=True):
-#        self.nom=str(nom)
-#        self.etiquette=etiquette
-#        self.reglesDist={}
-#        self.total=0
     
     def __eq__(self,other):
         '''
@@ -386,8 +347,6 @@ class Classes:
             self.classes[paire]=paireClasses.classes
         else:
             warnings.warn("Classes déja définies pour %s"%paire)
-
-
 
 class ModifForme:
     '''
@@ -556,9 +515,6 @@ class Case:
 
     def addForm(self,FormeCoef):
         self.valeurs.append(FormeCoef)
-#        if not FormeCoef.forme in self.coefficient:
-#            self.coefficient[FormeCoef.forme]=0
-#        self.coefficient[FormeCoef.forme]+=FormeCoef.coef
     
     def addForms(self,FormesCoefs):
         for FormeCoef in FormesCoefs:
@@ -621,8 +577,6 @@ class Paradigme:
             raise ValueError("%s not in Paradigme"%nomCase)
         else:
             self.entrees[nomCase]=case
-#            if not nomCase in self.sorties:
-#                self.sorties[nomCase]=Case(nomCase)
         
     def __getitem__(self,nomCase):
         return self.entrees[nomCase]
@@ -683,8 +637,6 @@ class Paradigme:
         if not formesDist in self.sorties[paire.sortie][paire]:
             self.sorties[paire.sortie][paire].append(formesDist)
             self.addEdge(paire,formeClasse)
-#        if not formeClasse in self.sorties[paire.sortie][paire]:
-#            self.sorties[paire.sortie][paire].append(formeClasse)
         else:
             warnings.warn("%s déjà dans le paradigme de sortie %s %s"%(formesDist,paire,self.sorties[paire.sortie][paire]))
             
