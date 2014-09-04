@@ -640,21 +640,28 @@ class Paradigme:
         '''
         Ajouter des arcs dans le graphe pour la paire et la formeClasse
         '''
+#        verbose3=not len(self.nouveau)==0
+        if verbose:
+            print("addEdge(paire,formeClasse)",paire,formeClasse)
         nDepart=paire.entree+"-"+formeClasse.nom
+        if verbose: 
+            print("nDepart,coefDEP",nDepart,self.getCoefNewForm(paire.entree,formeClasse.nom))
         self.graphe.add_node(nDepart,weight=self.getCoefNewForm(paire.entree,formeClasse.nom))
         rulesDist=formeClasse.numRulesDist()
         for rd in rulesDist:
             coef=self.getCoefNewForm(paire.sortie,rd.sortie)
+            if verbose: 
+                print("coefARR,rd",coef,rd)
 #            if rd.dist>seuilDistribution or True:
             if coef>seuilDistribution:
                 nArrivee=paire.sortie+"-"+rd.sortie
                 self.digraphe.add_node(nArrivee,weight=coef)
-                self.digraphe.add_edge(nDepart,nArrivee,weight=rd.dist)
+                self.digraphe.add_edge(nDepart,nArrivee,weight=rd.dist*coef)
 #                self.digraphe.add_edge(nDepart,nArrivee,weight=coef)
-                if self.digraphe.has_edge(nArrivee,nDepart) and "weight" in self.digraphe[nDepart]:
+                if self.digraphe.has_edge(nArrivee,nDepart) and ("weight" in self.digraphe.node[nDepart]):
                     poids=(self.digraphe[nDepart][nArrivee]["weight"]+self.digraphe[nArrivee][nDepart]["weight"])/2
-                    self.graphe.add_node(nDepart,weight=self.digraphe[nDepart]["weight"])
-                    self.graphe.add_node(nArrivee,weight=self.digraphe[nArrivee]["weight"])
+                    self.graphe.add_node(nDepart,weight=self.digraphe.node[nDepart]["weight"])
+                    self.graphe.add_node(nArrivee,weight=self.digraphe.node[nArrivee]["weight"])
                     self.graphe.add_edge(nDepart,nArrivee,weight=poids)
                 
     def addSortie(self,paire,formeClasse):
@@ -682,10 +689,20 @@ class Paradigme:
         '''
         Renvoi le coef d'une forme dans self.nouveau[nomCase]
         '''
+        if verbose:
+            print (nomCase,forme)
         if nomCase in self.nouveau:
-            for formeCoef in self.nouveau[nomCase]:
+            if verbose:
+                print ("nomCase,nouveau[nomCase]",nomCase,self.nouveau[nomCase])
+            for formeCoef in self.nouveau[nomCase].valeurs: # self.nouveau[nomCase] est du type CASE !!!
+                if verbose:
+                    print ("formeCoef.forme, forme",formeCoef.forme,forme)
                 if formeCoef.forme==forme:
+                    if verbose:
+                        print ("formeCoef.coef",formeCoef.coef)
                     return formeCoef.coef
+            if verbose:
+                print ()
         return 0
     
     def calculNouveau(self):
@@ -741,12 +758,15 @@ class Paradigme:
                         if verbose: print ("pas de classe", paire, formeSorties)
 
     def calculerParadigme(self):
+        if True: print ("Première passe")
         self.calculSorties(self.entrees)
         if verbose: print("verbes.sorties")
         self.calculNouveau()
         self.digraphe=nx.DiGraph()
         self.graphe=nx.Graph()
+        self.intermediaires=self.nouveau.copy()
         self.sorties={}
+        if True: print ("Deuxième passe")
         self.calculSorties(self.nouveau)
         self.calculNouveau()
     
