@@ -7,6 +7,7 @@ import networkx as nx
 seuilDistribution=0.01
 
 verbose=False
+verbose1=False
 verbose2=False
 
 def strFloat(num):
@@ -240,7 +241,8 @@ class FormeClasse:
     def updateTotal(self):
         self.total=0
         for regle in self.reglesDist:
-            self.total+=self.reglesDist[regle].dist
+            if self.reglesDist[regle].dist >= seuilDistribution:
+                self.total+=self.reglesDist[regle].dist
         
     def numRulesDist(self):
         '''
@@ -250,7 +252,11 @@ class FormeClasse:
         normalReglesDist=[]
         for regle in self.reglesDist:
             dr=self.reglesDist[regle]
-            normalReglesDist.append(RegleDist(dr.regle,float(strFloat(dr.dist/self.total)),dr.sortie,dr.nom,dr.etiquette))
+            if dr.dist >= seuilDistribution:
+                normalDist=float(strFloat(dr.dist/self.total))
+            else:
+                normalDist=0
+            normalReglesDist.append(RegleDist(dr.regle,normalDist,dr.sortie,dr.nom,dr.etiquette))
         return normalReglesDist
     
     def getRules(self):
@@ -494,7 +500,6 @@ class Case:
             nomCase=""
         return "%s[%s]"%(nomCase,contenuCase)
 
-    
     def __repr__(self):
         temp=[]
         for fc in distributionVecteurs([self.valeurs]):
@@ -509,7 +514,6 @@ class Case:
     def __getitem__(self,index):
         return self.valeurs[index]
         
-
     def label(self,etiquette):
         self.etiquette=etiquette
 
@@ -541,6 +545,41 @@ class Case:
             normalValeurs.append(FormeCoef(forme,float(strFloat(formeCoefs[forme]/self.total))))
         return normalValeurs
 
+class NewCase:
+    '''
+    Distribution des formes dans une case
+    '''
+    
+    def __init__(self,nom=""):
+        self.nom=nom
+        self.coefs={}
+        
+    def __getitem__(self,index):
+        return self.coefs[index]
+
+    def addFormeCoefs(self,*formeCoefs):
+        for formeCoef in formeCoefs:
+            self.coefs[formeCoef.forme]=formeCoef.coef
+        
+    def getTotal(self):
+        total=0
+        for forme in self.coefs:
+            total+=self.coefs[forme]
+        return total
+        
+    def rawDistribution(self):
+        result=[]
+        for forme in self.coefs:
+            result.append[FormeCoef(forme,self.coefs[forme])]
+        return result
+            
+    def normDistribution(self):
+        result=[]
+        total=self.getTotal()
+        for forme in self.coefs:
+            result.append[FormeCoef(forme,float(strFloat(self.coefs[forme])/total))]
+        return result
+        
     
 class Paradigme:
     '''
@@ -551,7 +590,7 @@ class Paradigme:
     def __init__(self,Cases=[],mutable=False):
         self.entrees={}
         self.sorties={}
-        self.supporters={}
+        self.complementaires={}
         self.nouveau={}
         self.mutable=mutable
         self.digraphe=nx.DiGraph()
@@ -605,33 +644,25 @@ class Paradigme:
         self.graphe.add_node(nDepart)
         rulesDist=formeClasse.numRulesDist()
         for rd in rulesDist:
-            nArrivee=paire.sortie+"-"+rd.sortie
-            self.digraphe.add_node(nArrivee,weight=rd.dist)
-            self.digraphe.add_edge(nDepart,nArrivee,weight=rd.dist)
-            if self.digraphe.has_edge(nArrivee,nDepart):
-                poids=(self.digraphe[nDepart][nArrivee]["weight"]+self.digraphe[nArrivee][nDepart]["weight"])/2
-                self.graphe.add_node(nDepart,weight=self.digraphe[nArrivee][nDepart]["weight"])
-                self.graphe.add_node(nArrivee,weight=self.digraphe[nDepart][nArrivee]["weight"])
-                self.graphe.add_edge(nDepart,nArrivee,weight=poids)
+            if rd.dist>seuilDistribution:
+                nArrivee=paire.sortie+"-"+rd.sortie
+                self.digraphe.add_node(nArrivee,weight=rd.dist)
+                self.digraphe.add_edge(nDepart,nArrivee,weight=rd.dist)
+                if self.digraphe.has_edge(nArrivee,nDepart):
+                    poids=(self.digraphe[nDepart][nArrivee]["weight"]+self.digraphe[nArrivee][nDepart]["weight"])/2
+                    self.graphe.add_node(nDepart,weight=self.digraphe[nArrivee][nDepart]["weight"])
+                    self.graphe.add_node(nArrivee,weight=self.digraphe[nDepart][nArrivee]["weight"])
+                    self.graphe.add_edge(nDepart,nArrivee,weight=poids)
                 
     def addSortie(self,paire,formeClasse):
         '''
         Ajouter une distribution de formes à une case de sortie
         '''
-        if verbose2: print ("DEB: addSortie(%s,%s)"%(paire, formeClasse))
         if not paire.sortie in self.sorties:
             self.sorties[paire.sortie]={}
-        else:
-            if verbose2: print ("SORTIE: addSortie(%s,%s) to %s"%(paire, formeClasse,self.sorties[paire.sortie]))
 
         if not paire in self.sorties[paire.sortie]:
             self.sorties[paire.sortie][paire]=[]
-        else:
-            if verbose2: print ("PAIRE: addSortie(%s,%s) to %s"%(paire, formeClasse,self.sorties[paire.sortie][paire]))
-        '''
-        il y a un pb avec __eq__ quand formeClasse concerne les mêmes règles
-        mais possède un nom différent
-        '''
         formesDist=FormesDist(formeClasse.nom)
         formesDist.reglesDist=formeClasse.reglesDist
         if not formesDist in self.sorties[paire.sortie][paire]:
@@ -644,19 +675,10 @@ class Paradigme:
         for formeClasse in formeClasses:
             self.addSortie(paire,formeClasse)    
 
-    def addSupporter(self,paire,ruleDist):
+    def addComplement(self,case,formeCoef):
         '''
-        Ajouter la forme d'entrée de la paire supporte la forme de sortie
+        Ajouter les conséquences d'une forme complémentaire aux graphes
         '''
-        inCase=paire.entree
-        outCase=paire.sortie
-        if not outCase in self.supporters:
-            self.supporters[outCase]={}
-        if not ruleDist.sortie in self.supporters[outCase]:
-            self.supporters[outCase][ruleDist.sortie]={}
-        if not inCase in self.supporters[outCase][ruleDist.sortie]:
-            self.supporters[outCase][ruleDist.sortie][inCase]=FormeClasse()
-        self.supporters[outCase][ruleDist.sortie][inCase].addRule(RegleDist(ruleDist.regle,ruleDist.dist,ruleDist.nom,ruleDist.sortie),force=True)
 
     def calculerParadigme(self):
         for inCase in self.entrees:
@@ -678,9 +700,9 @@ class Paradigme:
                             formeSorties.reglesDist[numRegle].dist=classification.classes[paire][numClasse].reglesDist[numRegle].dist
                         self.addSortie(paire,formeSorties)
                         if verbose: print("\t\t\tformeSorties",paire,formeSorties)
-                        for rd in formeSorties.numRulesDist():
-                            if rd.dist!=0:
-                                self.addSupporter(paire,rd)
+#                        for rd in formeSorties.numRulesDist():
+#                            if rd.dist!=0:
+#                                self.addSupporter(paire,rd)
                     else:
                         if verbose: print ("formeSorties",formeSorties.getRules())
                         if verbose: print ("classes", classification.classes[paire])
@@ -702,6 +724,34 @@ class Paradigme:
             nouvelleCase.addForms(case.numValeurs())
             if verbose: print ("nouvelle case %s : %s" % (nomCase,nouvelleCase.valeurs))
             self.nouveau[nomCase]=nouvelleCase
+        for inCase in self.nouveau:
+            if verbose1: print("inCase",inCase,self.nouveau[inCase].valeurs)
+            for formeCoef in self.nouveau[inCase].numValeurs():
+                if verbose1: print("\tforme coef",formeCoef,self.entrees)
+                if not inCase in self.entrees or formeCoef.forme not in [x.forme for x in self.entrees[inCase].valeurs]:
+                    forme=formeCoef.forme
+                    for outCase in analyse.pairesCase[inCase]:
+                        if verbose1: print("\t\toutCase",outCase)
+                        paire=Paire(inCase,outCase)
+                        formeSorties=FormeClasse(forme)
+                        for numRegle in analyse.reglesPaire[paire]:
+                            (entree,sortie)=modifierForme(forme,numRegle)
+                            if sortie!="":
+                                formeSorties.addRule(RegleDist(numRegle,1,sortie,entree),force=True)
+                        if formeSorties in classification.classes[paire]:
+                            numClasse=classification.classes[paire].index(formeSorties)
+                            for numRegle in formeSorties.reglesDist:
+                                formeSorties.reglesDist[numRegle].dist=classification.classes[paire][numClasse].reglesDist[numRegle].dist
+                            self.addEdge(paire,formeSorties)
+                            if verbose1: print("\t\t\tformeSorties",paire,formeSorties)
+    #                        for rd in formeSorties.numRulesDist():
+    #                            if rd.dist!=0:
+    #                                self.addSupporter(paire,rd)
+                        else:
+                            if verbose1: print ("formeSorties",formeSorties.getRules())
+                            if verbose1: print ("classes", classification.classes[paire])
+                            if verbose1: print ("pas de classe", paire, formeSorties)
+            
     
 
     def supportsEntrees(self):
@@ -721,4 +771,6 @@ class Paradigme:
                 print ("\t",paire)
                 for element in self.sorties[case][paire]:
                     print ("\t\t",element)
-        
+
+
+
