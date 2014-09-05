@@ -646,7 +646,7 @@ class Paradigme:
         nDepart=paire.entree+"-"+formeClasse.nom
         if verbose: 
             print("nDepart,coefDEP",nDepart,self.getCoefNewForm(paire.entree,formeClasse.nom))
-        self.graphe.add_node(nDepart,weight=self.getCoefNewForm(paire.entree,formeClasse.nom))
+        self.digraphe.add_node(nDepart,weight=self.getCoefNewForm(paire.entree,formeClasse.nom))
         rulesDist=formeClasse.numRulesDist()
         for rd in rulesDist:
             coef=self.getCoefNewForm(paire.sortie,rd.sortie)
@@ -689,12 +689,12 @@ class Paradigme:
         '''
         Renvoi le coef d'une forme dans self.nouveau[nomCase]
         '''
-        if verbose:
+        if verbose: 
             print (nomCase,forme)
-        if nomCase in self.nouveau:
+        if nomCase in self.intermediaires:
             if verbose:
-                print ("nomCase,nouveau[nomCase]",nomCase,self.nouveau[nomCase])
-            for formeCoef in self.nouveau[nomCase].valeurs: # self.nouveau[nomCase] est du type CASE !!!
+                print ("nomCase,intermediaires[nomCase]",nomCase,self.intermediaires[nomCase])
+            for formeCoef in self.intermediaires[nomCase].valeurs: # self.intermediaires[nomCase] est du type CASE !!!
                 if verbose:
                     print ("formeCoef.forme, forme",formeCoef.forme,forme)
                 if formeCoef.forme==forme:
@@ -703,6 +703,10 @@ class Paradigme:
                     return formeCoef.coef
             if verbose:
                 print ()
+#         elif nomCase in self.entrees:
+#         		for formeCoef in self.entrees[nomCase].valeurs:
+#         			if formeCoef.forme==forme:
+#         				return formeCoef.coef
         return 0
     
     def calculNouveau(self):
@@ -732,7 +736,10 @@ class Paradigme:
         '''
         for inCase in lexical:
             if verbose: print("inCase",inCase,lexical[inCase].valeurs)
+            autoPaire=Paire(inCase,inCase)
+            autoSorties=FormeClasse("auto")
             for formeCoef in lexical[inCase].numValeurs():
+                autoSorties.addRule(RegleDist(0,formeCoef.coef,formeCoef.forme,formeCoef.forme),force=True)
                 if verbose: print("\tforme coef",formeCoef)
                 forme=formeCoef.forme
                 for outCase in analyse.pairesCase[inCase]:
@@ -749,16 +756,15 @@ class Paradigme:
                             formeSorties.reglesDist[numRegle].dist=classification.classes[paire][numClasse].reglesDist[numRegle].dist
                         self.addSortie(paire,formeSorties)
                         if verbose: print("\t\t\tformeSorties",paire,formeSorties)
-#                        for rd in formeSorties.numRulesDist():
-#                            if rd.dist!=0:
-#                                self.addSupporter(paire,rd)
                     else:
                         if verbose: print ("formeSorties",formeSorties.getRules())
                         if verbose: print ("classes", classification.classes[paire])
                         if verbose: print ("pas de classe", paire, formeSorties)
+            self.addSortie(autoPaire,autoSorties)
 
     def calculerParadigme(self):
-        if True: print ("Première passe")
+        if verbose: print ("Première passe")
+        self.intermediaires=self.entrees.copy()
         self.calculSorties(self.entrees)
         if verbose: print("verbes.sorties")
         self.calculNouveau()
@@ -766,7 +772,7 @@ class Paradigme:
         self.graphe=nx.Graph()
         self.intermediaires=self.nouveau.copy()
         self.sorties={}
-        if True: print ("Deuxième passe")
+        if verbose: print ("Deuxième passe")
         self.calculSorties(self.nouveau)
         self.calculNouveau()
     
