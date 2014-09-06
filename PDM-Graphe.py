@@ -32,20 +32,21 @@ with open('Classes.pkl', 'rb') as input:
 # In[22]:
 
 prs1=Case("prs.1")
-prs1.addForm(FormeCoef("fini",1))
+prs1.addForm(FormeCoef("balE",3.0))
+#prs1.addForm(FormeCoef("balEj",1.0))
 pst1=Case("pst.1")
-pst1.addForm(FormeCoef("fini",1))
+pst1.addForm(FormeCoef("fini",1.0))
 inf=Case("inf")
-inf.addForm(FormeCoef("finir",1))
+inf.addForm(FormeCoef("balEjE",1.0))
 prspcp=Case("prs.pcp")
-prspcp.addForm(FormeCoef("finisâ",1))
+prspcp.addForm(FormeCoef("finisâ",1.0))
 
 
 # In[23]:
 
 lexical=Paradigme()
 #lexical.addEntrees(inf,prs1,pst1)
-lexical.addEntrees(inf)
+lexical.addEntrees(prs1,inf)
 #lexical.addEntrees(prs1,pst1)
 #lexical.addEntrees(prs1,prspcp)
 lexical.calculerParadigme()
@@ -55,7 +56,7 @@ lexical.calculerParadigme()
 
 cliques=list(nx.algorithms.clique.find_cliques(lexical.graphe))
 print len(cliques)
-for clique in cliques:
+for clique in sorted(cliques,key=lambda x: len(x),reverse=True):
     print (len(clique),clique)
     print ()
     total=0

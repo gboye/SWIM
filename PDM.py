@@ -450,6 +450,7 @@ class FormeCoef:
     '''
     def __init__(self,forme,coef):
         self.forme=forme
+        
         self.coef=coef
         
     def __repr__(self):
@@ -491,7 +492,8 @@ class Case:
         
     def __str__(self):
         temp=[]
-        for fc in distributionVecteurs([self.valeurs]):
+        for fc in self.numValeurs():
+        #for fc in distributionVecteurs([self.valeurs]):
             temp.append(repr(fc))
         contenuCase=",".join(temp)
         if self.nom!="":
@@ -502,7 +504,8 @@ class Case:
 
     def __repr__(self):
         temp=[]
-        for fc in distributionVecteurs([self.valeurs]):
+        for fc in self.numValeurs():
+        #for fc in distributionVecteurs([self.valeurs]):
             temp.append(repr(fc))
         contenuCase=",".join(temp)
         if self.etiquette and self.nom!="":
@@ -723,7 +726,7 @@ class Paradigme:
                     for rd in fc.numRulesDist():
                         if verbose: print("\t\t\trègle distribution",rd)
                         if rd.dist!=0:
-                            case.addForm(FormeCoef(rd.sortie,rd.dist))
+                            case.addForm(FormeCoef(rd.sortie,rd.dist*self.getCoefNewForm(vecteur.entree, rd.nom))) ###
             if verbose: print ("temp case %s : %s" % (nomCase,case.valeurs))
             nouvelleCase=Case(nomCase)
             nouvelleCase.addForms(case.numValeurs())
@@ -737,9 +740,11 @@ class Paradigme:
         for inCase in lexical:
             if verbose: print("inCase",inCase,lexical[inCase].valeurs)
             autoPaire=Paire(inCase,inCase)
-            autoSorties=FormeClasse("auto")
+            autoSorties=Case("auto")
+            #autoSorties=FormeClasse("auto")
             for formeCoef in lexical[inCase].numValeurs():
-                autoSorties.addRule(RegleDist(0,formeCoef.coef,formeCoef.forme,formeCoef.forme),force=True)
+                autoSorties.addForm(FormeCoef(formeCoef.forme,formeCoef.coef))
+				#autoSorties.addRule(RegleDist(0,formeCoef.coef,formeCoef.forme,formeCoef.forme),force=True)
                 if verbose: print("\tforme coef",formeCoef)
                 forme=formeCoef.forme
                 for outCase in analyse.pairesCase[inCase]:
@@ -760,7 +765,13 @@ class Paradigme:
                         if verbose: print ("formeSorties",formeSorties.getRules())
                         if verbose: print ("classes", classification.classes[paire])
                         if verbose: print ("pas de classe", paire, formeSorties)
-            self.addSortie(autoPaire,autoSorties)
+            numBase=(len(analyse.regles)/100+1)*1000
+            num=numBase+1
+            autoFormeClasse=FormeClasse("AUTO")
+            for fc in autoSorties:
+            		autoFormeClasse.addRule(RegleDist(num,fc.coef,fc.forme,fc.forme))
+            		num+=1
+            self.addSortie(autoPaire,autoFormeClasse)
 
     def calculerParadigme(self):
         if verbose: print ("Première passe")
