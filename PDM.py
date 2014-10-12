@@ -21,7 +21,7 @@ def parserPaire(line):
     parse une ligne de la sortie de PredSPE pour une paire comme :
     ipf.1 ==> prs.1
     '''
-    m=re.search("^\s*(\S+)\s+==>\s+(\S+)\s*$",line)
+    m=re.search(u"^\s*(\S+)\s+==>\s+(\S+)\s*$",line)
     if m:
         inCase=m.group(1)
         outCase=m.group(2)
@@ -34,7 +34,7 @@ def parserRegle(line):
     parse une ligne de la sortie de PredSPE pour une règle comme :
     E --> jô / X ___ #
     '''
-    m=re.search("^(\S+)\s+-->\s+(\S+)\s+/\s+(\S+)\s+___\s+(\S+)\s+(.*)$",line)
+    m=re.search(u"^(\S+)\s+-->\s+(\S+)\s+/\s+(\S+)\s+___\s+(\S+)\s+(.*)$",line)
     if m:
         a=m.group(1)
         if a=="[]":
@@ -75,7 +75,7 @@ def distributionVecteurs(vecteurs):
     distribution=[]
     supprime=False
     for forme in formes:
-        coef=float(strFloat(formes[forme]/total))
+        coef=float(strFloat(float(formes[forme])/total))
         if coef>seuilDistribution:
             distribution.append(FormeCoef(forme,coef))
         else:
@@ -88,8 +88,8 @@ def transformerForme(inPatron,mod,forme):
     '''
     renvoie la transformation de forme par inPatron et mod ou sinon False
     '''
-    if isinstance(forme,unicode):
-      forme=forme.encode("utf8")
+#    if isinstance(forme,unicode):
+#      forme=forme.encode("utf8")
     extrait=re.search(inPatron,forme)
     if extrait:
         sortie=extrait.group(1)+mod+extrait.group(2)
@@ -101,8 +101,8 @@ def modifierForme(forme,numRegle):
     patron=analyse.regles[numRegle].patron
     mod=analyse.regles[numRegle].mod
 
-    if isinstance(forme,unicode):
-      forme=forme.encode("utf8")
+#    if isinstance(forme,unicode):
+#      forme=forme.encode("utf8")
     m=re.search(patron,forme)
     if m:
         sortie=m.group(1)+mod+m.group(2)
@@ -125,7 +125,7 @@ class Paire:
         return self.entree==other.entree and self.sortie==other.sortie
 
     def __repr__(self):
-        return ('%s=>%s'%(self.entree,self.sortie))
+        return ('%s=>%s'%(self.entree,self.sortie)).encode('utf8')
     
     def __getitem__(self,index):
         if index==0:
@@ -167,12 +167,12 @@ class RegleDist:
         
     def __repr__(self):
         if self.etiquette and self.nom!="":
-            name=" "+self.nom
+            name=u" "+self.nom
         else:
-            name=""
+            name=u""
         if self.sortie!="":
-            name=" "+self.sortie+name
-        return '%d (%s%s)'%(self.regle,strFloat(self.dist),name)
+            name=u" "+self.sortie+name
+        return (u'%d (%s%s)'%(self.regle,strFloat(self.dist),name)).encode('utf8')
     
     def __getitem__(self,index):
         if index==0:
@@ -198,10 +198,10 @@ class FormeClasse:
     Cette classe permet de stocker une classe de sorties pour une forme
     '''
     
-    def __init__(self,nom="",etiquette=True):
-      if isinstance(nom,unicode):
-        nom=nom.encode("utf8")
-      self.nom=str(nom)
+    def __init__(self,nom=u"",etiquette=True):
+#      if isinstance(nom,unicode):
+#        nom=nom.encode("utf8")
+      self.nom=nom
       self.etiquette=etiquette
       self.reglesDist={}
       self.total=0
@@ -209,12 +209,14 @@ class FormeClasse:
     def __repr__(self):
         temp=[]
         for element in self.numRulesDist():
-            temp.append(str(element))
+#            print type(str(element).decode("utf8")),type(repr(element))
+            temp.append(str(element).decode("utf8"))
         if self.etiquette and self.nom!="":
-            nomClasse=self.nom+" : "
+            nomClasse=self.nom+u" : "
         else:
-            nomClasse=""
-        return "%s[%s]"%(nomClasse,", ".join(temp))
+            nomClasse=u""
+        result=u"%s[%s]"%(nomClasse,u", ".join(temp))
+        return result.encode('utf8')
 
     def __eq__(self,other):
         return self.getRules()==other.getRules()
@@ -259,7 +261,7 @@ class FormeClasse:
         for regle in self.reglesDist:
             dr=self.reglesDist[regle]
             if dr.dist > seuilDistribution:
-                normalDist=float(strFloat(dr.dist/self.total))
+                normalDist=float(strFloat(float(dr.dist)/self.total))
             else:
                 normalDist=0
             normalReglesDist.append(RegleDist(dr.regle,normalDist,dr.sortie,dr.nom,dr.etiquette))
@@ -296,7 +298,7 @@ class FormesDist(FormeClasse):
             nomClasse=self.nom+" : "
         else:
             nomClasse=""
-        return "%s[%s]"%(nomClasse,", ".join(temp))
+        return (u"%s[%s]"%(nomClasse,", ".join(temp))).encode('utf8')
 
 class PaireClasses:
     '''
@@ -312,13 +314,13 @@ class PaireClasses:
     def __repr__(self):
         temp=[]
         for element in self.classes:
-            temp.append(str(element))
-        classes=",".join(temp)
+            temp.append(repr(element))
+        classes=u",".join(temp)
         if self.etiquette and self.nom!="":
-            nomClasse=self.nom+" : "
+            nomClasse=self.nom+u" : "
         else:
             nomClasse=""
-        return "%s[%s]"%(nomClasse,classes)
+        return (u"%s[%s]"%(nomClasse,classes)).encode('utf8')
 
     def name(self):
         return self.nom
@@ -352,7 +354,7 @@ class Classes:
             for classe in self.classes[paire]:
                 tempClasses.append(str(classe))
             tempPaire.append("\n".join(tempClasses)+"\n")
-        return "\n".join(tempPaire)
+        return (u"\n".join(tempPaire)).encode('utf8')
     
     def addPaireClasses(self,paire,paireClasses):
         if not paire in self.classes:
@@ -364,7 +366,7 @@ class ModifForme:
     '''
     Cette classe permet de stocker une règle de transformation (patron,mod,regleSPE)
     '''
-    def __init__(self,inPatron,mod,regleSPE=""):
+    def __init__(self,inPatron,mod,regleSPE=u""):
         self.patron=inPatron
         self.mod=mod
         self.regleSPE=regleSPE
@@ -374,9 +376,9 @@ class ModifForme:
     
     def __repr__(self):
         if self.regleSPE=="":
-            return "(%s>%s)" % (self.patron, self.mod)
+            return (u"(%s>%s)" % (self.patron, self.mod)).encode('utf8')
         else:
-            return self.regleSPE
+            return self.regleSPE.encode('utf8')
 
     def __getitem__(self,index):
         if index==0:
@@ -415,18 +417,18 @@ class Regles:
     def __repr__(self):
         tempRegles=[]
         for i in range(len(self.regles)):
-            tempRegles.append(str(i)+" "+str(self.regles[i]))
+            tempRegles.append(unicode(i)+" "+(self.regles[i]))
         tempReglesPaire=[]
         for paire in self.reglesPaire:
             tempPaire=[]
             for element in self.reglesPaire[paire]:
-                tempPaire.append(str(element))
-            tempReglesPaire.append(str(paire)+" : "+", ".join(tempPaire))
-        return "\n".join(tempRegles)+"\n\n"+"\n".join(tempReglesPaire)
+                tempPaire.append((element))
+            tempReglesPaire.append((paire)+u" : "+u", ".join(tempPaire))
+        return (u"\n".join(tempRegles)+u"\n\n"+u"\n".join(tempReglesPaire)).encode('utf8')
             
     def addRegle(self,paire,ligne):
         (inPatron,mod,reste)=parserRegle(ligne)
-        regleSPE=""
+        regleSPE=u""
         if ligne.endswith(reste):
             regleSPE=ligne[:-len(reste)]
         regle=ModifForme(inPatron,mod,regleSPE)
@@ -455,13 +457,13 @@ class FormeCoef:
     Cet classe contient deux variables : forme et coef
     '''
     def __init__(self,forme,coef):
-      if isinstance(forme,unicode):
-        forme=forme.encode("utf8")
+#      if isinstance(forme,unicode):
+#        forme=forme.encode("utf8")
       self.forme=forme      
       self.coef=coef
         
     def __repr__(self):
-        return ('("%s",%s)'%(self.forme,strFloat(self.coef)))
+        return ('("%s",%s)'%(self.forme,strFloat(self.coef))).encode('utf8')
     
     def __getitem__(self,index):
         if index==0:
@@ -507,7 +509,7 @@ class Case:
             nomCase=self.nom+" : "
         else:
             nomCase=""
-        return "%s[%s]"%(nomCase,contenuCase)
+        return u"%s[%s]"%(nomCase,contenuCase)
 
     def __repr__(self):
         temp=[]
@@ -519,7 +521,7 @@ class Case:
             nomCase=self.nom+" : "
         else:
             nomCase=""
-        return "%s[%s]"%(nomCase,contenuCase)
+        return (u"%s[%s]"%(nomCase,contenuCase)).encode('utf8')
 
     def __getitem__(self,index):
         return self.valeurs[index]
@@ -551,8 +553,10 @@ class Case:
                 formeCoefs[formeCoef.forme]=0
             formeCoefs[formeCoef.forme]+=formeCoef.coef
         normalValeurs=[]
+#        if self.total==0:
+#          print formeCoefs,self.etiquette,self.nom,self.valeurs
         for forme in formeCoefs:
-            normalValeurs.append(FormeCoef(forme,float(strFloat(formeCoefs[forme]/self.total))))
+            normalValeurs.append(FormeCoef(forme,float(strFloat(float(formeCoefs[forme])/self.total))))
         return normalValeurs
 
 class NewCase:
@@ -587,7 +591,7 @@ class NewCase:
         result=[]
         total=self.getTotal()
         for forme in self.coefs:
-            result.append[FormeCoef(forme,float(strFloat(self.coefs[forme])/total))]
+            result.append[FormeCoef(forme,float(strFloat(float(self.coefs[forme])/total)))]
         return result
         
     
@@ -619,7 +623,7 @@ class Paradigme:
             for paire in self.sorties[case]:
                 sortiesTemp.append("\t"+repr(paire)+" : "+repr(self.sorties[case][paire]))
         result="entrees : {\n\t%s\n} \nsorties : {\n\t%s\n}"%("\n\t".join(entreesTemp),"\n\t".join(sortiesTemp))
-        return result
+        return result.encode('utf8')
     
     def __setitem__(self,nomCase,case):
         if self.mutable and not nomCase in self.entrees:
@@ -669,7 +673,7 @@ class Paradigme:
                 self.digraphe.add_edge(nDepart,nArrivee,weight=float(rd.dist*coef))
 #                self.digraphe.add_edge(nDepart,nArrivee,weight=coef)
                 if self.digraphe.has_edge(nArrivee,nDepart) and ("weight" in self.digraphe.node[nDepart]):
-                    poids=(self.digraphe[nDepart][nArrivee]["weight"]+self.digraphe[nArrivee][nDepart]["weight"])/2
+                    poids=float(self.digraphe[nDepart][nArrivee]["weight"]+self.digraphe[nArrivee][nDepart]["weight"])/2
                     self.graphe.add_node(nDepart,weight=float(self.digraphe.node[nDepart]["weight"]),cell=paire.entree,tense=paire.entree.split(".")[0])
                     self.graphe.add_node(nArrivee,weight=float(self.digraphe.node[nArrivee]["weight"]),cell=paire.sortie,tense=paire.sortie.split(".")[0])
                     self.graphe.add_edge(nDepart,nArrivee,weight=poids)
@@ -701,8 +705,9 @@ class Paradigme:
         '''
         if verbose: 
             print (nomCase,forme)
-        if isinstance(forme,unicode):
-          forme=forme.encode("utf8")
+#        if isinstance(forme,unicode):
+#          print "unicode"
+#          forme=forme.encode("utf8")
         if nomCase in self.intermediaires:
             if verbose:
                 print ("nomCase,intermediaires[nomCase]",nomCase,self.intermediaires[nomCase])
@@ -715,10 +720,12 @@ class Paradigme:
                     return formeCoef.coef
             if verbose:
                 print ()
-#         elif nomCase in self.entrees:
-#                 for formeCoef in self.entrees[nomCase].valeurs:
-#                     if formeCoef.forme==forme:
-#                         return formeCoef.coef
+#        elif nomCase in self.entrees:
+#           for formeCoef in self.entrees[nomCase].valeurs:
+#             if formeCoef.forme==forme:
+#               return formeCoef.coef
+#        else:
+#          print "nomCase %s not in intermediaires"%nomCase
         return 0
     
     def calculNouveau(self):
@@ -746,6 +753,7 @@ class Paradigme:
         '''
         Calculer les sorties à partir
         '''
+#        verbose=True
         for inCase in lexical:
             if verbose: print("inCase",inCase,lexical[inCase].valeurs)
             autoPaire=Paire(inCase,inCase)
@@ -783,6 +791,7 @@ class Paradigme:
               self.addSortie(autoPaire,autoFormeClasse)
               num+=1
 #            self.addSortie(autoPaire,autoFormeClasse)
+#        verbose=False
 
     def calculerParadigme(self):
         if verbose: print ("Première passe")
