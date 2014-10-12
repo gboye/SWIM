@@ -88,6 +88,8 @@ def transformerForme(inPatron,mod,forme):
     '''
     renvoie la transformation de forme par inPatron et mod ou sinon False
     '''
+    if isinstance(forme,unicode):
+      forme=forme.encode("utf8")
     extrait=re.search(inPatron,forme)
     if extrait:
         sortie=extrait.group(1)+mod+extrait.group(2)
@@ -99,6 +101,8 @@ def modifierForme(forme,numRegle):
     patron=analyse.regles[numRegle].patron
     mod=analyse.regles[numRegle].mod
 
+    if isinstance(forme,unicode):
+      forme=forme.encode("utf8")
     m=re.search(patron,forme)
     if m:
         sortie=m.group(1)+mod+m.group(2)
@@ -195,10 +199,12 @@ class FormeClasse:
     '''
     
     def __init__(self,nom="",etiquette=True):
-        self.nom=str(nom)
-        self.etiquette=etiquette
-        self.reglesDist={}
-        self.total=0
+      if isinstance(nom,unicode):
+        nom=nom.encode("utf8")
+      self.nom=str(nom)
+      self.etiquette=etiquette
+      self.reglesDist={}
+      self.total=0
         
     def __repr__(self):
         temp=[]
@@ -449,9 +455,10 @@ class FormeCoef:
     Cet classe contient deux variables : forme et coef
     '''
     def __init__(self,forme,coef):
-        self.forme=forme
-        
-        self.coef=coef
+      if isinstance(forme,unicode):
+        forme=forme.encode("utf8")
+      self.forme=forme      
+      self.coef=coef
         
     def __repr__(self):
         return ('("%s",%s)'%(self.forme,strFloat(self.coef)))
@@ -649,7 +656,7 @@ class Paradigme:
         nDepart=paire.entree+"-"+formeClasse.nom
         if verbose: 
             print("nDepart,coefDEP",nDepart,self.getCoefNewForm(paire.entree,formeClasse.nom))
-        self.digraphe.add_node(nDepart,weight=self.getCoefNewForm(paire.entree,formeClasse.nom))
+        self.digraphe.add_node(nDepart,weight=self.getCoefNewForm(paire.entree,formeClasse.nom),cell=paire.entree,tense=paire.entree.split(".")[0])
         rulesDist=formeClasse.numRulesDist()
         for rd in rulesDist:
             coef=self.getCoefNewForm(paire.sortie,rd.sortie)
@@ -658,13 +665,13 @@ class Paradigme:
 #            if rd.dist>seuilDistribution or True:
             if coef>seuilDistribution:
                 nArrivee=paire.sortie+"-"+rd.sortie
-                self.digraphe.add_node(nArrivee,weight=coef)
-                self.digraphe.add_edge(nDepart,nArrivee,weight=rd.dist*coef)
+                self.digraphe.add_node(nArrivee,weight=float(coef),cell=paire.sortie,tense=paire.sortie.split(".")[0])
+                self.digraphe.add_edge(nDepart,nArrivee,weight=float(rd.dist*coef))
 #                self.digraphe.add_edge(nDepart,nArrivee,weight=coef)
                 if self.digraphe.has_edge(nArrivee,nDepart) and ("weight" in self.digraphe.node[nDepart]):
                     poids=(self.digraphe[nDepart][nArrivee]["weight"]+self.digraphe[nArrivee][nDepart]["weight"])/2
-                    self.graphe.add_node(nDepart,weight=self.digraphe.node[nDepart]["weight"])
-                    self.graphe.add_node(nArrivee,weight=self.digraphe.node[nArrivee]["weight"])
+                    self.graphe.add_node(nDepart,weight=float(self.digraphe.node[nDepart]["weight"]),cell=paire.entree,tense=paire.entree.split(".")[0])
+                    self.graphe.add_node(nArrivee,weight=float(self.digraphe.node[nArrivee]["weight"]),cell=paire.sortie,tense=paire.sortie.split(".")[0])
                     self.graphe.add_edge(nDepart,nArrivee,weight=poids)
                 
     def addSortie(self,paire,formeClasse):
@@ -694,6 +701,8 @@ class Paradigme:
         '''
         if verbose: 
             print (nomCase,forme)
+        if isinstance(forme,unicode):
+          forme=forme.encode("utf8")
         if nomCase in self.intermediaires:
             if verbose:
                 print ("nomCase,intermediaires[nomCase]",nomCase,self.intermediaires[nomCase])
@@ -707,9 +716,9 @@ class Paradigme:
             if verbose:
                 print ()
 #         elif nomCase in self.entrees:
-#         		for formeCoef in self.entrees[nomCase].valeurs:
-#         			if formeCoef.forme==forme:
-#         				return formeCoef.coef
+#                 for formeCoef in self.entrees[nomCase].valeurs:
+#                     if formeCoef.forme==forme:
+#                         return formeCoef.coef
         return 0
     
     def calculNouveau(self):
@@ -744,7 +753,7 @@ class Paradigme:
             #autoSorties=FormeClasse("auto")
             for formeCoef in lexical[inCase].numValeurs():
                 autoSorties.addForm(FormeCoef(formeCoef.forme,formeCoef.coef))
-				#autoSorties.addRule(RegleDist(0,formeCoef.coef,formeCoef.forme,formeCoef.forme),force=True)
+                #autoSorties.addRule(RegleDist(0,formeCoef.coef,formeCoef.forme,formeCoef.forme),force=True)
                 if verbose: print("\tforme coef",formeCoef)
                 forme=formeCoef.forme
                 for outCase in analyse.pairesCase[inCase]:
@@ -767,11 +776,13 @@ class Paradigme:
                         if verbose: print ("pas de classe", paire, formeSorties)
             numBase=(len(analyse.regles)/100+1)*1000
             num=numBase+1
-            autoFormeClasse=FormeClasse("AUTO")
+#            autoFormeClasse=FormeClasse("AUTO")
             for fc in autoSorties:
-            		autoFormeClasse.addRule(RegleDist(num,fc.coef,fc.forme,fc.forme))
-            		num+=1
-            self.addSortie(autoPaire,autoFormeClasse)
+              autoFormeClasse=FormeClasse(fc.forme)
+              autoFormeClasse.addRule(RegleDist(num,fc.coef,fc.forme,fc.forme))
+              self.addSortie(autoPaire,autoFormeClasse)
+              num+=1
+#            self.addSortie(autoPaire,autoFormeClasse)
 
     def calculerParadigme(self):
         if verbose: print ("Première passe")
