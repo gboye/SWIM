@@ -660,7 +660,7 @@ class Paradigme:
         nDepart=paire.entree+"-"+formeClasse.nom
         if verbose: 
             print("nDepart,coefDEP",nDepart,self.getCoefNewForm(paire.entree,formeClasse.nom))
-        self.digraphe.add_node(nDepart,weight=self.getCoefNewForm(paire.entree,formeClasse.nom),cell=paire.entree,tense=paire.entree.split(".")[0])
+        self.digraphe.add_node(nDepart,weight=self.getCoefNewForm(paire.entree,formeClasse.nom),cell=paire.entree,tense=paire.entree.strip("0123456789."))
         rulesDist=formeClasse.numRulesDist()
         for rd in rulesDist:
             coef=self.getCoefNewForm(paire.sortie,rd.sortie)
@@ -669,13 +669,13 @@ class Paradigme:
 #            if rd.dist>seuilDistribution or True:
             if coef>seuilDistribution:
                 nArrivee=paire.sortie+"-"+rd.sortie
-                self.digraphe.add_node(nArrivee,weight=float(coef),cell=paire.sortie,tense=paire.sortie.split(".")[0])
+                self.digraphe.add_node(nArrivee,weight=float(coef),cell=paire.sortie,tense=paire.sortie.strip("0123456789."))
                 self.digraphe.add_edge(nDepart,nArrivee,weight=float(rd.dist*coef))
 #                self.digraphe.add_edge(nDepart,nArrivee,weight=coef)
                 if self.digraphe.has_edge(nArrivee,nDepart) and ("weight" in self.digraphe.node[nDepart]):
                     poids=float(self.digraphe[nDepart][nArrivee]["weight"]+self.digraphe[nArrivee][nDepart]["weight"])/2
-                    self.graphe.add_node(nDepart,weight=float(self.digraphe.node[nDepart]["weight"]),cell=paire.entree,tense=paire.entree.split(".")[0])
-                    self.graphe.add_node(nArrivee,weight=float(self.digraphe.node[nArrivee]["weight"]),cell=paire.sortie,tense=paire.sortie.split(".")[0])
+                    self.graphe.add_node(nDepart,weight=float(self.digraphe.node[nDepart]["weight"]),cell=paire.entree,tense=paire.entree.strip("0123456789."))
+                    self.graphe.add_node(nArrivee,weight=float(self.digraphe.node[nArrivee]["weight"]),cell=paire.sortie,tense=paire.sortie.strip("0123456789."))
                     self.graphe.add_edge(nDepart,nArrivee,weight=poids)
                 
     def addSortie(self,paire,formeClasse):

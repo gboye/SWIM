@@ -12,7 +12,7 @@ digraph  {
 		weight=0.48];
 	"ipf.4-finjô" -> "sbjv.4-finjô"	 [weight=0.48];
 	"pst.pcp-finy"	 [cell="pst.pcp",
-		tense=pst,
+		tense="pst.pcp",
 		weight=0.12];
 	"ipf.4-finjô" -> "pst.pcp-finy"	 [weight=0.0048];
 	"ipf.2-finE"	 [cell="ipf.2",
@@ -24,7 +24,7 @@ digraph  {
 		weight=0.48];
 	"ipf.4-finjô" -> "sbjv.5-finjE"	 [weight=0.48];
 	"prs.pcp-finâ"	 [cell="prs.pcp",
-		tense=prs,
+		tense="prs.pcp",
 		weight=0.47];
 	"ipf.4-finjô" -> "prs.pcp-finâ"	 [weight=0.4324];
 	"inf-finir"	 [cell=inf,

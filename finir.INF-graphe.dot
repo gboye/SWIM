@@ -28,7 +28,7 @@ graph  {
 		weight=0.12];
 	"cond.5-finirjE" -- "sbjv.3-fin"	 [weight=0.011];
 	"pst.sbj.3-fini"	 [cell="pst.sbj.3",
-		tense=pst,
+		tense="pst.sbj",
 		weight=1.0];
 	"cond.5-finirjE" -- "pst.sbj.3-fini"	 [weight=0.75];
 	"sbjv.5-finjE"	 [cell="sbjv.5",
@@ -36,11 +36,11 @@ graph  {
 		weight=0.48];
 	"cond.5-finirjE" -- "sbjv.5-finjE"	 [weight=0.063];
 	"pst.sbj.5-finisjE"	 [cell="pst.sbj.5",
-		tense=pst,
+		tense="pst.sbj",
 		weight=1.0];
 	"cond.5-finirjE" -- "pst.sbj.5-finisjE"	 [weight=0.75];
 	"pst.sbj.6-finis"	 [cell="pst.sbj.6",
-		tense=pst,
+		tense="pst.sbj",
 		weight=1.0];
 	"cond.5-finirjE" -- "pst.sbj.6-finis"	 [weight=0.75];
 	"prs.2-fini"	 [cell="prs.2",
@@ -76,7 +76,7 @@ graph  {
 		weight=0.47];
 	"cond.5-finirjE" -- "ipf.2-finE"	 [weight=0.01];
 	"prs.pcp-finisâ"	 [cell="prs.pcp",
-		tense=prs,
+		tense="prs.pcp",
 		weight=0.53];
 	"cond.5-finirjE" -- "prs.pcp-finisâ"	 [weight=0.66965];
 	"ipf.5-finjE"	 [cell="ipf.5",
@@ -108,7 +108,7 @@ graph  {
 		weight=0.53];
 	"cond.5-finirjE" -- "ipf.1-finisE"	 [weight=0.66965];
 	"pst.sbj.2-finis"	 [cell="pst.sbj.2",
-		tense=pst,
+		tense="pst.sbj",
 		weight=1.0];
 	"cond.5-finirjE" -- "pst.sbj.2-finis"	 [weight=0.75];
 	"imp.2-fini"	 [cell="imp.2",
@@ -152,11 +152,11 @@ graph  {
 		weight=0.52];
 	"cond.5-finirjE" -- "ipf.4-finisjô"	 [weight=0.653];
 	"prs.pcp-finâ"	 [cell="prs.pcp",
-		tense=prs,
+		tense="prs.pcp",
 		weight=0.47];
 	"cond.5-finirjE" -- "prs.pcp-finâ"	 [weight=0.01];
 	"pst.pcp-fini"	 [cell="pst.pcp",
-		tense=pst,
+		tense="pst.pcp",
 		weight=0.88];
 	"cond.5-finirjE" -- "pst.pcp-fini"	 [weight=0.6848];
 	"sbjv.1-fin"	 [cell="sbjv.1",
@@ -188,7 +188,7 @@ graph  {
 		weight=0.48];
 	"cond.5-finirjE" -- "sbjv.4-finjô"	 [weight=0.063];
 	"pst.sbj.1-finis"	 [cell="pst.sbj.1",
-		tense=pst,
+		tense="pst.sbj",
 		weight=1.0];
 	"cond.5-finirjE" -- "pst.sbj.1-finis"	 [weight=0.75];
 	"pst.4-finim"	 [cell="pst.4",
@@ -200,7 +200,7 @@ graph  {
 		weight=1.0];
 	"cond.5-finirjE" -- "cond.2-finirE"	 [weight=1.0];
 	"pst.sbj.4-finisjô"	 [cell="pst.sbj.4",
-		tense=pst,
+		tense="pst.sbj",
 		weight=1.0];
 	"cond.5-finirjE" -- "pst.sbj.4-finisjô"	 [weight=0.75];
 	"cond.6-finirE"	 [cell="cond.6",
@@ -613,7 +613,7 @@ graph  {
 	"sbjv.5-finjE" -- "ipf.3-finE"	 [weight=0.4562];
 	"sbjv.5-finjE" -- "pst.6-finir"	 [weight=0.02];
 	"pst.pcp-finy"	 [cell="pst.pcp",
-		tense=pst,
+		tense="pst.pcp",
 		weight=0.12];
 	"sbjv.5-finjE" -- "pst.pcp-finy"	 [weight=0.2424];
 	"sbjv.5-finjE" -- "fut.3-finira"	 [weight=0.0798];
