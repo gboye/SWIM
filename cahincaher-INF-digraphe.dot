@@ -1,0 +1,6 @@
+digraph  {
+	"inf-kaêkaE"	 [cell=inf,
+		tense=inf,
+		weight=1.0];
+	"inf-kaêkaE" -> "inf-kaêkaE"	 [weight=1.0];
+}
