@@ -1,0 +1,8 @@
+graph  {
+	node [label="\N"];
+	"inf-kaêkaE"	 [cell=inf,
+		label="inf-kaɛ̃kae",
+		tense=inf,
+		weight=1.0];
+	"inf-kaêkaE" -- "inf-kaêkaE"	 [weight=1.0];
+}

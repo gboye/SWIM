@@ -1,0 +1,35 @@
+digraph  {
+	node [label="\N"];
+	"prs.3-sE"	 [cell="prs.3",
+		label="prs.3-se",
+		tense=prs,
+		weight=1.0];
+	"prs.3-sE" -> "prs.3-sE"	 [weight=1.0];
+	"prs.1-sE"	 [cell="prs.1",
+		label="prs.1-se",
+		tense=prs,
+		weight=1.0];
+	"prs.3-sE" -> "prs.1-sE"	 [weight=1.0];
+	"pst.pcp-sE"	 [cell="pst.pcp",
+		label="pst.pcp-se",
+		tense="pst.pcp",
+		weight=0.15];
+	"prs.3-sE" -> "pst.pcp-sE"	 [weight=0.0465];
+	"prs.2-sE"	 [cell="prs.2",
+		label="prs.2-se",
+		tense=prs,
+		weight=1.0];
+	"prs.3-sE" -> "prs.2-sE"	 [weight=1.0];
+	"prs.1-sE" -> "prs.3-sE"	 [weight=1.0];
+	"prs.1-sE" -> "prs.1-sE"	 [weight=1.0];
+	"prs.1-sE" -> "pst.pcp-sE"	 [weight=0.0465];
+	"prs.1-sE" -> "prs.2-sE"	 [weight=1.0];
+	"pst.pcp-sE" -> "prs.3-sE"	 [weight=0.0];
+	"pst.pcp-sE" -> "prs.1-sE"	 [weight=0.0];
+	"pst.pcp-sE" -> "pst.pcp-sE"	 [weight=0.15];
+	"pst.pcp-sE" -> "prs.2-sE"	 [weight=0.0];
+	"prs.2-sE" -> "prs.3-sE"	 [weight=1.0];
+	"prs.2-sE" -> "prs.1-sE"	 [weight=1.0];
+	"prs.2-sE" -> "pst.pcp-sE"	 [weight=0.0465];
+	"prs.2-sE" -> "prs.2-sE"	 [weight=1.0];
+}
