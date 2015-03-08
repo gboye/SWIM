@@ -1,3 +1,3 @@
-PDM
+SWIM
 ===
-A tentative implementation of PDM
+A tentative implementation of Small World Inflectional Morphology
