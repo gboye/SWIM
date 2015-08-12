@@ -2,15 +2,20 @@
 A tentative implementation of Small World Inflectional Morphology
 
 ##Preparing
+###BDL-SyncLexiques
 - Prepare a bdlexique with phonological transcriptions and frequencies
  - Synchronize frequencies from Lexique.org
  - Remove duplicates
  - Transform frequencies into probabilities
  - Save the lexicon in CSV form
+
+###BDL-GoldParadigm
 - Prepare the GOLD paradigms
  - Make complete paradigms in CSV form
    - with overabundance
    - with defectiveness
+
+###MGC-GoldRules
  - Calculate the analogies and the classifications based on the GOLD paradigms
    - with all phonological maps
    - store in pandas form
