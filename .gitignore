@@ -1,2 +1,5 @@
 # Graphes de génération des paradigmes
 *.dot
+
+# iPython Notebooks Checkpoints
+.ipynb_checkpoints
