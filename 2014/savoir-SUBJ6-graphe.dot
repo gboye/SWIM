@@ -28,7 +28,7 @@ graph G {
 "ipf.1-savE" [cell="ipf.1", tense=ipf, weight="1.0", label="ipf.1-savE"];
 "sbjv.2-saS" [cell="sbjv.2", tense=sbjv, weight="1.0", label="sbjv.2-saS"];
 "sbjv.1-saS" [cell="sbjv.1", tense=sbjv, weight="1.0", label="sbjv.1-saS"];
-"prs.3-sE" [cell="prs.3", tense=prs, weight="1.0", label="prs.3-sE"];
+"pst.sbj.6-sys" [cell="pst.sbj.6", tense="pst.sbj", weight="1.0", label="pst.sbj.6-sys"];
 "pst.4-sym" [cell="pst.4", tense=pst, weight="1.0", label="pst.4-sym"];
 "prs.pcp-saSA~" [cell="prs.pcp", tense="prs.pcp", weight="1.0", label="prs.pcp-saSA~"];
 "fut.3-sora" [cell="fut.3", tense=fut, weight="1.0", label="fut.3-sora"];
@@ -39,7 +39,7 @@ graph G {
 "pst.sbj.2-sys" [cell="pst.sbj.2", tense="pst.sbj", weight="1.0", label="pst.sbj.2-sys"];
 "ipf.5-savjE" [cell="ipf.5", tense=ipf, weight="1.0", label="ipf.5-savjE"];
 "pst.sbj.3-sy" [cell="pst.sbj.3", tense="pst.sbj", weight="1.0", label="pst.sbj.3-sy"];
-"pst.sbj.6-sys" [cell="pst.sbj.6", tense="pst.sbj", weight="1.0", label="pst.sbj.6-sys"];
+"prs.3-sE" [cell="prs.3", tense=prs, weight="1.0", label="prs.3-sE"];
 "sbjv.6-saS" [cell="sbjv.6", tense=sbjv, weight="1.0", label="sbjv.6-saS"];
 "pst.6-syr" [cell="pst.6", tense=pst, weight="1.0", label="pst.6-syr"];
 "cond.4-sorjO~" [cell="cond.4", tense=cond, weight="1.0", label="cond.4-sorjO~"];
@@ -76,7 +76,7 @@ graph G {
 "prs.4-savO~" -- "ipf.1-savE"  [weight="1.0"];
 "prs.4-savO~" -- "sbjv.2-saS"  [weight="1.0"];
 "prs.4-savO~" -- "sbjv.1-saS"  [weight="1.0"];
-"prs.4-savO~" -- "prs.3-sE"  [weight="1.0"];
+"prs.4-savO~" -- "pst.sbj.6-sys"  [weight="1.0"];
 "prs.4-savO~" -- "pst.4-sym"  [weight="1.0"];
 "prs.4-savO~" -- "prs.pcp-saSA~"  [weight="1.0"];
 "prs.4-savO~" -- "fut.3-sora"  [weight="1.0"];
@@ -87,7 +87,7 @@ graph G {
 "prs.4-savO~" -- "pst.sbj.2-sys"  [weight="1.0"];
 "prs.4-savO~" -- "ipf.5-savjE"  [weight="0.96"];
 "prs.4-savO~" -- "pst.sbj.3-sy"  [weight="1.0"];
-"prs.4-savO~" -- "pst.sbj.6-sys"  [weight="1.0"];
+"prs.4-savO~" -- "prs.3-sE"  [weight="1.0"];
 "prs.4-savO~" -- "sbjv.6-saS"  [weight="1.0"];
 "prs.4-savO~" -- "pst.6-syr"  [weight="1.0"];
 "prs.4-savO~" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -123,7 +123,7 @@ graph G {
 "pst.sbj.1-sys" -- "ipf.1-savE"  [weight="1.0"];
 "pst.sbj.1-sys" -- "sbjv.2-saS"  [weight="1.0"];
 "pst.sbj.1-sys" -- "sbjv.1-saS"  [weight="1.0"];
-"pst.sbj.1-sys" -- "prs.3-sE"  [weight="0.605"];
+"pst.sbj.1-sys" -- "pst.sbj.6-sys"  [weight="1.0"];
 "pst.sbj.1-sys" -- "pst.4-sym"  [weight="1.0"];
 "pst.sbj.1-sys" -- "prs.pcp-saSA~"  [weight="1.0"];
 "pst.sbj.1-sys" -- "fut.3-sora"  [weight="1.0"];
@@ -134,7 +134,7 @@ graph G {
 "pst.sbj.1-sys" -- "prs.6-sav"  [weight="1.0"];
 "pst.sbj.1-sys" -- "ipf.5-savjE"  [weight="1.0"];
 "pst.sbj.1-sys" -- "pst.sbj.2-sys"  [weight="1.0"];
-"pst.sbj.1-sys" -- "pst.sbj.6-sys"  [weight="1.0"];
+"pst.sbj.1-sys" -- "prs.3-sE"  [weight="0.605"];
 "pst.sbj.1-sys" -- "sbjv.6-saS"  [weight="1.0"];
 "pst.sbj.1-sys" -- "pst.6-syr"  [weight="1.0"];
 "pst.sbj.1-sys" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -169,7 +169,7 @@ graph G {
 "sbjv.4-saSjO~" -- "ipf.1-savE"  [weight="1.0"];
 "sbjv.4-saSjO~" -- "sbjv.2-saS"  [weight="0.975"];
 "sbjv.4-saSjO~" -- "sbjv.1-saS"  [weight="0.975"];
-"sbjv.4-saSjO~" -- "prs.3-sE"  [weight="1.0"];
+"sbjv.4-saSjO~" -- "pst.sbj.6-sys"  [weight="1.0"];
 "sbjv.4-saSjO~" -- "pst.4-sym"  [weight="1.0"];
 "sbjv.4-saSjO~" -- "prs.pcp-saSA~"  [weight="0.96"];
 "sbjv.4-saSjO~" -- "fut.3-sora"  [weight="1.0"];
@@ -180,7 +180,7 @@ graph G {
 "sbjv.4-saSjO~" -- "pst.sbj.2-sys"  [weight="1.0"];
 "sbjv.4-saSjO~" -- "ipf.5-savjE"  [weight="1.0"];
 "sbjv.4-saSjO~" -- "pst.sbj.3-sy"  [weight="1.0"];
-"sbjv.4-saSjO~" -- "pst.sbj.6-sys"  [weight="1.0"];
+"sbjv.4-saSjO~" -- "prs.3-sE"  [weight="1.0"];
 "sbjv.4-saSjO~" -- "sbjv.6-saS"  [weight="0.975"];
 "sbjv.4-saSjO~" -- "pst.6-syr"  [weight="1.0"];
 "sbjv.4-saSjO~" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -214,7 +214,7 @@ graph G {
 "ipf.2-savE" -- "ipf.1-savE"  [weight="1.0"];
 "ipf.2-savE" -- "sbjv.2-saS"  [weight="1.0"];
 "ipf.2-savE" -- "sbjv.1-saS"  [weight="1.0"];
-"ipf.2-savE" -- "prs.3-sE"  [weight="1.0"];
+"ipf.2-savE" -- "pst.sbj.6-sys"  [weight="1.0"];
 "ipf.2-savE" -- "pst.4-sym"  [weight="1.0"];
 "ipf.2-savE" -- "prs.pcp-saSA~"  [weight="1.0"];
 "ipf.2-savE" -- "fut.3-sora"  [weight="1.0"];
@@ -225,7 +225,7 @@ graph G {
 "ipf.2-savE" -- "pst.sbj.2-sys"  [weight="1.0"];
 "ipf.2-savE" -- "ipf.5-savjE"  [weight="0.96"];
 "ipf.2-savE" -- "pst.sbj.3-sy"  [weight="1.0"];
-"ipf.2-savE" -- "pst.sbj.6-sys"  [weight="1.0"];
+"ipf.2-savE" -- "prs.3-sE"  [weight="1.0"];
 "ipf.2-savE" -- "sbjv.6-saS"  [weight="1.0"];
 "ipf.2-savE" -- "pst.6-syr"  [weight="1.0"];
 "ipf.2-savE" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -258,7 +258,7 @@ graph G {
 "prs.5-savE" -- "ipf.1-savE"  [weight="1.0"];
 "prs.5-savE" -- "sbjv.2-saS"  [weight="1.0"];
 "prs.5-savE" -- "sbjv.1-saS"  [weight="1.0"];
-"prs.5-savE" -- "prs.3-sE"  [weight="1.0"];
+"prs.5-savE" -- "pst.sbj.6-sys"  [weight="1.0"];
 "prs.5-savE" -- "pst.4-sym"  [weight="1.0"];
 "prs.5-savE" -- "prs.pcp-saSA~"  [weight="1.0"];
 "prs.5-savE" -- "fut.3-sora"  [weight="1.0"];
@@ -269,7 +269,7 @@ graph G {
 "prs.5-savE" -- "pst.sbj.2-sys"  [weight="1.0"];
 "prs.5-savE" -- "ipf.5-savjE"  [weight="0.96"];
 "prs.5-savE" -- "pst.sbj.3-sy"  [weight="1.0"];
-"prs.5-savE" -- "pst.sbj.6-sys"  [weight="1.0"];
+"prs.5-savE" -- "prs.3-sE"  [weight="1.0"];
 "prs.5-savE" -- "sbjv.6-saS"  [weight="1.0"];
 "prs.5-savE" -- "pst.6-syr"  [weight="1.0"];
 "prs.5-savE" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -301,7 +301,7 @@ graph G {
 "cond.6-sorE" -- "ipf.1-savE"  [weight="1.0"];
 "cond.6-sorE" -- "sbjv.2-saS"  [weight="1.0"];
 "cond.6-sorE" -- "sbjv.1-saS"  [weight="1.0"];
-"cond.6-sorE" -- "prs.3-sE"  [weight="1.0"];
+"cond.6-sorE" -- "pst.sbj.6-sys"  [weight="1.0"];
 "cond.6-sorE" -- "pst.4-sym"  [weight="1.0"];
 "cond.6-sorE" -- "prs.pcp-saSA~"  [weight="1.0"];
 "cond.6-sorE" -- "fut.3-sora"  [weight="1.0"];
@@ -312,7 +312,7 @@ graph G {
 "cond.6-sorE" -- "pst.sbj.2-sys"  [weight="1.0"];
 "cond.6-sorE" -- "ipf.5-savjE"  [weight="1.0"];
 "cond.6-sorE" -- "prs.6-sav"  [weight="1.0"];
-"cond.6-sorE" -- "pst.sbj.6-sys"  [weight="1.0"];
+"cond.6-sorE" -- "prs.3-sE"  [weight="1.0"];
 "cond.6-sorE" -- "sbjv.6-saS"  [weight="1.0"];
 "cond.6-sorE" -- "pst.6-syr"  [weight="1.0"];
 "cond.6-sorE" -- "pst.sbj.4-sysjO~"  [weight="1.0"];
@@ -343,7 +343,7 @@ graph G {
 "fut.4-sorO~" -- "ipf.1-savE"  [weight="1.0"];
 "fut.4-sorO~" -- "sbjv.2-saS"  [weight="1.0"];
 "fut.4-sorO~" -- "sbjv.1-saS"  [weight="1.0"];
-"fut.4-sorO~" -- "prs.3-sE"  [weight="1.0"];
+"fut.4-sorO~" -- "pst.sbj.6-sys"  [weight="1.0"];
 "fut.4-sorO~" -- "pst.4-sym"  [weight="1.0"];
 "fut.4-sorO~" -- "prs.pcp-saSA~"  [weight="1.0"];
 "fut.4-sorO~" -- "fut.3-sora"  [weight="1.0"];
@@ -354,7 +354,7 @@ graph G {
 "fut.4-sorO~" -- "pst.sbj.2-sys"  [weight="1.0"];
 "fut.4-sorO~" -- "ipf.5-savjE"  [weight="1.0"];
 "fut.4-sorO~" -- "pst.sbj.3-sy"  [weight="1.0"];
-"fut.4-sorO~" -- "pst.sbj.6-sys"  [weight="1.0"];
+"fut.4-sorO~" -- "prs.3-sE"  [weight="1.0"];
 "fut.4-sorO~" -- "sbjv.6-saS"  [weight="1.0"];
 "fut.4-sorO~" -- "pst.6-syr"  [weight="1.0"];
 "fut.4-sorO~" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -384,7 +384,7 @@ graph G {
 "imp.4-saSO~" -- "ipf.1-savE"  [weight="1.0"];
 "imp.4-saSO~" -- "sbjv.2-saS"  [weight="1.0"];
 "imp.4-saSO~" -- "sbjv.1-saS"  [weight="1.0"];
-"imp.4-saSO~" -- "prs.3-sE"  [weight="1.0"];
+"imp.4-saSO~" -- "pst.sbj.6-sys"  [weight="1.0"];
 "imp.4-saSO~" -- "pst.4-sym"  [weight="1.0"];
 "imp.4-saSO~" -- "prs.pcp-saSA~"  [weight="1.0"];
 "imp.4-saSO~" -- "fut.3-sora"  [weight="1.0"];
@@ -395,7 +395,7 @@ graph G {
 "imp.4-saSO~" -- "pst.sbj.2-sys"  [weight="1.0"];
 "imp.4-saSO~" -- "ipf.5-savjE"  [weight="1.0"];
 "imp.4-saSO~" -- "pst.sbj.3-sy"  [weight="1.0"];
-"imp.4-saSO~" -- "pst.sbj.6-sys"  [weight="1.0"];
+"imp.4-saSO~" -- "prs.3-sE"  [weight="1.0"];
 "imp.4-saSO~" -- "sbjv.6-saS"  [weight="1.0"];
 "imp.4-saSO~" -- "pst.6-syr"  [weight="1.0"];
 "imp.4-saSO~" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -424,7 +424,7 @@ graph G {
 "pst.sbj.4-sysjO~" -- "ipf.1-savE"  [weight="1.0"];
 "pst.sbj.4-sysjO~" -- "sbjv.2-saS"  [weight="1.0"];
 "pst.sbj.4-sysjO~" -- "sbjv.1-saS"  [weight="1.0"];
-"pst.sbj.4-sysjO~" -- "prs.3-sE"  [weight="0.605"];
+"pst.sbj.4-sysjO~" -- "pst.sbj.6-sys"  [weight="1.0"];
 "pst.sbj.4-sysjO~" -- "pst.4-sym"  [weight="1.0"];
 "pst.sbj.4-sysjO~" -- "prs.pcp-saSA~"  [weight="1.0"];
 "pst.sbj.4-sysjO~" -- "fut.3-sora"  [weight="1.0"];
@@ -435,7 +435,7 @@ graph G {
 "pst.sbj.4-sysjO~" -- "pst.sbj.2-sys"  [weight="1.0"];
 "pst.sbj.4-sysjO~" -- "ipf.5-savjE"  [weight="1.0"];
 "pst.sbj.4-sysjO~" -- "pst.sbj.3-sy"  [weight="1.0"];
-"pst.sbj.4-sysjO~" -- "pst.sbj.6-sys"  [weight="1.0"];
+"pst.sbj.4-sysjO~" -- "prs.3-sE"  [weight="0.605"];
 "pst.sbj.4-sysjO~" -- "sbjv.6-saS"  [weight="1.0"];
 "pst.sbj.4-sysjO~" -- "pst.6-syr"  [weight="1.0"];
 "pst.sbj.4-sysjO~" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -463,7 +463,7 @@ graph G {
 "imp.2-saS" -- "ipf.1-savE"  [weight="1.0"];
 "imp.2-saS" -- "sbjv.2-saS"  [weight="1.0"];
 "imp.2-saS" -- "sbjv.1-saS"  [weight="1.0"];
-"imp.2-saS" -- "prs.3-sE"  [weight="1.0"];
+"imp.2-saS" -- "pst.sbj.6-sys"  [weight="1.0"];
 "imp.2-saS" -- "pst.4-sym"  [weight="1.0"];
 "imp.2-saS" -- "prs.pcp-saSA~"  [weight="1.0"];
 "imp.2-saS" -- "fut.3-sora"  [weight="1.0"];
@@ -474,7 +474,7 @@ graph G {
 "imp.2-saS" -- "pst.sbj.2-sys"  [weight="1.0"];
 "imp.2-saS" -- "ipf.5-savjE"  [weight="1.0"];
 "imp.2-saS" -- "pst.sbj.3-sy"  [weight="1.0"];
-"imp.2-saS" -- "pst.sbj.6-sys"  [weight="1.0"];
+"imp.2-saS" -- "prs.3-sE"  [weight="1.0"];
 "imp.2-saS" -- "sbjv.6-saS"  [weight="1.0"];
 "imp.2-saS" -- "pst.6-syr"  [weight="1.0"];
 "imp.2-saS" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -501,7 +501,7 @@ graph G {
 "inf-savwar" -- "ipf.1-savE"  [weight="0.45"];
 "inf-savwar" -- "sbjv.2-saS"  [weight="1.0"];
 "inf-savwar" -- "sbjv.1-saS"  [weight="1.0"];
-"inf-savwar" -- "prs.3-sE"  [weight="1.0"];
+"inf-savwar" -- "pst.sbj.6-sys"  [weight="1.0"];
 "inf-savwar" -- "pst.4-sym"  [weight="1.0"];
 "inf-savwar" -- "prs.pcp-saSA~"  [weight="1.0"];
 "inf-savwar" -- "fut.3-sora"  [weight="1.0"];
@@ -512,7 +512,7 @@ graph G {
 "inf-savwar" -- "pst.sbj.2-sys"  [weight="1.0"];
 "inf-savwar" -- "ipf.5-savjE"  [weight="0.45"];
 "inf-savwar" -- "pst.sbj.3-sy"  [weight="1.0"];
-"inf-savwar" -- "pst.sbj.6-sys"  [weight="1.0"];
+"inf-savwar" -- "prs.3-sE"  [weight="1.0"];
 "inf-savwar" -- "sbjv.6-saS"  [weight="1.0"];
 "inf-savwar" -- "pst.6-syr"  [weight="1.0"];
 "inf-savwar" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -538,7 +538,7 @@ graph G {
 "pst.3-sy" -- "ipf.1-savE"  [weight="1.0"];
 "pst.3-sy" -- "sbjv.2-saS"  [weight="1.0"];
 "pst.3-sy" -- "sbjv.1-saS"  [weight="1.0"];
-"pst.3-sy" -- "prs.3-sE"  [weight="0.605"];
+"pst.3-sy" -- "pst.sbj.6-sys"  [weight="1.0"];
 "pst.3-sy" -- "pst.4-sym"  [weight="1.0"];
 "pst.3-sy" -- "prs.pcp-saSA~"  [weight="1.0"];
 "pst.3-sy" -- "fut.3-sora"  [weight="1.0"];
@@ -549,7 +549,7 @@ graph G {
 "pst.3-sy" -- "pst.sbj.2-sys"  [weight="1.0"];
 "pst.3-sy" -- "ipf.5-savjE"  [weight="1.0"];
 "pst.3-sy" -- "pst.sbj.3-sy"  [weight="1.0"];
-"pst.3-sy" -- "pst.sbj.6-sys"  [weight="1.0"];
+"pst.3-sy" -- "prs.3-sE"  [weight="0.605"];
 "pst.3-sy" -- "sbjv.6-saS"  [weight="1.0"];
 "pst.3-sy" -- "pst.6-syr"  [weight="1.0"];
 "pst.3-sy" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -574,7 +574,7 @@ graph G {
 "prs.2-sE" -- "ipf.1-savE"  [weight="1.0"];
 "prs.2-sE" -- "sbjv.2-saS"  [weight="1.0"];
 "prs.2-sE" -- "sbjv.1-saS"  [weight="1.0"];
-"prs.2-sE" -- "prs.3-sE"  [weight="1.0"];
+"prs.2-sE" -- "pst.sbj.6-sys"  [weight="0.605"];
 "prs.2-sE" -- "pst.4-sym"  [weight="0.605"];
 "prs.2-sE" -- "prs.pcp-saSA~"  [weight="1.0"];
 "prs.2-sE" -- "fut.3-sora"  [weight="1.0"];
@@ -585,7 +585,7 @@ graph G {
 "prs.2-sE" -- "pst.sbj.2-sys"  [weight="0.605"];
 "prs.2-sE" -- "ipf.5-savjE"  [weight="1.0"];
 "prs.2-sE" -- "pst.sbj.3-sy"  [weight="0.605"];
-"prs.2-sE" -- "pst.sbj.6-sys"  [weight="0.605"];
+"prs.2-sE" -- "prs.3-sE"  [weight="1.0"];
 "prs.2-sE" -- "sbjv.6-saS"  [weight="1.0"];
 "prs.2-sE" -- "pst.6-syr"  [weight="0.605"];
 "prs.2-sE" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -610,7 +610,7 @@ graph G {
 "cond.5-sorjE" -- "ipf.1-savE"  [weight="1.0"];
 "cond.5-sorjE" -- "sbjv.2-saS"  [weight="1.0"];
 "cond.5-sorjE" -- "sbjv.1-saS"  [weight="1.0"];
-"cond.5-sorjE" -- "prs.3-sE"  [weight="1.0"];
+"cond.5-sorjE" -- "pst.sbj.6-sys"  [weight="1.0"];
 "cond.5-sorjE" -- "pst.4-sym"  [weight="1.0"];
 "cond.5-sorjE" -- "prs.pcp-saSA~"  [weight="1.0"];
 "cond.5-sorjE" -- "fut.3-sora"  [weight="1.0"];
@@ -621,7 +621,7 @@ graph G {
 "cond.5-sorjE" -- "pst.sbj.2-sys"  [weight="1.0"];
 "cond.5-sorjE" -- "ipf.5-savjE"  [weight="1.0"];
 "cond.5-sorjE" -- "prs.6-sav"  [weight="1.0"];
-"cond.5-sorjE" -- "pst.sbj.6-sys"  [weight="1.0"];
+"cond.5-sorjE" -- "prs.3-sE"  [weight="1.0"];
 "cond.5-sorjE" -- "sbjv.6-saS"  [weight="1.0"];
 "cond.5-sorjE" -- "pst.6-syr"  [weight="1.0"];
 "cond.5-sorjE" -- "cond.3-sorE"  [weight="1.0"];
@@ -643,7 +643,7 @@ graph G {
 "fut.1-sorE" -- "ipf.1-savE"  [weight="1.0"];
 "fut.1-sorE" -- "sbjv.2-saS"  [weight="1.0"];
 "fut.1-sorE" -- "sbjv.1-saS"  [weight="1.0"];
-"fut.1-sorE" -- "prs.3-sE"  [weight="1.0"];
+"fut.1-sorE" -- "pst.sbj.6-sys"  [weight="1.0"];
 "fut.1-sorE" -- "pst.4-sym"  [weight="1.0"];
 "fut.1-sorE" -- "prs.pcp-saSA~"  [weight="1.0"];
 "fut.1-sorE" -- "fut.3-sora"  [weight="1.0"];
@@ -654,7 +654,7 @@ graph G {
 "fut.1-sorE" -- "pst.sbj.2-sys"  [weight="1.0"];
 "fut.1-sorE" -- "ipf.5-savjE"  [weight="1.0"];
 "fut.1-sorE" -- "pst.sbj.3-sy"  [weight="1.0"];
-"fut.1-sorE" -- "pst.sbj.6-sys"  [weight="1.0"];
+"fut.1-sorE" -- "prs.3-sE"  [weight="1.0"];
 "fut.1-sorE" -- "sbjv.6-saS"  [weight="1.0"];
 "fut.1-sorE" -- "pst.6-syr"  [weight="1.0"];
 "fut.1-sorE" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -676,7 +676,7 @@ graph G {
 "sbjv.3-saS" -- "ipf.1-savE"  [weight="1.0"];
 "sbjv.3-saS" -- "sbjv.2-saS"  [weight="1.0"];
 "sbjv.3-saS" -- "sbjv.1-saS"  [weight="1.0"];
-"sbjv.3-saS" -- "prs.3-sE"  [weight="1.0"];
+"sbjv.3-saS" -- "pst.sbj.6-sys"  [weight="1.0"];
 "sbjv.3-saS" -- "pst.4-sym"  [weight="1.0"];
 "sbjv.3-saS" -- "prs.pcp-saSA~"  [weight="1.0"];
 "sbjv.3-saS" -- "fut.3-sora"  [weight="1.0"];
@@ -687,7 +687,7 @@ graph G {
 "sbjv.3-saS" -- "pst.sbj.2-sys"  [weight="1.0"];
 "sbjv.3-saS" -- "ipf.5-savjE"  [weight="1.0"];
 "sbjv.3-saS" -- "pst.sbj.3-sy"  [weight="1.0"];
-"sbjv.3-saS" -- "pst.sbj.6-sys"  [weight="1.0"];
+"sbjv.3-saS" -- "prs.3-sE"  [weight="1.0"];
 "sbjv.3-saS" -- "sbjv.6-saS"  [weight="1.0"];
 "sbjv.3-saS" -- "pst.6-syr"  [weight="1.0"];
 "sbjv.3-saS" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -708,7 +708,7 @@ graph G {
 "pst.sbj.5-sysjE" -- "ipf.1-savE"  [weight="1.0"];
 "pst.sbj.5-sysjE" -- "sbjv.2-saS"  [weight="1.0"];
 "pst.sbj.5-sysjE" -- "sbjv.1-saS"  [weight="1.0"];
-"pst.sbj.5-sysjE" -- "prs.3-sE"  [weight="0.605"];
+"pst.sbj.5-sysjE" -- "pst.sbj.6-sys"  [weight="1.0"];
 "pst.sbj.5-sysjE" -- "pst.4-sym"  [weight="1.0"];
 "pst.sbj.5-sysjE" -- "prs.pcp-saSA~"  [weight="1.0"];
 "pst.sbj.5-sysjE" -- "fut.3-sora"  [weight="1.0"];
@@ -719,7 +719,7 @@ graph G {
 "pst.sbj.5-sysjE" -- "pst.sbj.2-sys"  [weight="1.0"];
 "pst.sbj.5-sysjE" -- "ipf.5-savjE"  [weight="1.0"];
 "pst.sbj.5-sysjE" -- "pst.sbj.3-sy"  [weight="1.0"];
-"pst.sbj.5-sysjE" -- "pst.sbj.6-sys"  [weight="1.0"];
+"pst.sbj.5-sysjE" -- "prs.3-sE"  [weight="0.605"];
 "pst.sbj.5-sysjE" -- "sbjv.6-saS"  [weight="1.0"];
 "pst.sbj.5-sysjE" -- "pst.6-syr"  [weight="1.0"];
 "pst.sbj.5-sysjE" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -739,7 +739,7 @@ graph G {
 "pst.2-sy" -- "ipf.1-savE"  [weight="1.0"];
 "pst.2-sy" -- "sbjv.2-saS"  [weight="1.0"];
 "pst.2-sy" -- "sbjv.1-saS"  [weight="1.0"];
-"pst.2-sy" -- "prs.3-sE"  [weight="0.605"];
+"pst.2-sy" -- "pst.sbj.6-sys"  [weight="1.0"];
 "pst.2-sy" -- "pst.4-sym"  [weight="1.0"];
 "pst.2-sy" -- "prs.pcp-saSA~"  [weight="1.0"];
 "pst.2-sy" -- "fut.3-sora"  [weight="1.0"];
@@ -750,7 +750,7 @@ graph G {
 "pst.2-sy" -- "pst.sbj.2-sys"  [weight="1.0"];
 "pst.2-sy" -- "ipf.5-savjE"  [weight="1.0"];
 "pst.2-sy" -- "pst.sbj.3-sy"  [weight="1.0"];
-"pst.2-sy" -- "pst.sbj.6-sys"  [weight="1.0"];
+"pst.2-sy" -- "prs.3-sE"  [weight="0.605"];
 "pst.2-sy" -- "sbjv.6-saS"  [weight="1.0"];
 "pst.2-sy" -- "pst.6-syr"  [weight="1.0"];
 "pst.2-sy" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -769,7 +769,7 @@ graph G {
 "prs.6-sav" -- "ipf.1-savE"  [weight="1.0"];
 "prs.6-sav" -- "sbjv.2-saS"  [weight="1.0"];
 "prs.6-sav" -- "sbjv.1-saS"  [weight="1.0"];
-"prs.6-sav" -- "prs.3-sE"  [weight="1.0"];
+"prs.6-sav" -- "pst.sbj.6-sys"  [weight="1.0"];
 "prs.6-sav" -- "pst.4-sym"  [weight="1.0"];
 "prs.6-sav" -- "prs.pcp-saSA~"  [weight="1.0"];
 "prs.6-sav" -- "fut.3-sora"  [weight="1.0"];
@@ -780,7 +780,7 @@ graph G {
 "prs.6-sav" -- "prs.6-sav"  [weight="1.0"];
 "prs.6-sav" -- "ipf.5-savjE"  [weight="0.975"];
 "prs.6-sav" -- "pst.sbj.2-sys"  [weight="1.0"];
-"prs.6-sav" -- "pst.sbj.6-sys"  [weight="1.0"];
+"prs.6-sav" -- "prs.3-sE"  [weight="1.0"];
 "prs.6-sav" -- "sbjv.6-saS"  [weight="1.0"];
 "prs.6-sav" -- "pst.6-syr"  [weight="1.0"];
 "prs.6-sav" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -798,7 +798,7 @@ graph G {
 "fut.5-sorE" -- "ipf.1-savE"  [weight="1.0"];
 "fut.5-sorE" -- "sbjv.2-saS"  [weight="1.0"];
 "fut.5-sorE" -- "sbjv.1-saS"  [weight="1.0"];
-"fut.5-sorE" -- "prs.3-sE"  [weight="1.0"];
+"fut.5-sorE" -- "pst.sbj.6-sys"  [weight="1.0"];
 "fut.5-sorE" -- "pst.4-sym"  [weight="1.0"];
 "fut.5-sorE" -- "prs.pcp-saSA~"  [weight="1.0"];
 "fut.5-sorE" -- "fut.3-sora"  [weight="1.0"];
@@ -809,7 +809,7 @@ graph G {
 "fut.5-sorE" -- "pst.sbj.2-sys"  [weight="1.0"];
 "fut.5-sorE" -- "ipf.5-savjE"  [weight="1.0"];
 "fut.5-sorE" -- "pst.sbj.3-sy"  [weight="1.0"];
-"fut.5-sorE" -- "pst.sbj.6-sys"  [weight="1.0"];
+"fut.5-sorE" -- "prs.3-sE"  [weight="1.0"];
 "fut.5-sorE" -- "sbjv.6-saS"  [weight="1.0"];
 "fut.5-sorE" -- "pst.6-syr"  [weight="1.0"];
 "fut.5-sorE" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -827,7 +827,7 @@ graph G {
 "pst.pcp-sy" -- "ipf.1-savE"  [weight="1.0"];
 "pst.pcp-sy" -- "sbjv.2-saS"  [weight="1.0"];
 "pst.pcp-sy" -- "sbjv.1-saS"  [weight="1.0"];
-"pst.pcp-sy" -- "prs.3-sE"  [weight="0.435"];
+"pst.pcp-sy" -- "pst.sbj.6-sys"  [weight="0.595"];
 "pst.pcp-sy" -- "pst.4-sym"  [weight="0.595"];
 "pst.pcp-sy" -- "prs.pcp-saSA~"  [weight="1.0"];
 "pst.pcp-sy" -- "fut.3-sora"  [weight="1.0"];
@@ -837,7 +837,7 @@ graph G {
 "pst.pcp-sy" -- "fut.2-sora"  [weight="1.0"];
 "pst.pcp-sy" -- "ipf.5-savjE"  [weight="1.0"];
 "pst.pcp-sy" -- "pst.sbj.2-sys"  [weight="0.595"];
-"pst.pcp-sy" -- "pst.sbj.6-sys"  [weight="0.595"];
+"pst.pcp-sy" -- "prs.3-sE"  [weight="0.435"];
 "pst.pcp-sy" -- "sbjv.6-saS"  [weight="1.0"];
 "pst.pcp-sy" -- "pst.6-syr"  [weight="0.595"];
 "pst.pcp-sy" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -853,7 +853,7 @@ graph G {
 "ipf.6-savE" -- "ipf.1-savE"  [weight="1.0"];
 "ipf.6-savE" -- "sbjv.2-saS"  [weight="1.0"];
 "ipf.6-savE" -- "sbjv.1-saS"  [weight="1.0"];
-"ipf.6-savE" -- "prs.3-sE"  [weight="1.0"];
+"ipf.6-savE" -- "pst.sbj.6-sys"  [weight="1.0"];
 "ipf.6-savE" -- "pst.4-sym"  [weight="1.0"];
 "ipf.6-savE" -- "prs.pcp-saSA~"  [weight="1.0"];
 "ipf.6-savE" -- "fut.3-sora"  [weight="1.0"];
@@ -864,7 +864,7 @@ graph G {
 "ipf.6-savE" -- "pst.sbj.2-sys"  [weight="1.0"];
 "ipf.6-savE" -- "ipf.5-savjE"  [weight="0.96"];
 "ipf.6-savE" -- "pst.sbj.3-sy"  [weight="1.0"];
-"ipf.6-savE" -- "pst.sbj.6-sys"  [weight="1.0"];
+"ipf.6-savE" -- "prs.3-sE"  [weight="1.0"];
 "ipf.6-savE" -- "sbjv.6-saS"  [weight="1.0"];
 "ipf.6-savE" -- "pst.6-syr"  [weight="1.0"];
 "ipf.6-savE" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -879,7 +879,7 @@ graph G {
 "pst.1-sy" -- "ipf.1-savE"  [weight="1.0"];
 "pst.1-sy" -- "sbjv.2-saS"  [weight="1.0"];
 "pst.1-sy" -- "sbjv.1-saS"  [weight="1.0"];
-"pst.1-sy" -- "prs.3-sE"  [weight="0.605"];
+"pst.1-sy" -- "pst.sbj.6-sys"  [weight="1.0"];
 "pst.1-sy" -- "pst.4-sym"  [weight="1.0"];
 "pst.1-sy" -- "prs.pcp-saSA~"  [weight="1.0"];
 "pst.1-sy" -- "fut.3-sora"  [weight="1.0"];
@@ -890,7 +890,7 @@ graph G {
 "pst.1-sy" -- "pst.sbj.2-sys"  [weight="1.0"];
 "pst.1-sy" -- "ipf.5-savjE"  [weight="1.0"];
 "pst.1-sy" -- "pst.sbj.3-sy"  [weight="1.0"];
-"pst.1-sy" -- "pst.sbj.6-sys"  [weight="1.0"];
+"pst.1-sy" -- "prs.3-sE"  [weight="0.605"];
 "pst.1-sy" -- "sbjv.6-saS"  [weight="1.0"];
 "pst.1-sy" -- "pst.6-syr"  [weight="1.0"];
 "pst.1-sy" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -904,7 +904,7 @@ graph G {
 "pst.5-syt" -- "ipf.1-savE"  [weight="1.0"];
 "pst.5-syt" -- "sbjv.2-saS"  [weight="1.0"];
 "pst.5-syt" -- "sbjv.1-saS"  [weight="1.0"];
-"pst.5-syt" -- "prs.3-sE"  [weight="0.605"];
+"pst.5-syt" -- "pst.sbj.6-sys"  [weight="1.0"];
 "pst.5-syt" -- "pst.4-sym"  [weight="1.0"];
 "pst.5-syt" -- "prs.pcp-saSA~"  [weight="1.0"];
 "pst.5-syt" -- "fut.3-sora"  [weight="1.0"];
@@ -915,7 +915,7 @@ graph G {
 "pst.5-syt" -- "pst.sbj.2-sys"  [weight="1.0"];
 "pst.5-syt" -- "ipf.5-savjE"  [weight="1.0"];
 "pst.5-syt" -- "pst.sbj.3-sy"  [weight="1.0"];
-"pst.5-syt" -- "pst.sbj.6-sys"  [weight="1.0"];
+"pst.5-syt" -- "prs.3-sE"  [weight="0.605"];
 "pst.5-syt" -- "sbjv.6-saS"  [weight="1.0"];
 "pst.5-syt" -- "pst.6-syr"  [weight="1.0"];
 "pst.5-syt" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -930,7 +930,7 @@ graph G {
 "cond.1-sorE" -- "ipf.1-savE"  [weight="1.0"];
 "cond.1-sorE" -- "sbjv.2-saS"  [weight="1.0"];
 "cond.1-sorE" -- "sbjv.1-saS"  [weight="1.0"];
-"cond.1-sorE" -- "prs.3-sE"  [weight="1.0"];
+"cond.1-sorE" -- "pst.sbj.6-sys"  [weight="1.0"];
 "cond.1-sorE" -- "pst.4-sym"  [weight="1.0"];
 "cond.1-sorE" -- "prs.pcp-saSA~"  [weight="1.0"];
 "cond.1-sorE" -- "fut.3-sora"  [weight="1.0"];
@@ -940,7 +940,7 @@ graph G {
 "cond.1-sorE" -- "fut.2-sora"  [weight="1.0"];
 "cond.1-sorE" -- "pst.sbj.2-sys"  [weight="1.0"];
 "cond.1-sorE" -- "ipf.5-savjE"  [weight="1.0"];
-"cond.1-sorE" -- "pst.sbj.6-sys"  [weight="1.0"];
+"cond.1-sorE" -- "prs.3-sE"  [weight="1.0"];
 "cond.1-sorE" -- "sbjv.6-saS"  [weight="1.0"];
 "cond.1-sorE" -- "pst.6-syr"  [weight="1.0"];
 "cond.1-sorE" -- "cond.3-sorE"  [weight="1.0"];
@@ -953,7 +953,7 @@ graph G {
 "cond.2-sorE" -- "ipf.1-savE"  [weight="1.0"];
 "cond.2-sorE" -- "sbjv.2-saS"  [weight="1.0"];
 "cond.2-sorE" -- "sbjv.1-saS"  [weight="1.0"];
-"cond.2-sorE" -- "prs.3-sE"  [weight="1.0"];
+"cond.2-sorE" -- "pst.sbj.6-sys"  [weight="1.0"];
 "cond.2-sorE" -- "pst.4-sym"  [weight="1.0"];
 "cond.2-sorE" -- "prs.pcp-saSA~"  [weight="1.0"];
 "cond.2-sorE" -- "fut.3-sora"  [weight="1.0"];
@@ -963,7 +963,7 @@ graph G {
 "cond.2-sorE" -- "fut.2-sora"  [weight="1.0"];
 "cond.2-sorE" -- "pst.sbj.2-sys"  [weight="1.0"];
 "cond.2-sorE" -- "ipf.5-savjE"  [weight="1.0"];
-"cond.2-sorE" -- "pst.sbj.6-sys"  [weight="1.0"];
+"cond.2-sorE" -- "prs.3-sE"  [weight="1.0"];
 "cond.2-sorE" -- "sbjv.6-saS"  [weight="1.0"];
 "cond.2-sorE" -- "pst.6-syr"  [weight="1.0"];
 "cond.2-sorE" -- "cond.3-sorE"  [weight="1.0"];
@@ -973,7 +973,7 @@ graph G {
 "ipf.1-savE" -- "ipf.1-savE"  [weight="1.0"];
 "ipf.1-savE" -- "sbjv.2-saS"  [weight="1.0"];
 "ipf.1-savE" -- "sbjv.1-saS"  [weight="1.0"];
-"ipf.1-savE" -- "prs.3-sE"  [weight="1.0"];
+"ipf.1-savE" -- "pst.sbj.6-sys"  [weight="1.0"];
 "ipf.1-savE" -- "pst.4-sym"  [weight="1.0"];
 "ipf.1-savE" -- "prs.pcp-saSA~"  [weight="1.0"];
 "ipf.1-savE" -- "fut.3-sora"  [weight="1.0"];
@@ -984,7 +984,7 @@ graph G {
 "ipf.1-savE" -- "pst.sbj.2-sys"  [weight="1.0"];
 "ipf.1-savE" -- "ipf.5-savjE"  [weight="0.96"];
 "ipf.1-savE" -- "pst.sbj.3-sy"  [weight="1.0"];
-"ipf.1-savE" -- "pst.sbj.6-sys"  [weight="1.0"];
+"ipf.1-savE" -- "prs.3-sE"  [weight="1.0"];
 "ipf.1-savE" -- "sbjv.6-saS"  [weight="1.0"];
 "ipf.1-savE" -- "pst.6-syr"  [weight="1.0"];
 "ipf.1-savE" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -994,7 +994,7 @@ graph G {
 "ipf.1-savE" -- "ipf.4-savjO~"  [weight="0.96"];
 "sbjv.2-saS" -- "sbjv.2-saS"  [weight="1.0"];
 "sbjv.2-saS" -- "sbjv.1-saS"  [weight="1.0"];
-"sbjv.2-saS" -- "prs.3-sE"  [weight="1.0"];
+"sbjv.2-saS" -- "pst.sbj.6-sys"  [weight="1.0"];
 "sbjv.2-saS" -- "pst.4-sym"  [weight="1.0"];
 "sbjv.2-saS" -- "prs.pcp-saSA~"  [weight="1.0"];
 "sbjv.2-saS" -- "fut.3-sora"  [weight="1.0"];
@@ -1005,7 +1005,7 @@ graph G {
 "sbjv.2-saS" -- "pst.sbj.2-sys"  [weight="1.0"];
 "sbjv.2-saS" -- "ipf.5-savjE"  [weight="1.0"];
 "sbjv.2-saS" -- "pst.sbj.3-sy"  [weight="1.0"];
-"sbjv.2-saS" -- "pst.sbj.6-sys"  [weight="1.0"];
+"sbjv.2-saS" -- "prs.3-sE"  [weight="1.0"];
 "sbjv.2-saS" -- "sbjv.6-saS"  [weight="1.0"];
 "sbjv.2-saS" -- "pst.6-syr"  [weight="1.0"];
 "sbjv.2-saS" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -1014,7 +1014,7 @@ graph G {
 "sbjv.2-saS" -- "sbjv.5-saSjE"  [weight="0.975"];
 "sbjv.2-saS" -- "ipf.4-savjO~"  [weight="1.0"];
 "sbjv.1-saS" -- "sbjv.1-saS"  [weight="1.0"];
-"sbjv.1-saS" -- "prs.3-sE"  [weight="1.0"];
+"sbjv.1-saS" -- "pst.sbj.6-sys"  [weight="1.0"];
 "sbjv.1-saS" -- "pst.4-sym"  [weight="1.0"];
 "sbjv.1-saS" -- "prs.pcp-saSA~"  [weight="1.0"];
 "sbjv.1-saS" -- "fut.3-sora"  [weight="1.0"];
@@ -1025,7 +1025,7 @@ graph G {
 "sbjv.1-saS" -- "pst.sbj.2-sys"  [weight="1.0"];
 "sbjv.1-saS" -- "ipf.5-savjE"  [weight="1.0"];
 "sbjv.1-saS" -- "pst.sbj.3-sy"  [weight="1.0"];
-"sbjv.1-saS" -- "pst.sbj.6-sys"  [weight="1.0"];
+"sbjv.1-saS" -- "prs.3-sE"  [weight="1.0"];
 "sbjv.1-saS" -- "sbjv.6-saS"  [weight="1.0"];
 "sbjv.1-saS" -- "pst.6-syr"  [weight="1.0"];
 "sbjv.1-saS" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -1033,25 +1033,25 @@ graph G {
 "sbjv.1-saS" -- "ipf.3-savE"  [weight="1.0"];
 "sbjv.1-saS" -- "sbjv.5-saSjE"  [weight="0.975"];
 "sbjv.1-saS" -- "ipf.4-savjO~"  [weight="1.0"];
-"prs.3-sE" -- "prs.3-sE"  [weight="1.0"];
-"prs.3-sE" -- "pst.4-sym"  [weight="0.605"];
-"prs.3-sE" -- "prs.pcp-saSA~"  [weight="1.0"];
-"prs.3-sE" -- "fut.3-sora"  [weight="1.0"];
-"prs.3-sE" -- "fut.6-sorO~"  [weight="1.0"];
-"prs.3-sE" -- "prs.1-sE"  [weight="1.0"];
-"prs.3-sE" -- "imp.5-saSE"  [weight="1.0"];
-"prs.3-sE" -- "fut.2-sora"  [weight="1.0"];
-"prs.3-sE" -- "pst.sbj.2-sys"  [weight="0.605"];
-"prs.3-sE" -- "ipf.5-savjE"  [weight="1.0"];
-"prs.3-sE" -- "pst.sbj.3-sy"  [weight="0.605"];
-"prs.3-sE" -- "pst.sbj.6-sys"  [weight="0.605"];
-"prs.3-sE" -- "sbjv.6-saS"  [weight="1.0"];
-"prs.3-sE" -- "pst.6-syr"  [weight="0.605"];
-"prs.3-sE" -- "cond.4-sorjO~"  [weight="1.0"];
-"prs.3-sE" -- "cond.3-sorE"  [weight="1.0"];
-"prs.3-sE" -- "ipf.3-savE"  [weight="1.0"];
-"prs.3-sE" -- "sbjv.5-saSjE"  [weight="1.0"];
-"prs.3-sE" -- "ipf.4-savjO~"  [weight="1.0"];
+"pst.sbj.6-sys" -- "pst.sbj.6-sys"  [weight="1.0"];
+"pst.sbj.6-sys" -- "pst.4-sym"  [weight="1.0"];
+"pst.sbj.6-sys" -- "prs.pcp-saSA~"  [weight="1.0"];
+"pst.sbj.6-sys" -- "fut.3-sora"  [weight="1.0"];
+"pst.sbj.6-sys" -- "fut.6-sorO~"  [weight="1.0"];
+"pst.sbj.6-sys" -- "prs.1-sE"  [weight="0.605"];
+"pst.sbj.6-sys" -- "imp.5-saSE"  [weight="1.0"];
+"pst.sbj.6-sys" -- "fut.2-sora"  [weight="1.0"];
+"pst.sbj.6-sys" -- "pst.sbj.2-sys"  [weight="1.0"];
+"pst.sbj.6-sys" -- "ipf.5-savjE"  [weight="1.0"];
+"pst.sbj.6-sys" -- "pst.sbj.3-sy"  [weight="1.0"];
+"pst.sbj.6-sys" -- "prs.3-sE"  [weight="0.605"];
+"pst.sbj.6-sys" -- "sbjv.6-saS"  [weight="1.0"];
+"pst.sbj.6-sys" -- "pst.6-syr"  [weight="1.0"];
+"pst.sbj.6-sys" -- "cond.4-sorjO~"  [weight="1.0"];
+"pst.sbj.6-sys" -- "cond.3-sorE"  [weight="1.0"];
+"pst.sbj.6-sys" -- "ipf.3-savE"  [weight="1.0"];
+"pst.sbj.6-sys" -- "sbjv.5-saSjE"  [weight="1.0"];
+"pst.sbj.6-sys" -- "ipf.4-savjO~"  [weight="1.0"];
 "pst.4-sym" -- "pst.4-sym"  [weight="1.0"];
 "pst.4-sym" -- "prs.pcp-saSA~"  [weight="1.0"];
 "pst.4-sym" -- "fut.3-sora"  [weight="1.0"];
@@ -1062,7 +1062,7 @@ graph G {
 "pst.4-sym" -- "pst.sbj.2-sys"  [weight="1.0"];
 "pst.4-sym" -- "ipf.5-savjE"  [weight="1.0"];
 "pst.4-sym" -- "pst.sbj.3-sy"  [weight="1.0"];
-"pst.4-sym" -- "pst.sbj.6-sys"  [weight="1.0"];
+"pst.4-sym" -- "prs.3-sE"  [weight="0.605"];
 "pst.4-sym" -- "sbjv.6-saS"  [weight="1.0"];
 "pst.4-sym" -- "pst.6-syr"  [weight="1.0"];
 "pst.4-sym" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -1079,7 +1079,7 @@ graph G {
 "prs.pcp-saSA~" -- "pst.sbj.2-sys"  [weight="1.0"];
 "prs.pcp-saSA~" -- "ipf.5-savjE"  [weight="1.0"];
 "prs.pcp-saSA~" -- "pst.sbj.3-sy"  [weight="1.0"];
-"prs.pcp-saSA~" -- "pst.sbj.6-sys"  [weight="1.0"];
+"prs.pcp-saSA~" -- "prs.3-sE"  [weight="1.0"];
 "prs.pcp-saSA~" -- "sbjv.6-saS"  [weight="1.0"];
 "prs.pcp-saSA~" -- "pst.6-syr"  [weight="1.0"];
 "prs.pcp-saSA~" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -1095,7 +1095,7 @@ graph G {
 "fut.3-sora" -- "pst.sbj.2-sys"  [weight="1.0"];
 "fut.3-sora" -- "ipf.5-savjE"  [weight="1.0"];
 "fut.3-sora" -- "pst.sbj.3-sy"  [weight="1.0"];
-"fut.3-sora" -- "pst.sbj.6-sys"  [weight="1.0"];
+"fut.3-sora" -- "prs.3-sE"  [weight="1.0"];
 "fut.3-sora" -- "sbjv.6-saS"  [weight="1.0"];
 "fut.3-sora" -- "pst.6-syr"  [weight="1.0"];
 "fut.3-sora" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -1110,7 +1110,7 @@ graph G {
 "fut.6-sorO~" -- "pst.sbj.2-sys"  [weight="1.0"];
 "fut.6-sorO~" -- "ipf.5-savjE"  [weight="1.0"];
 "fut.6-sorO~" -- "pst.sbj.3-sy"  [weight="1.0"];
-"fut.6-sorO~" -- "pst.sbj.6-sys"  [weight="1.0"];
+"fut.6-sorO~" -- "prs.3-sE"  [weight="1.0"];
 "fut.6-sorO~" -- "sbjv.6-saS"  [weight="1.0"];
 "fut.6-sorO~" -- "pst.6-syr"  [weight="1.0"];
 "fut.6-sorO~" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -1124,7 +1124,7 @@ graph G {
 "prs.1-sE" -- "pst.sbj.2-sys"  [weight="0.605"];
 "prs.1-sE" -- "ipf.5-savjE"  [weight="1.0"];
 "prs.1-sE" -- "pst.sbj.3-sy"  [weight="0.605"];
-"prs.1-sE" -- "pst.sbj.6-sys"  [weight="0.605"];
+"prs.1-sE" -- "prs.3-sE"  [weight="1.0"];
 "prs.1-sE" -- "sbjv.6-saS"  [weight="1.0"];
 "prs.1-sE" -- "pst.6-syr"  [weight="0.605"];
 "prs.1-sE" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -1137,7 +1137,7 @@ graph G {
 "imp.5-saSE" -- "pst.sbj.2-sys"  [weight="1.0"];
 "imp.5-saSE" -- "ipf.5-savjE"  [weight="1.0"];
 "imp.5-saSE" -- "pst.sbj.3-sy"  [weight="1.0"];
-"imp.5-saSE" -- "pst.sbj.6-sys"  [weight="1.0"];
+"imp.5-saSE" -- "prs.3-sE"  [weight="1.0"];
 "imp.5-saSE" -- "sbjv.6-saS"  [weight="1.0"];
 "imp.5-saSE" -- "pst.6-syr"  [weight="1.0"];
 "imp.5-saSE" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -1149,7 +1149,7 @@ graph G {
 "fut.2-sora" -- "pst.sbj.2-sys"  [weight="1.0"];
 "fut.2-sora" -- "ipf.5-savjE"  [weight="1.0"];
 "fut.2-sora" -- "pst.sbj.3-sy"  [weight="1.0"];
-"fut.2-sora" -- "pst.sbj.6-sys"  [weight="1.0"];
+"fut.2-sora" -- "prs.3-sE"  [weight="1.0"];
 "fut.2-sora" -- "sbjv.6-saS"  [weight="1.0"];
 "fut.2-sora" -- "pst.6-syr"  [weight="1.0"];
 "fut.2-sora" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -1160,7 +1160,7 @@ graph G {
 "pst.sbj.2-sys" -- "pst.sbj.2-sys"  [weight="1.0"];
 "pst.sbj.2-sys" -- "ipf.5-savjE"  [weight="1.0"];
 "pst.sbj.2-sys" -- "pst.sbj.3-sy"  [weight="1.0"];
-"pst.sbj.2-sys" -- "pst.sbj.6-sys"  [weight="1.0"];
+"pst.sbj.2-sys" -- "prs.3-sE"  [weight="0.605"];
 "pst.sbj.2-sys" -- "sbjv.6-saS"  [weight="1.0"];
 "pst.sbj.2-sys" -- "pst.6-syr"  [weight="1.0"];
 "pst.sbj.2-sys" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -1170,7 +1170,7 @@ graph G {
 "pst.sbj.2-sys" -- "ipf.4-savjO~"  [weight="1.0"];
 "ipf.5-savjE" -- "ipf.5-savjE"  [weight="1.0"];
 "ipf.5-savjE" -- "pst.sbj.3-sy"  [weight="1.0"];
-"ipf.5-savjE" -- "pst.sbj.6-sys"  [weight="1.0"];
+"ipf.5-savjE" -- "prs.3-sE"  [weight="1.0"];
 "ipf.5-savjE" -- "sbjv.6-saS"  [weight="1.0"];
 "ipf.5-savjE" -- "pst.6-syr"  [weight="1.0"];
 "ipf.5-savjE" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -1179,7 +1179,7 @@ graph G {
 "ipf.5-savjE" -- "sbjv.5-saSjE"  [weight="1.0"];
 "ipf.5-savjE" -- "ipf.4-savjO~"  [weight="1.0"];
 "pst.sbj.3-sy" -- "pst.sbj.3-sy"  [weight="1.0"];
-"pst.sbj.3-sy" -- "pst.sbj.6-sys"  [weight="1.0"];
+"pst.sbj.3-sy" -- "prs.3-sE"  [weight="0.605"];
 "pst.sbj.3-sy" -- "sbjv.6-saS"  [weight="1.0"];
 "pst.sbj.3-sy" -- "pst.6-syr"  [weight="1.0"];
 "pst.sbj.3-sy" -- "cond.4-sorjO~"  [weight="1.0"];
@@ -1187,14 +1187,14 @@ graph G {
 "pst.sbj.3-sy" -- "ipf.3-savE"  [weight="1.0"];
 "pst.sbj.3-sy" -- "sbjv.5-saSjE"  [weight="1.0"];
 "pst.sbj.3-sy" -- "ipf.4-savjO~"  [weight="1.0"];
-"pst.sbj.6-sys" -- "pst.sbj.6-sys"  [weight="1.0"];
-"pst.sbj.6-sys" -- "sbjv.6-saS"  [weight="1.0"];
-"pst.sbj.6-sys" -- "pst.6-syr"  [weight="1.0"];
-"pst.sbj.6-sys" -- "cond.4-sorjO~"  [weight="1.0"];
-"pst.sbj.6-sys" -- "cond.3-sorE"  [weight="1.0"];
-"pst.sbj.6-sys" -- "ipf.3-savE"  [weight="1.0"];
-"pst.sbj.6-sys" -- "sbjv.5-saSjE"  [weight="1.0"];
-"pst.sbj.6-sys" -- "ipf.4-savjO~"  [weight="1.0"];
+"prs.3-sE" -- "cond.4-sorjO~"  [weight="1.0"];
+"prs.3-sE" -- "prs.3-sE"  [weight="1.0"];
+"prs.3-sE" -- "sbjv.6-saS"  [weight="1.0"];
+"prs.3-sE" -- "pst.6-syr"  [weight="0.605"];
+"prs.3-sE" -- "cond.3-sorE"  [weight="1.0"];
+"prs.3-sE" -- "ipf.3-savE"  [weight="1.0"];
+"prs.3-sE" -- "sbjv.5-saSjE"  [weight="1.0"];
+"prs.3-sE" -- "ipf.4-savjO~"  [weight="1.0"];
 "sbjv.6-saS" -- "sbjv.6-saS"  [weight="1.0"];
 "sbjv.6-saS" -- "pst.6-syr"  [weight="1.0"];
 "sbjv.6-saS" -- "cond.4-sorjO~"  [weight="1.0"];
