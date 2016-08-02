@@ -1,5 +1,5 @@
 # Données de génération des paradigmes
-2015-Data/**/*
+2015-Data/
 
 # iPython Notebooks Checkpoints
-.ipynb_checkpoints/**/*
+.ipynb_checkpoints/
