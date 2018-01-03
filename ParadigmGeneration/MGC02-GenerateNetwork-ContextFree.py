@@ -126,8 +126,10 @@ else:
     casesType=""
 
 print (sampleNumero,sampleType,casesType)
-
-sampleNumber=prefixEchantillon(sampleNumero,sampleType,casesType)
+if casesType:
+    sampleNumber=prefixEchantillon(sampleNumero,sampleType,casesType)
+else:
+    sampleNumber=prefixEchantillon(sampleNumero)
 print (sampleNumber)
 paperPrefix="-ISMo"
 genFormeVotes=True
