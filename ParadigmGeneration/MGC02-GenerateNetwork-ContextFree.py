@@ -1293,3 +1293,4 @@ print ("Swim2",characteristicsSwim2,measuresSwim2)
 
 
 # # Fin du traitement
+cliques=[]
