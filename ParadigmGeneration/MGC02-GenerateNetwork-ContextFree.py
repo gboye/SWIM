@@ -1174,6 +1174,7 @@ def calculerResultats(contextParadigmes,extension="-Swim2"):
     precision=float(TP)/(OG+TP+FP)
     fMeasure=2*recall*precision/(recall+precision)
     resultMeasures=(precision,recall,fMeasure)
+    print (sampleNumero,sampleType,casesType)
     print ("UG",UG ,"OG",OG,"TP",TP,"FP",FP)
     print ("recall", recall, "precision", precision)
     print (fMeasure)

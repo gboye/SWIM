@@ -342,3 +342,4 @@ yaml.safe_dump(resultats, file(nomFichierResultats, 'w'), encoding='utf-8', allo
 fin=datetime.datetime.now()
 print debut
 print fin
+print numeroEchantillon,sampleType,casesType,etapeSwim

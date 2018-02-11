@@ -1,11 +1,12 @@
 if [ -n "$1" ]
-then 
+then
 	numeros=$1
 else
-	numeros='00 01 02 03'
+	exit 1
 fi
 for numero in $numeros
 do
-	echo "../MGC02-GenerateNetwork-ContextFree.py $numero -X"
-	echo "../MGC02-GenerateNetwork-ContextFree.py $numero -X -Morphomes"
+	python2 "../MGC02-GenerateNetwork-ContextFree.py" $numero "-X"
+	python2 "../MGC02-GenerateNetwork-ContextFree.py" $numero "-X" "-Morphomes"
 done
+echo $numeros
