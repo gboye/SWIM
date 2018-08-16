@@ -87,7 +87,7 @@ fs=features.FeatureSystem('phonemes')
 
 # In[8]:
 
-filePrefix="/Volumes/gilles/Transfert/Copies-iMac-GB/2015-Data/Longitudinales/Longitudinal"
+filePrefix="/Volumes/gilles/Transfert/Copies-iMac-GB/2015-Data/LongitudinalesRnd/Longitudinal"
 sampleFiles=glob.glob(filePrefix+"*.pkl")
 def prefixEchantillon(numero,sampleType="",casesType=""):
     candidats=[]
@@ -619,8 +619,8 @@ goldFormsIndex=goldForms.index.tolist()
 
 #paradigmes
 #analyseCases
-lexeme=u"découper"
-paradigmes[paradigmes["lexeme"]==lexeme].columns[paradigmes[paradigmes["lexeme"]==lexeme].notnull().iloc[0]].tolist()
+#lexeme=u"découper"
+#paradigmes[paradigmes["lexeme"]==lexeme].columns[paradigmes[paradigmes["lexeme"]==lexeme].notnull().iloc[0]].tolist()
 # # Lecture des règles
 
 # In[32]:

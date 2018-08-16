@@ -43,7 +43,7 @@ timeStamp=""
 # In[596]:
 
 filePrefix="/Users/gilles/Box Sync/2015-Data/MGC-170330"
-filePrefix="/Volumes/gilles/Transfert/Copies-iMac-GB/2015-Data/Longitudinales/"
+filePrefix="/Volumes/gilles/Transfert/Copies-iMac-GB/2015-Data/LongitudinalesRnd/"
 sampleFiles=glob.glob(filePrefix+"Longitudinal*.pkl")
 
 arguments=sys.argv

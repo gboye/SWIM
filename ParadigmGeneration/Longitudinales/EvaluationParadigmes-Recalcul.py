@@ -10,7 +10,7 @@ import glob,re,pickle,os,yaml,datetime,sys
 # In[259]:
 
 debut=datetime.datetime.now()
-filePrefix="/Volumes/gilles/Transfert/Copies-iMac-GB/2015-Data/Longitudinales/"
+filePrefix="/Volumes/gilles/Transfert/Copies-iMac-GB/2015-Data/LongitudinalesRnd/"
 sampleFiles=glob.glob(filePrefix+"Longitudinal*.csv")
 
 
@@ -103,26 +103,35 @@ dierese={"j":"ij", "w":"uw","H":"yH","i":"ij","u":"uw","y":"yH"}
 # In[265]:
 
 def checkFrench(prononciation):
+    glide2voyelle={"j":"i","w":"u","H":"y"}
     if prononciation:
-        result=recoder(prononciation)
-        m=re.match(ur"^.*([^ieèEaOouy926êôâ])[jwH]$",result)
-        if m:
-            print "pb avec un glide final", prononciation
-        m=re.match(ur"(.*[ptkbdgfsSvzZ][rl])([jwH])(.*)",result)
-        if m:
-            n=re.search(ur"[ptkbdgfsSvzZ][rl](wa|Hi|wê)",result)
-            if not n:
+        if "," in prononciation:
+            prononciations=prononciation.split(",")
+            setPrononciations=set()
+            for element in prononciations:
+                setPrononciations.add(checkFrench(element))
+            result=",".join(list(setPrononciations))
+        else:
+            result=recoder(prononciation)
+            m=re.match(ur"^(.*[^ieèEaOouy926êôâ])([jwH])$",result)
+            if m:
+                print ("pb avec un glide final", prononciation)
+                voyelle=glide2voyelle[m.group(2)]
+                result=m.group(1)+voyelle
+            m=re.match(ur"(.*[ptkbdgfsSvzZ][rl])([jwH])(.*)",result)
+            if m:
+                n=re.search(ur"[ptkbdgfsSvzZ][rl](wa|Hi|wê)",result)
+                if not n:
+                    glide=m.group(2)
+                    result=m.group(1)+dierese[glide]+m.group(3)
+            m=re.match(ur"(.*)([iuy])([ieEaOouy].*)",result)
+            if m:
                 glide=m.group(2)
                 result=m.group(1)+dierese[glide]+m.group(3)
-        m=re.match(ur"(.*)([iuy])([ieEaOouy].*)",result)
-        if m:
-            glide=m.group(2)
-            result=m.group(1)+dierese[glide]+m.group(3)
-        result=result.replace("Jj","J")
+            result=result.replace("Jj","J")
     else:
         result=prononciation
     return result
-
 
 # ## Formes de l'échantillon
 
@@ -204,6 +213,7 @@ def countSplits(dfForms):
 
 '''Soustraire les formes initiales des prédictions'''
 finalForms=predictedForms.loc[~predictedForms.index.isin(initialFormsIndex)]
+finalForms["value"]=finalForms["value"].apply(lambda x: checkFrench(x))
 finalFormsIndex=finalForms.index.tolist()
 
 
