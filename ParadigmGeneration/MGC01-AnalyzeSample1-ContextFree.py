@@ -42,9 +42,9 @@ timeStamp=""
 
 # In[596]:
 
+repPrefix="/Volumes/gilles/Transfert/Copies-iMac-GB/2015-Data/"
 filePrefix="/Users/gilles/Box Sync/2015-Data/MGC-170330"
 filePrefix="/Volumes/gilles/Transfert/Copies-iMac-GB/2015-Data/LongitudinalesRnd/"
-sampleFiles=glob.glob(filePrefix+"Longitudinal*.pkl")
 
 arguments=sys.argv
 if len(arguments)>1:
@@ -53,6 +53,8 @@ if len(arguments)>1:
         casesType=arguments[2]
         if len(arguments)>3:
             phonologicalMap=arguments[3]
+            if len(arguments)>4:
+                filePrefix=repPrefix+arguments[4]
         else:
             phonologicalMap="-X"
     else:
@@ -61,6 +63,9 @@ if len(arguments)>1:
 else:
     sys.exit()
 # In[597]:
+
+print (filePrefix)
+sampleFiles=glob.glob(filePrefix+"Longitudinal*.pkl")
 
 def prefixEchantillon(numero):
     candidats=[]
@@ -157,7 +162,7 @@ dierese={"j":"ij", "w":"uw","H":"yH","i":"ij","u":"uw","y":"yH"}
 # In[605]:
 
 def checkFrench(prononciation):
-    if prononciation:
+    if prononciation and not pd.isnull(prononciation):
         result=recoder(prononciation)
         m=re.match(ur"^.*([^ieèEaOouy926êôâ])[jwH]$",result)
         if m:
