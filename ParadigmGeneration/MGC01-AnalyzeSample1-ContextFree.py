@@ -45,6 +45,7 @@ timeStamp=""
 repPrefix="/Volumes/gilles/Transfert/Copies-iMac-GB/2015-Data/"
 filePrefix="/Users/gilles/Box Sync/2015-Data/MGC-170330"
 filePrefix="/Volumes/gilles/Transfert/Copies-iMac-GB/2015-Data/LongitudinalesRnd/"
+filePrefix="/Volumes/gilles/Transfert/Copies-iMac-GB/2015-Data/lexique3/"
 
 arguments=sys.argv
 if len(arguments)>1:
@@ -70,7 +71,8 @@ sampleFiles=glob.glob(filePrefix+"Longitudinal*.pkl")
 def prefixEchantillon(numero):
     candidats=[]
     for sample in sampleFiles:
-        m=re.match(ur"^.*/(Longitudinal-%s-T\d+-F\d+)%s\.pkl"%(numero,casesType),sample)
+#         m=re.match(ur"^.*/(Longitudinal-%s-T\d+-F\d+)%s\.pkl"%(numero,casesType),sample)
+        m=re.match(ur"^.*/(Longitudinal-Lexique3-%s-T\d+-F\d+)%s\.pkl"%(numero,casesType),sample)
         if m:
             print (sample)
             print (m.group(1))

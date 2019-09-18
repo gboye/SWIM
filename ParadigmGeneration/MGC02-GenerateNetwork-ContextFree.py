@@ -88,10 +88,12 @@ fs=features.FeatureSystem('phonemes')
 # In[8]:
 
 filePrefix="/Volumes/gilles/Transfert/Copies-iMac-GB/2015-Data/LongitudinalesRnd/Longitudinal"
+filePrefix="/Volumes/gilles/Transfert/Copies-iMac-GB/2015-Data/lexique3/Longitudinal-Lexique3"
 sampleFiles=glob.glob(filePrefix+"*.pkl")
 def prefixEchantillon(numero,sampleType="",casesType=""):
     candidats=[]
-    matchFile=ur"^.*/Longitudinal(-%s-T\d+-F\d+)%s\.pkl"%(numero,sampleType+casesType)
+#    matchFile=ur"^.*/Longitudinal(-%s-T\d+-F\d+)%s\.pkl"%(numero,sampleType+casesType)
+    matchFile=ur"^.*/Longitudinal-Lexique3(-%s-T\d+-F\d+)%s\.pkl"%(numero,sampleType+casesType)
     for sample in sampleFiles:
         m=re.match(matchFile,sample)
         if m:
@@ -160,6 +162,7 @@ if debug:
 
 #tirage=filePrefix+'-'+sampleNumber+'-Tirage-'+sampleType+'-170503-1907'+casesType+'.pkl'
 #tirage=filePrefix+sampleNumber+casesType+'.pkl'
+print (tirageFile)
 with open(tirageFile, 'rb') as input:
     sampleTirage = pickle.load(input)
 
@@ -600,8 +603,10 @@ initialFormsIndex=initialForms.index.tolist()
 # In[31]:
 
 #with open(goldPrefix+"/"+goldFile,"rb") as input:
-with open(goldPrefix+goldFile,"rb") as input:
-    lexiqueGold=pickle.load(input)
+
+# with open(goldPrefix+goldFile,"rb") as input:
+#     lexiqueGold=pickle.load(input)
+lexiqueGold=pd.read_pickle(path=goldPrefix+goldFile)
 
 '''Rectifications phonologiques'''
 lexiqueGold["phono"]=lexiqueGold["phono"].apply(lambda x: checkFrench(x))
