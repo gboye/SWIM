@@ -89,11 +89,13 @@ fs=features.FeatureSystem('phonemes')
 
 filePrefix="/Volumes/gilles/Transfert/Copies-iMac-GB/2015-Data/LongitudinalesRnd/Longitudinal"
 filePrefix="/Volumes/gilles/Transfert/Copies-iMac-GB/2015-Data/lexique3/Longitudinal-Lexique3"
+filePrefix="/Volumes/gilles/Transfert/Copies-iMac-GB/2015-Data/lexique3/AltLexique3/Longitudinal-AltLexique3"
 sampleFiles=glob.glob(filePrefix+"*.pkl")
 def prefixEchantillon(numero,sampleType="",casesType=""):
     candidats=[]
 #    matchFile=ur"^.*/Longitudinal(-%s-T\d+-F\d+)%s\.pkl"%(numero,sampleType+casesType)
-    matchFile=ur"^.*/Longitudinal-Lexique3(-%s-T\d+-F\d+)%s\.pkl"%(numero,sampleType+casesType)
+#    matchFile=ur"^.*/Longitudinal-Lexique3(-%s-T\d+-F\d+)%s\.pkl"%(numero,sampleType+casesType)
+    matchFile=ur"^.*/Longitudinal-AltLexique3(-%s-T\d+-F\d+)%s\.pkl"%(numero,sampleType+casesType)
     for sample in sampleFiles:
         m=re.match(matchFile,sample)
         if m:
