@@ -1,3 +1,9 @@
 *ipynb_checkpoints/
 *—checkpoint.ipynb
 *.pkl
+*.xlsx
+*.png
+*.yaml
+*.gexf
+
+
