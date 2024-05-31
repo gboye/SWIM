@@ -5,5 +5,5 @@
 *.png
 *.yaml
 *.gexf
-
+*.code-workspace
 
